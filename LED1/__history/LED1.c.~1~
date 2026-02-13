@@ -1,5 +1,6 @@
-/*#include <18F67J94.h>*/
+#include <18F67J94.h>
 #include "LED1.h"
+#device ADC=10
 
 
 // --- UART/PPS設定 ---

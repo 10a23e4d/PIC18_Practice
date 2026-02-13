@@ -1,0 +1,7 @@
+ÀÄLED1
+   ÀÄmain  0/168  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/44  Ram=1
+      ÃÄ@PSTRINGC_9600_31766_31767  0/44  Ram=3
+      ÀÄ@delay_ms1  0/44  Ram=1
