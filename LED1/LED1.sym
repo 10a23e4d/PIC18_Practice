@@ -4,21 +4,30 @@
 002     @SCRATCH
 003     @SCRATCH
 004-005 @sprintf_string
+006     @SPI_XFER_1.P1
+006     @SPI_XFER_2.P2
+006     @SPI_XFER_3.P3
 006     main.@SCRATCH1
-006     @PSTRINGC_9600_31766_31767.@SCRATCH1
+006     @PSTRINGC_9600_31791_31789.@SCRATCH1
 007     @delay_ms1.P1
-007     @PSTRINGC_9600_31766_31767.@SCRATCH2
-008     @PSTRINGC_9600_31766_31767.@SCRATCH3
+007     @SPI_XFER_1.P2
+007     @SPI_XFER_2.P3
+007     @SPI_XFER_3.P4
+007     @PSTRINGC_9600_31791_31789.@SCRATCH2
+008     @SPI_XFER_2.P1
+008     @SPI_XFER_1.P2
+008     @SPI_XFER_3.P3
+008     @PSTRINGC_9600_31791_31789.@SCRATCH3
 EEF.0   MDBIT
 EEF.3   MDOUT
-F08     CCP_7
 F08     CCP_7_LOW
+F08     CCP_7
 F09     CCP_7_HIGH
-F0B     CCP_6
 F0B     CCP_6_LOW
+F0B     CCP_6
 F0C     CCP_6_HIGH
-F0E     CCP_5
 F0E     CCP_5_LOW
+F0E     CCP_5
 F0F     CCP_5_HIGH
 F11     CCP_4
 F11     CCP_4_LOW
@@ -33,11 +42,11 @@ F42     CCP_10_HIGH
 F44     CCP_9
 F44     CCP_9_LOW
 F45     CCP_9_HIGH
-F47     CCP_8_LOW
 F47     CCP_8
+F47     CCP_8_LOW
 F48     CCP_8_HIGH
-F4A     CCP_3
 F4A     CCP_3_LOW
+F4A     CCP_3
 F4B     CCP_3_HIGH
 F4F     CCP_2_LOW
 F4F     CCP_2
@@ -51,32 +60,33 @@ FC4.1   C2OUT
 FC4.2   C3OUT
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P1
-FE9-FEA @READ_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PROGRAM_MEMORY.P3
-FE9-FEA @WRITE_PACKED_MEMORY.P4
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
-FF6-FF8 @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-000006  @const954.call
-00000E  @delay_ms1
-00003A  @PSTRINGC_9600_31766_31767
-000066  @cinit1
-000066  main
-0000D6  @cinit2
+000006  @const975.call
+000010  @const980.call
+00001C  @PSTRINGC_9600_31791_31789
+000046  @delay_ms1
+00006E  main
+00006E  @cinit1
+000144  @cinit2
 
 Project Directory:
     C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\
 
 Project Files:
-    LED1.c                                                  [13-2-26 16:55  CRC=E1F6B889]
-    LED1.h                                                  [13-2-26 15:50  CRC=00000000]
+    LED1.c                                                  [13-2-26 17:34  CRC=2EFB2414]
+    LED1.h                                                  [13-2-26 17:30  CRC=D872A938]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h [13-5-21 13:54  CRC=CB5C8DE4]
 
-Source signature=78AFD451
+Source signature=9E26E914
 Program memory checksum=0000
-Hex file CRC=1204
+Hex file CRC=F204
 
 Units:
     C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1 (main)
@@ -84,7 +94,7 @@ Units:
 Compiler Settings:
     Processor:      PIC18F67J94
     Pointer Size:   16
-    ADC Range:      0-255
+    ADC Range:      0-4095
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32

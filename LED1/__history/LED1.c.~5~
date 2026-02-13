@@ -5,19 +5,19 @@
 
 #pin_select U1TX = PIN_F7
 #pin_select U1RX = PIN_F5
-#use rs232(baud=9600, UART1, parity=N,bits=8,stream=PORT1)
+#use rs232(baud=9600,parity=N,bits=8,stream=PORT1)
 
 #pin_select U2TX = PIN_D3
 #pin_select U2RX =    PIN_D2
-#use rs232(baud=9600, UART2, parity=N,bits=8,stream=PORT2)
+#use rs232(baud=9600,parity=N,bits=8,stream=PORT2)
 
 #pin_select U3TX = PIN_E5
 #pin_select U3RX = PIN_E4
-#use rs232(baud=9600, UART3, parity=N,bits=8,stream=PORT3)
+#use rs232(baud=9600,parity=N,bits=8,stream=PORT3)
 
 #pin_select U4TX = PIN_E3
 #pin_select U4RX = PIN_F2
-#use rs232(baud=9600, UART4, parity=N,bits=8,stream=PORT4)
+#use rs232(baud=9600,parity=N,bits=8,stream=PORT4)
 
 #define SPI1_CS PIN_A2
 #use spi (MASTER, CLK = PIN_A3, DI = PIN_A0, DO = PIN_A1,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
@@ -58,15 +58,10 @@
 
 void main()
 {
-    while (TRUE)
-    {
-        fprintf(PORT1, "LED1 on\r\n");
-        output_high(DIO_3);
-        delay_ms(500);
-        output_low(DIO_3);
-        delay_ms(500);
-        fprintf(PORT1, "LED1 off\r\n");
-    }
-
-
+    fprintf(PORT1, "LED1 test start\r\n");
+    output_high(DIO_3);
+    delay_ms(500);
+    output_low(DIO_3);
+    delay_ms(500);
+    fprintf(PORT1, "LED1 test end\r\n");
 }

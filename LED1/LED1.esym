@@ -1,9 +1,9 @@
-D G "__PCH__" 0 39 ""5.104""
-D G "__DEVICE__" 0 39 "6794"
-D G "__DATE__" 0 39 ""13-Feb-26""
-D G "__TIME__" 0 39 ""16:55:33""
-D G "_UNICODE" 0 39 ""?""
-D G "__EVAL" 0 39 ""?"" "#include <18F67J94.h>*"
+D G "__PCH__" 0 69 ""5.104""
+D G "__DEVICE__" 0 69 "6794"
+D G "__DATE__" 0 69 ""13-Feb-26""
+D G "__TIME__" 0 69 ""17:35:06""
+D G "_UNICODE" 0 69 ""?""
+D G "__EVAL" 0 69 ""?"" "LED1/////"
 c L "set_tris_a" 2 1 26 "FUNCTION"
 F N "set_tris_a" 2 77 ""
 V L "value" 2 77 "int8" `55 
@@ -1928,14 +1928,36 @@ D G "INT_RDA3" 2 1481 "0x006120"
 D G "INT_TBE4" 2 1482 "0x006140"
 D G "INT_RDA4" 2 1483 "0x006180"
 D G "INT_IOC" 2 1484 "0x0FFFF208"
-D G "DIO_3" 0 14 "PIN_G0"
-F N "main" 0 16 ""
-F G "main" 0 17 "void()" `951  "ピン出�
-�設定"
-C L "main" 0 5 1 "FUNCTION"
-C L "main" 0 5 1 "FUNCTION"
-C L "main" 0 5 1 "FUNCTION"
-C L "main" 0 5 1 "FUNCTION"
+D G "SPI1_CS" 0 22 "PIN_A2"
+D G "SPI2_CS" 0 25 "PIN_B3"
+D G "SPI3_CS" 0 28 "PIN_E2"
+D G "DIO_3" 0 32 "PIN_G0"
+D G "DIO_4" 0 33 "PIN_G1"
+D G "DIO_5" 0 34 "PIN_G2"
+D G "DIO_6" 0 35 "PIN_G3"
+D G "DIO_8" 0 36 "PIN_G4"
+D G "DIO_12" 0 37 "PIN_F6"
+D G "DIO_27" 0 38 "PIN_A5"
+D G "DIO_28" 0 39 "PIN_A4"
+D G "DIO_29" 0 40 "PIN_C1"
+D G "DIO_30" 0 41 "PIN_C0"
+D G "DIO_31" 0 42 "PIN_C6"
+D G "DIO_32" 0 43 "PIN_C7"
+D G "DIO_33" 0 44 "PIN_C2"
+D G "DIO_34" 0 45 "PIN_C3"
+D G "DIO_35" 0 46 "PIN_C4"
+D G "DIO_36" 0 47 "PIN_C5"
+D G "DIO_47" 0 48 "PIN_B1"
+D G "DIO_48" 0 49 "PIN_B0"
+D G "DIO_49" 0 50 "PIN_D7"
+D G "DIO_50" 0 51 "PIN_D6"
+D G "DIO_51" 0 52 "PIN_D5"
+D G "DIO_52" 0 53 "PIN_D4"
+D G "DIO_55" 0 54 "PIN_D1"
+D G "DIO_58" 0 55 "PIN_D0"
+D G "DIO_59" 0 56 "PIN_E7"
+F N "main" 0 59 ""
+F G "main" 0 60 "void()" `972 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
@@ -2140,3 +2162,7 @@ F B "gets" 1 3
 F B "kbhit" 0 1
 F B "set_uart_speed" 1 3
 F B "setup_uart" 1 3
+F B "spi_xfer" 0 3
+F B "spi_transfer" 3 4
+F B "spi_transfer_write" 2 3
+F B "spi_transfer_read" 2 3

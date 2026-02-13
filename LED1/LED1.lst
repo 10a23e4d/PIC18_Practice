@@ -1,18 +1,19 @@
-CCS PCH C Compiler, Version 5.104, 57077               13-2-26 16:55
+CCS PCH C Compiler, Version 5.104, 57077               13-2-26 17:35
 
                Filename:   C:\Users\rice_\Chiba Institute of Technology\6���@ - �h�L�������g\TMP_MIS\00_�Q�l����\PIC18_Practice\LED1\LED1.lst
 
-               ROM used:   270 bytes (0%)
+               ROM used:   396 bytes (0%)
                            Largest free fragment is 65520
                RAM used:   7 (0%) at main() level
-                           9 (0%) worst case
+                           11 (0%) worst case
                Stack used: 0 locations
                Stack size: 31
 
 *
 00000:  NOP   
-00002:  GOTO   0066
-.................... /*#include <18F67J94.h>*/
+00002:  GOTO   006E
+.................... /////LED1/////
+.................... //#include <18F67J94.h>
 .................... #include "LED1.h"
 .................... #include <18F67J94.h>
 .................... //////////// Standard Header file for the PIC18F67J94 device ////////////////
@@ -26,175 +27,273 @@ CCS PCH C Compiler, Version 5.104, 57077               13-2-26 16:55
 .................... //// form are not restricted in any way.                               ////
 .................... ///////////////////////////////////////////////////////////////////////////
 .................... #device PIC18F67J94
-00006:  DATA 53,74
-00008:  DATA 61,72
-0000A:  DATA 74,0D
-0000C:  DATA 0A,00
-*
-0003A:  TBLRD*+
-0003C:  MOVF   FF5,F
-0003E:  BZ    0062
-00040:  MOVFF  FF6,06
-00044:  MOVFF  FF7,07
-00048:  MOVFF  FF8,08
-0004C:  MOVF   FF5,W
-0004E:  BTFSS  F9E.4
-00050:  BRA    004E
-00052:  MOVWF  FAD
-00054:  MOVFF  06,FF6
-00058:  MOVFF  07,FF7
-0005C:  MOVFF  08,FF8
-00060:  BRA    003A
-00062:  GOTO   00F0 (RETURN)
+00006:  DATA 4C,45
+00008:  DATA 44,31
+0000A:  DATA 20,6F
+0000C:  DATA 6E,0D
+0000E:  DATA 0A,00
+00010:  DATA 4C,45
+00012:  DATA 44,31
+00014:  DATA 20,6F
+00016:  DATA 66,66
+00018:  DATA 0D,0A
+0001A:  DATA 00,00
+0001C:  TBLRD*+
+0001E:  MOVF   FF5,F
+00020:  BZ    0044
+00022:  MOVFF  FF6,06
+00026:  MOVFF  FF7,07
+0002A:  MOVFF  FF8,08
+0002E:  MOVF   FF5,W
+00030:  BTFSS  F9E.4
+00032:  BRA    0030
+00034:  MOVWF  FAD
+00036:  MOVFF  06,FF6
+0003A:  MOVFF  07,FF7
+0003E:  MOVFF  08,FF8
+00042:  BRA    001C
+00044:  RETURN 0
 .................... 
 .................... #list
 .................... 
 .................... #FUSES NOWDT                    //No Watch Dog Timer
+.................... #device ADC = 12
 .................... #use delay(crystal=16000000)
-*
-0000E:  CLRF   FEA
-00010:  MOVLW  07
-00012:  MOVWF  FE9
-00014:  MOVF   FEF,W
-00016:  BTFSC  FD8.2
-00018:  GOTO   0038
-0001C:  MOVLW  05
-0001E:  MOVWF  01
-00020:  CLRF   00
-00022:  DECFSZ 00,F
-00024:  BRA    0022
-00026:  DECFSZ 01,F
-00028:  BRA    0020
-0002A:  MOVLW  2E
-0002C:  MOVWF  00
-0002E:  DECFSZ 00,F
-00030:  BRA    002E
-00032:  BRA    0034
-00034:  DECFSZ FEF,F
-00036:  BRA    001C
-00038:  RETURN 0
+00046:  CLRF   FEA
+00048:  MOVLW  07
+0004A:  MOVWF  FE9
+0004C:  MOVF   FEF,W
+0004E:  BZ    006C
+00050:  MOVLW  05
+00052:  MOVWF  01
+00054:  CLRF   00
+00056:  DECFSZ 00,F
+00058:  BRA    0056
+0005A:  DECFSZ 01,F
+0005C:  BRA    0054
+0005E:  MOVLW  2E
+00060:  MOVWF  00
+00062:  DECFSZ 00,F
+00064:  BRA    0062
+00066:  BRA    0068
+00068:  DECFSZ FEF,F
+0006A:  BRA    0050
+0006C:  RETURN 0
 .................... 
 .................... 
 .................... 
 .................... 
-.................... // --- UART/PPS設定 ---
-.................... // ボードの「U1TX」は物理的に PIN_C6 に繋がっているため、ここを変更します
-.................... #pin_select U1TX = PIN_C6
-.................... #pin_select U1RX = PIN_C7
 .................... 
-.................... // xmit/rcv も物理ピン C6/C7 に変更
-.................... #use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7, bits=8, stream=PORT1)
+.................... #pin_select U1TX = PIN_F7
+.................... #pin_select U1RX = PIN_F5
+.................... #use rs232(baud=9600, UART1, parity=N,bits=8,stream=PORT1)
 .................... 
-.................... // --- DIO設定 ---
+.................... #pin_select U2TX = PIN_D3
+.................... #pin_select U2RX =    PIN_D2
+.................... #use rs232(baud=9600, UART2, parity=N,bits=8,stream=PORT2)
+.................... 
+.................... #pin_select U3TX = PIN_E5
+.................... #pin_select U3RX = PIN_E4
+.................... #use rs232(baud=9600, UART3, parity=N,bits=8,stream=PORT3)
+.................... 
+.................... #pin_select U4TX = PIN_E3
+.................... #pin_select U4RX = PIN_F2
+.................... #use rs232(baud=9600, UART4, parity=N,bits=8,stream=PORT4)
+.................... 
+.................... #define SPI1_CS PIN_A2
+.................... #use spi (MASTER, CLK = PIN_A3, DI = PIN_A0, DO = PIN_A1,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
+.................... 
+.................... #define SPI2_CS PIN_B3
+.................... #use spi (MASTER, CLK = PIN_B2, DI = PIN_B5, DO = PIN_B4,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
+.................... 
+.................... #define SPI3_CS PIN_E2
+.................... #use spi (MASTER, CLK = PIN_E1, DI = PIN_E0, DO = PIN_E6,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
+.................... 
+.................... 
 .................... #define DIO_3 PIN_G0
+.................... #define DIO_4 PIN_G1
+.................... #define DIO_5 PIN_G2
+.................... #define DIO_6 PIN_G3
+.................... #define DIO_8 PIN_G4
+.................... #define DIO_12 PIN_F6
+.................... #define DIO_27 PIN_A5
+.................... #define DIO_28 PIN_A4
+.................... #define DIO_29 PIN_C1
+.................... #define DIO_30 PIN_C0
+.................... #define DIO_31 PIN_C6
+.................... #define DIO_32 PIN_C7
+.................... #define DIO_33 PIN_C2
+.................... #define DIO_34 PIN_C3
+.................... #define DIO_35 PIN_C4
+.................... #define DIO_36 PIN_C5
+.................... #define DIO_47 PIN_B1
+.................... #define DIO_48 PIN_B0
+.................... #define DIO_49 PIN_D7
+.................... #define DIO_50 PIN_D6
+.................... #define DIO_51 PIN_D5
+.................... #define DIO_52 PIN_D4
+.................... #define DIO_55 PIN_D1
+.................... #define DIO_58 PIN_D0
+.................... #define DIO_59 PIN_E7
+.................... 
 .................... 
 .................... void main()
-*
-00066:  CLRF   FF8
-00068:  BCF    FD0.7
-0006A:  MOVLB  E
-0006C:  MOVLW  55
-0006E:  MOVWF  F7E
-00070:  MOVLW  AA
-00072:  MOVWF  F7E
-00074:  BCF    F66.6
-00076:  MOVLW  F4
-00078:  MOVWF  x2A
-0007A:  MOVLW  01
-0007C:  MOVWF  x1B
-0007E:  MOVLW  55
-00080:  MOVWF  F7E
-00082:  MOVLW  AA
-00084:  MOVWF  F7E
-00086:  BSF    F66.6
-00088:  CLRF   F9B
-0008A:  CLRF   F64
-0008C:  CLRF   F65
-0008E:  CLRF   F66
-00090:  MOVLW  02
-00092:  MOVWF  FD3
-00094:  BSF    F67.3
-00096:  MOVLW  A0
-00098:  MOVWF  FAF
+0006E:  CLRF   FF8
+00070:  BCF    FD0.7
+00072:  MOVLB  E
+00074:  MOVLW  55
+00076:  MOVWF  F7E
+00078:  MOVLW  AA
+0007A:  MOVWF  F7E
+0007C:  BCF    F66.6
+0007E:  MOVLW  F8
+00080:  MOVWF  x2A
+00082:  MOVLW  F5
+00084:  MOVWF  x2B
+00086:  MOVLW  F8
+00088:  MOVWF  x2C
+0008A:  MOVLW  F9
+0008C:  MOVWF  x2D
+0008E:  MOVLW  20
+00090:  MOVWF  x1D
+00092:  MOVLW  30
+00094:  MOVWF  x22
+00096:  MOVLW  20
+00098:  MOVWF  x24
 0009A:  MOVLW  01
-0009C:  MOVLB  F
-0009E:  MOVWF  x30
-000A0:  MOVLW  A6
-000A2:  MOVWF  FAC
-000A4:  MOVLW  90
-000A6:  MOVWF  FAB
-000A8:  CLRF   05
-000AA:  CLRF   04
-000AC:  MOVLB  E
-000AE:  CLRF   xD9
-000B0:  CLRF   xDA
-000B2:  CLRF   xCE
-000B4:  CLRF   xCF
-000B6:  CLRF   xD0
-000B8:  CLRF   xD1
-000BA:  CLRF   xD2
-000BC:  CLRF   xD3
-000BE:  CLRF   xD4
-000C0:  CLRF   xD5
-000C2:  CLRF   x45
-000C4:  CLRF   x46
-000C6:  CLRF   x47
-000C8:  BCF    x8D.7
-000CA:  BCF    x8D.6
-000CC:  BCF    x8D.5
-000CE:  MOVLB  F
-000D0:  CLRF   x53
-000D2:  CLRF   x38
-000D4:  CLRF   x37
+0009C:  MOVWF  x25
+0009E:  MOVLW  55
+000A0:  MOVWF  F7E
+000A2:  MOVLW  AA
+000A4:  MOVWF  F7E
+000A6:  BSF    F66.6
+000A8:  CLRF   F9B
+000AA:  CLRF   F64
+000AC:  CLRF   F65
+000AE:  CLRF   F66
+000B0:  MOVLW  02
+000B2:  MOVWF  FD3
+000B4:  BSF    F67.3
+000B6:  MOVLW  A0
+000B8:  MOVWF  FAF
+000BA:  MOVLW  01
+000BC:  MOVLB  F
+000BE:  MOVWF  x30
+000C0:  MOVLW  A6
+000C2:  MOVWF  FAC
+000C4:  MOVLW  90
+000C6:  MOVWF  FAB
+000C8:  BSF    x31.3
+000CA:  MOVLW  A0
+000CC:  MOVWF  x1F
+000CE:  MOVLW  01
+000D0:  MOVWF  x20
+000D2:  MOVLW  A6
+000D4:  MOVWF  x32
+000D6:  MOVLW  90
+000D8:  MOVWF  x33
+000DA:  BSF    x2D.3
+000DC:  MOVLW  A0
+000DE:  MOVWF  x2B
+000E0:  MOVLW  01
+000E2:  MOVWF  x2C
+000E4:  MOVLW  A6
+000E6:  MOVWF  x2E
+000E8:  MOVLW  90
+000EA:  MOVWF  x2F
+000EC:  MOVLB  E
+000EE:  BSF    xFD.3
+000F0:  MOVLW  A0
+000F2:  MOVWF  xFB
+000F4:  MOVLW  01
+000F6:  MOVWF  xFC
+000F8:  MOVLW  A6
+000FA:  MOVWF  xFE
+000FC:  MOVLW  90
+000FE:  MOVWF  xFF
+00100:  BSF    F92.0
+00102:  BCF    F92.1
+00104:  BCF    F92.3
+00106:  BCF    F89.3
+00108:  BSF    F93.5
+0010A:  BCF    F93.4
+0010C:  BCF    F93.2
+0010E:  BCF    F8A.2
+00110:  BSF    F96.0
+00112:  BCF    F96.6
+00114:  BCF    F96.1
+00116:  BCF    F8D.1
+00118:  CLRF   05
+0011A:  CLRF   04
+0011C:  CLRF   xD9
+0011E:  CLRF   xDA
+00120:  CLRF   xCE
+00122:  CLRF   xCF
+00124:  CLRF   xD0
+00126:  CLRF   xD1
+00128:  CLRF   xD2
+0012A:  CLRF   xD3
+0012C:  CLRF   xD4
+0012E:  CLRF   xD5
+00130:  CLRF   x45
+00132:  CLRF   x46
+00134:  CLRF   x47
+00136:  BCF    x8D.7
+00138:  BCF    x8D.6
+0013A:  BCF    x8D.5
+0013C:  MOVLB  F
+0013E:  CLRF   x53
+00140:  CLRF   x38
+00142:  CLRF   x37
 .................... {
-....................     // ピン出力設定
-....................     output_drive(DIO_3);
-000D6:  BCF    F98.0
-....................     output_drive(PIN_C6); // TXピン(C6)を出力に設定
-000D8:  BCF    F94.6
-.................... 
-....................     delay_ms(100);
-000DA:  MOVLW  64
-000DC:  MOVWF  07
-000DE:  MOVLB  0
-000E0:  RCALL  000E
-.................... 
-....................     // 開始メッセージ
-....................     fprintf(PORT1, "Start\r\n");
-000E2:  MOVLW  06
-000E4:  MOVWF  FF6
-000E6:  MOVLW  00
-000E8:  MOVWF  FF7
-000EA:  MOVLW  00
-000EC:  MOVWF  FF8
-000EE:  BRA    003A
-.................... 
-....................     while(true)
+....................     while (TRUE)
 ....................     {
-....................         // "U" (0x55) は 01010101... となるので波形確認に最適です
-....................         fprintf(PORT1, "U");
-000F0:  MOVLW  55
-000F2:  BTFSS  F9E.4
-000F4:  BRA    00F2
-000F6:  MOVWF  FAD
-.................... 
-....................         // Lチカ (8MHz設定でdelay_ms(500)なら0.5秒間隔になるはずです)
-....................         output_toggle(DIO_3);
-000F8:  BCF    F98.0
-000FA:  BTG    F8F.0
-.................... 
+....................         fprintf(PORT1, "LED1 on\r\n");
+00144:  MOVLW  06
+00146:  MOVWF  FF6
+00148:  MOVLW  00
+0014A:  MOVWF  FF7
+0014C:  MOVLW  00
+0014E:  MOVWF  FF8
+00150:  MOVLB  0
+00152:  RCALL  001C
+....................         output_high(DIO_3);
+00154:  BCF    F98.0
+00156:  BSF    F8F.0
 ....................         delay_ms(500);
-000FC:  MOVLW  02
-000FE:  MOVWF  06
-00100:  MOVLW  FA
-00102:  MOVWF  07
-00104:  RCALL  000E
-00106:  DECFSZ 06,F
-00108:  BRA    0100
-0010A:  BRA    00F0
+00158:  MOVLW  02
+0015A:  MOVWF  06
+0015C:  MOVLW  FA
+0015E:  MOVWF  07
+00160:  RCALL  0046
+00162:  DECFSZ 06,F
+00164:  BRA    015C
+....................         output_low(DIO_3);
+00166:  BCF    F98.0
+00168:  BCF    F8F.0
+....................         delay_ms(500);
+0016A:  MOVLW  02
+0016C:  MOVWF  06
+0016E:  MOVLW  FA
+00170:  MOVWF  07
+00172:  RCALL  0046
+00174:  DECFSZ 06,F
+00176:  BRA    016E
+....................         fprintf(PORT1, "LED1 off\r\n");
+00178:  MOVLW  10
+0017A:  MOVWF  FF6
+0017C:  MOVLW  00
+0017E:  MOVWF  FF7
+00180:  MOVLW  00
+00182:  MOVWF  FF8
+00184:  RCALL  001C
+00186:  MOVLB  F
+00188:  BRA    0144
 ....................     }
+.................... 
+.................... 
 .................... }
-0010C:  SLEEP 
+0018A:  SLEEP 
 
 Configuration Fuses:
    Word  1: F7A0   STVREN NOXINST NODEBUG BROWNOUT_SW BORV18 NOPROTECT

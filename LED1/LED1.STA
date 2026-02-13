@@ -1,48 +1,49 @@
 
-ROM used:   270/131056 (0%)
-            270/131056 (0%) including unused fragments
+ROM used:   396/131056 (0%)
+            396/131056 (0%) including unused fragments
 
-            0.2 Average locations per line
-            30.0 Average locations per statement
+            0.3 Average locations per line
+            49.5 Average locations per statement
 
 RAM used:   7/3578 (0%) at main() level
-            9/3578 (0%) worst case
+            11/3578 (0%) worst case
 
 Stack used: 0 worst case (0 in main + 0 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   38     9 100  LED1.c
-    5     0   0  LED1.h
+   73     8 100  LED1.c
+    7     0   0  LED1.h
  1487     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
 ----- -----
- 1530     9 Total
+ 1567     8 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0     44   8    1             @delay_ms1
-0    168  31    1    176  2.1  main
-0      8   1    0             @const954
-0     44   8    3             @PSTRINGC_9600_31766_31767
+0     40   5    1             @delay_ms1
+0    286  36    1    154  2.1  main
+0     10   1    0             @const975
+0     42   5    3    132  1.6  @PSTRINGC_9600_31791_31789
+0     12   2    0    132  1.6  @const980
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               1
-    Statements              9
-    Comments                283
-    Volume (V)              185
-    Difficulty (D)          1.8
-    Effort to implement (E) 327
-    Time to implement (T)   0 minutes
+    Functions               3
+    Statements              8
+    Comments                277
+    Volume (V)              572
+    Difficulty (D)          5.1
+    Effort to implement (E) 2908
+    Time to implement (T)   3 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    148
+    Maintainability (MI)    164
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00004     6  0  
-00006-0FFFE   264  65266  
+00006-0FFFE   390  65140  
 10000-1FFEE     0  65520  
 
 
