@@ -1,0 +1,21 @@
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=13-02-2026
+D1_L=9
+D1_L1=[56056]Project Opened.
+D1_L2=[56173]Project Closed.
+D1_L3=[56196]Project Opened.
+D1_L4=[56207]Project Closed.
+D1_L5=[56207]Project Opened.
+D1_L6=[56221]Project Closed.
+D1_L7=[56409]Project Opened.
+D1_L8=[56461]Project Closed.
+D1_L9=[57296]Project Opened.
+
+[Opened Files]
+1=LED1.c
+t1=1
+Count=1

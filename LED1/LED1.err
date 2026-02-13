@@ -1,0 +1,39 @@
+Compiling C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1 on 13-2-26 at 15:55
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 6(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 6(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 6(1,2): Illegal C character in input file  0x60
+*** Error 48 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 6(5,6): Expecting a (
+*** Error 48 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 6(7,18): Expecting a (
+*** Error 100 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 9(5,70): USE parameter value is out of range   Not a number: U1TX
+*** Error 100 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 13(5,70): USE parameter value is out of range   Not a number: U2RX
+*** Error 100 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 17(5,70): USE parameter value is out of range   Not a number: U3TX
+*** Error 100 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 21(5,70): USE parameter value is out of range   Not a number: U4TX
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 22(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 22(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 22(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 24(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 24(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 24(1,2): Illegal C character in input file  0x60
+*** Error 48 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 21(5,8): Expecting a (
+*** Error 43 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 24(6,7): Expecting a declaration
+*** Error 48 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 24(7,17): Expecting a (
+--- Info 300 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 26(5,8): More info:   First Declaration of SPI1
+*** Error 31 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 29(5,100): Identifier is already used in this scope
+--- Info 300 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 26(5,8): More info:   First Declaration of SPI1
+*** Error 31 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 32(5,100): Identifier is already used in this scope
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 33(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 33(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 33(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 35(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 35(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 35(1,2): Illegal C character in input file  0x60
+*** Error 48 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 32(5,8): Expecting a (
+*** Error 43 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 35(6,7): Expecting a declaration
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 61(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 61(1,2): Illegal C character in input file  0x60
+*** Error 1 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 61(1,2): Illegal C character in input file  0x60
+*** Error 48 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 60(9,15): Expecting a (
+*** Error 132 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 66(33,34): STDOUT not defined (may be missing #USE RS232)  ::
+*** Error 132 "C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.c" Line 71(31,32): STDOUT not defined (may be missing #USE RS232)  ::
+      34 Errors,  0 Warnings.
+Build Failed.

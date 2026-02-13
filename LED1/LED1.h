@@ -1,0 +1,4 @@
+#include <18F67J94.h>
+#FUSES NOWDT                    //No Watch Dog Timer
+#use delay(crystal=16000000)
+
