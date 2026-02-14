@@ -81,10 +81,10 @@ void main()
                 for (i = 0; i < 5; i++)
                 {
                     output_high(DIO_3);
-                    fprintf(PORT1, "LED ON\r\n");
+                    fprintf(PORT1, "LED ON (%d/5)\r\n", i + 1);
                     delay_ms(500);
                     output_low(DIO_3);
-                    fprintf(PORT1, "LED OFF\r\n");
+                    fprintf(PORT1, "LED OFF (%d/5)\r\n", i + 1);
                     delay_ms(500);
                 }
                 fprintf(PORT1, "Finished Blinking LED\r\n");
