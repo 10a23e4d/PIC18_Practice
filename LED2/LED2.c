@@ -62,6 +62,8 @@ void main()
 
     int1 current_state = 1;
     int1 last_state = 1;
+    int8 i;
+
 
     fprintf(PORT1, "Starting LED2 Program\r\n");
 
@@ -88,7 +90,8 @@ void main()
                 fprintf(PORT1, "Finished Blinking LED\r\n");
             }
         }
-    }
         last_state = current_state;
+        delay_ms(10);
+    }
 }
 
