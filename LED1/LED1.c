@@ -63,9 +63,9 @@ void main()
         fprintf(PORT1, "LED1 on\r\n");
         output_high(DIO_3);
         delay_ms(500);
+        fprintf(PORT1, "LED1 off\r\n");
         output_low(DIO_3);
         delay_ms(500);
-        fprintf(PORT1, "LED1 off\r\n");
     }
 
 

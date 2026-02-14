@@ -58,15 +58,34 @@
 
 void main()
 {
+    port_b_pullups(TRUE);
+
+    int1 current_state = 1;
+    int1 last_state = 1;
+
     while (TRUE)
     {
-        fprintf(PORT1, "LED1 on\r\n");
-        output_high(DIO_3);
+        current_state = input(DIO_47);
+        fprintf(PORT1, "Current State: %d\r\n", current_state);
+        fprintf(PORT1, "Last State: %d\r\n", last_state);
         delay_ms(500);
-        output_low(DIO_3);
-        delay_ms(500);
-        fprintf(PORT1, "LED1 off\r\n");
-    }
 
+        if (current_state == 0 && last_state == 1)
+        {
+            delay_ms(20);
 
+            if(input(DIO_47) == 0)
+            {
+                fprintf(PORT1, "Button Pressed\r\n");
+                while(TRUE)
+                {
+                    fprintf(PORT1, "LED2 on\r\n");
+                    output_high(DIO_3);
+                    delay_ms(500);
+                    fprintf(PORT1, "LED2 off\r\n");
+                    output_low(DIO_3);
+                    delay_ms(500);
+                }
+            }
+        }
 }
