@@ -63,29 +63,32 @@ void main()
     int1 current_state = 1;
     int1 last_state = 1;
 
+    fprintf(PORT1, "Starting LED2 Program\r\n");
+
     while (TRUE)
     {
         current_state = input(DIO_47);
-        fprintf(PORT1, "Current State: %d\r\n", current_state);
-        fprintf(PORT1, "Last State: %d\r\n", last_state);
-        delay_ms(500);
 
         if (current_state == 0 && last_state == 1)
         {
             delay_ms(20);
-
             if(input(DIO_47) == 0)
             {
                 fprintf(PORT1, "Button Pressed\r\n");
-                while(TRUE)
+                fprintf(PORT1, "Starting Blinking LED\r\n");
+                for (i = 0; i < 5; i++)
                 {
-                    fprintf(PORT1, "LED2 on\r\n");
                     output_high(DIO_3);
+                    fprintf(PORT1, "LED ON\r\n");
                     delay_ms(500);
-                    fprintf(PORT1, "LED2 off\r\n");
                     output_low(DIO_3);
+                    fprintf(PORT1, "LED OFF\r\n");
                     delay_ms(500);
                 }
+                fprintf(PORT1, "Finished Blinking LED\r\n");
             }
         }
+    }
+        last_state = current_state;
 }
+
