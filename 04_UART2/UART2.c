@@ -58,41 +58,74 @@
 
 void main()
 {
-    int1 led_on = 0;
-    int16 led_timer = 0;
     char command;
+    int1 is_blinking = 0;
+    int16 blink_interval = 0;
+    int16 time_counter = 0;
+    int1 led_current_state = 0;
+
+    fprintf(PORT1, "\r\nUART2 Test Program\r\n");
+    fprintf(PORT1, "Hello World\r\n");
 
     while (TRUE)
     {
         if (kbhit(PORT1))
         {
             command = getc(PORT1);
-            fprintf(PORT1, "\r\nYou entered: %c\r\n", command);
+            fprintf(PORT1, "\r\nCommand: %c -> ", command);
+
             if (command == 'a')
             {
-                led_on = 1;
-                led_timer = 500;
+                is_blinking = 1;
+                blink_interval = 500;
+                time_counter = 0;
+                led_current_state = 1;
+                output_high(DIO_3);
+                fprintf(PORT1, "Mode A (500ms Blink)\r\n");
             }
             else if (command == 'b')
             {
-                led_on = 1;
-                led_timer = 250;
+                is_blinking = 1;
+                blink_interval = 250;
+                time_counter = 0;
+                led_current_state = 1;
+                output_high(DIO_3);
+                fprintf(PORT1, "Mode B (250ms Blink)\r\n");
             }
             else if (command == 'c')
             {
-                led_on = 0;
-                led_timer = 10;
+                is_blinking = 0;
+                output_low(DIO_3);
+                led_current_state = 0;
+                fprintf(PORT1, "Mode C (OFF)\r\n");
             }
         }
-        if (led_on == 1)
+
+        if (is_blinking == 1)
         {
-            fprintf(PORT1, "LED is ON\r\n");
-            delay_ms(led_timer);
-        }
-            else
+
+            if (time_counter >= blink_interval)
             {
-                fprintf(PORT1, "LED is OFF\r\n");
-                delay_ms(led_timer);
+                time_counter = 0;
+
+                if (led_current_state == 0)
+                {
+                    fprintf(PORT1, "LED ON\r\n");
+                    output_high(DIO_3);
+                    led_current_state = 1;
+                }
+                else
+                {
+                    fprintf(PORT1, "LED OFF\r\n");
+                    output_low(DIO_3);
+                    led_current_state = 0;
+                }
             }
+        }
+
+        delay_ms(1);
+        time_counter++;
+
+        if(time_counter > 32000) time_counter = blink_interval + 1;
     }
 }

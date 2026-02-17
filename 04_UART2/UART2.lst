@@ -1,17 +1,17 @@
-CCS PCH C Compiler, Version 5.104, 57077               17-2-26 12:38
+CCS PCH C Compiler, Version 5.104, 57077               17-2-26 13:54
 
                Filename:   C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\UART2.lst
 
-               ROM used:   596 bytes (0%)
+               ROM used:   790 bytes (1%)
                            Largest free fragment is 65520
-               RAM used:   11 (0%) at main() level
-                           14 (0%) worst case
-               Stack used: 0 locations
+               RAM used:   13 (0%) at main() level
+                           16 (0%) worst case
+               Stack used: 1 locations
                Stack size: 31
 
 *
 00000:  NOP   
-00002:  GOTO   00B0
+00002:  GOTO   010E
 .................... /////LED1/////
 .................... //#include <18F67J94.h>
 .................... #include "UART2.h"
@@ -28,83 +28,130 @@ CCS PCH C Compiler, Version 5.104, 57077               17-2-26 12:38
 .................... ///////////////////////////////////////////////////////////////////////////
 .................... #device PIC18F67J94
 00006:  DATA 0D,0A
-00008:  DATA 59,6F
-0000A:  DATA 75,20
-0000C:  DATA 65,6E
-0000E:  DATA 74,65
-00010:  DATA 72,65
-00012:  DATA 64,3A
-00014:  DATA 20,25
-00016:  DATA 63,0D
-00018:  DATA 0A,00
-0001A:  DATA 4C,45
-0001C:  DATA 44,20
-0001E:  DATA 69,73
-00020:  DATA 20,4F
-00022:  DATA 4E,0D
-00024:  DATA 0A,00
-00026:  DATA 4C,45
-00028:  DATA 44,20
-0002A:  DATA 69,73
-0002C:  DATA 20,4F
-0002E:  DATA 46,46
-00030:  DATA 0D,0A
-00032:  DATA 00,00
-00034:  TBLRD*+
-00036:  MOVFF  FF6,0B
-0003A:  MOVFF  FF7,0C
-0003E:  MOVFF  FF8,0D
-00042:  MOVF   FF5,W
-00044:  BTFSS  F9E.4
-00046:  BRA    0044
-00048:  MOVWF  FAD
-0004A:  MOVFF  0B,FF6
-0004E:  MOVFF  0C,FF7
-00052:  MOVFF  0D,FF8
-00056:  DECFSZ 0A,F
-00058:  BRA    0034
-0005A:  GOTO   01AC (RETURN)
-0005E:  TBLRD*+
-00060:  MOVF   FF5,F
-00062:  BZ    0086
-00064:  MOVFF  FF6,0A
-00068:  MOVFF  FF7,0B
-0006C:  MOVFF  FF8,0C
-00070:  MOVF   FF5,W
-00072:  BTFSS  F9E.4
-00074:  BRA    0072
-00076:  MOVWF  FAD
-00078:  MOVFF  0A,FF6
-0007C:  MOVFF  0B,FF7
-00080:  MOVFF  0C,FF8
-00084:  BRA    005E
-00086:  RETURN 0
+00008:  DATA 55,41
+0000A:  DATA 52,54
+0000C:  DATA 32,20
+0000E:  DATA 54,65
+00010:  DATA 73,74
+00012:  DATA 20,50
+00014:  DATA 72,6F
+00016:  DATA 67,72
+00018:  DATA 61,6D
+0001A:  DATA 20,28
+0001C:  DATA 4E,6F
+0001E:  DATA 6E,2D
+00020:  DATA 62,6C
+00022:  DATA 6F,63
+00024:  DATA 6B,69
+00026:  DATA 6E,67
+00028:  DATA 29,0D
+0002A:  DATA 0A,00
+0002C:  DATA 0D,0A
+0002E:  DATA 43,6F
+00030:  DATA 6D,6D
+00032:  DATA 61,6E
+00034:  DATA 64,3A
+00036:  DATA 20,25
+00038:  DATA 63,20
+0003A:  DATA 2D,3E
+0003C:  DATA 20,00
+0003E:  DATA 4D,6F
+00040:  DATA 64,65
+00042:  DATA 20,41
+00044:  DATA 20,28
+00046:  DATA 35,30
+00048:  DATA 30,6D
+0004A:  DATA 73,20
+0004C:  DATA 42,6C
+0004E:  DATA 69,6E
+00050:  DATA 6B,29
+00052:  DATA 0D,0A
+00054:  DATA 00,00
+00056:  DATA 4D,6F
+00058:  DATA 64,65
+0005A:  DATA 20,42
+0005C:  DATA 20,28
+0005E:  DATA 32,35
+00060:  DATA 30,6D
+00062:  DATA 73,20
+00064:  DATA 42,6C
+00066:  DATA 69,6E
+00068:  DATA 6B,29
+0006A:  DATA 0D,0A
+0006C:  DATA 00,00
+0006E:  DATA 4D,6F
+00070:  DATA 64,65
+00072:  DATA 20,43
+00074:  DATA 20,28
+00076:  DATA 4F,46
+00078:  DATA 46,29
+0007A:  DATA 0D,0A
+0007C:  DATA 00,00
+0007E:  DATA 4C,45
+00080:  DATA 44,20
+00082:  DATA 4F,4E
+00084:  DATA 0D,0A
+00086:  DATA 00,00
+00088:  DATA 4C,45
+0008A:  DATA 44,20
+0008C:  DATA 4F,46
+0008E:  DATA 46,0D
+00090:  DATA 0A,00
+00092:  TBLRD*+
+00094:  MOVF   FF5,F
+00096:  BZ    00BA
+00098:  MOVFF  FF6,0C
+0009C:  MOVFF  FF7,0D
+000A0:  MOVFF  FF8,0E
+000A4:  MOVF   FF5,W
+000A6:  BTFSS  F9E.4
+000A8:  BRA    00A6
+000AA:  MOVWF  FAD
+000AC:  MOVFF  0C,FF6
+000B0:  MOVFF  0D,FF7
+000B4:  MOVFF  0E,FF8
+000B8:  BRA    0092
+000BA:  RETURN 0
+000BC:  TBLRD*+
+000BE:  MOVFF  FF6,0D
+000C2:  MOVFF  FF7,0E
+000C6:  MOVFF  FF8,0F
+000CA:  MOVF   FF5,W
+000CC:  BTFSS  F9E.4
+000CE:  BRA    00CC
+000D0:  MOVWF  FAD
+000D2:  MOVFF  0D,FF6
+000D6:  MOVFF  0E,FF7
+000DA:  MOVFF  0F,FF8
+000DE:  DECFSZ 0C,F
+000E0:  BRA    00BC
+000E2:  RETURN 0
 .................... 
 .................... #list
 .................... 
 .................... #FUSES NOWDT                    //No Watch Dog Timer
 .................... #device ADC = 12
 .................... #use delay(crystal=16000000)
-00088:  CLRF   FEA
-0008A:  MOVLW  0B
-0008C:  MOVWF  FE9
-0008E:  MOVF   FEF,W
-00090:  BZ    00AE
-00092:  MOVLW  05
-00094:  MOVWF  01
-00096:  CLRF   00
-00098:  DECFSZ 00,F
-0009A:  BRA    0098
-0009C:  DECFSZ 01,F
-0009E:  BRA    0096
-000A0:  MOVLW  2E
-000A2:  MOVWF  00
-000A4:  DECFSZ 00,F
-000A6:  BRA    00A4
-000A8:  BRA    00AA
-000AA:  DECFSZ FEF,F
-000AC:  BRA    0092
-000AE:  RETURN 0
+000E4:  CLRF   FEA
+000E6:  MOVLW  0C
+000E8:  MOVWF  FE9
+000EA:  MOVF   FEF,W
+000EC:  BZ    010A
+000EE:  MOVLW  05
+000F0:  MOVWF  01
+000F2:  CLRF   00
+000F4:  DECFSZ 00,F
+000F6:  BRA    00F4
+000F8:  DECFSZ 01,F
+000FA:  BRA    00F2
+000FC:  MOVLW  2E
+000FE:  MOVWF  00
+00100:  DECFSZ 00,F
+00102:  BRA    0100
+00104:  BRA    0106
+00106:  DECFSZ FEF,F
+00108:  BRA    00EE
+0010A:  GOTO   02F0 (RETURN)
 .................... 
 .................... 
 .................... 
@@ -164,250 +211,336 @@ CCS PCH C Compiler, Version 5.104, 57077               17-2-26 12:38
 .................... 
 .................... 
 .................... void main()
-000B0:  CLRF   FF8
-000B2:  BCF    FD0.7
-000B4:  MOVLB  E
-000B6:  MOVLW  55
-000B8:  MOVWF  F7E
-000BA:  MOVLW  AA
-000BC:  MOVWF  F7E
-000BE:  BCF    F66.6
-000C0:  MOVLW  F8
-000C2:  MOVWF  x2A
-000C4:  MOVLW  F5
-000C6:  MOVWF  x2B
-000C8:  MOVLW  F8
-000CA:  MOVWF  x2C
-000CC:  MOVLW  F9
-000CE:  MOVWF  x2D
-000D0:  MOVLW  20
-000D2:  MOVWF  x1D
-000D4:  MOVLW  30
-000D6:  MOVWF  x22
-000D8:  MOVLW  20
-000DA:  MOVWF  x24
-000DC:  MOVLW  01
-000DE:  MOVWF  x25
-000E0:  MOVLW  55
-000E2:  MOVWF  F7E
-000E4:  MOVLW  AA
-000E6:  MOVWF  F7E
-000E8:  BSF    F66.6
-000EA:  CLRF   F9B
-000EC:  CLRF   F64
-000EE:  CLRF   F65
-000F0:  CLRF   F66
-000F2:  MOVLW  02
-000F4:  MOVWF  FD3
-000F6:  BSF    F67.3
-000F8:  MOVLW  A0
-000FA:  MOVWF  FAF
-000FC:  MOVLW  01
-000FE:  MOVLB  F
-00100:  MOVWF  x30
-00102:  MOVLW  A6
-00104:  MOVWF  FAC
-00106:  MOVLW  90
-00108:  MOVWF  FAB
-0010A:  BSF    x31.3
-0010C:  MOVLW  A0
-0010E:  MOVWF  x1F
-00110:  MOVLW  01
-00112:  MOVWF  x20
-00114:  MOVLW  A6
-00116:  MOVWF  x32
-00118:  MOVLW  90
-0011A:  MOVWF  x33
-0011C:  BSF    x2D.3
-0011E:  MOVLW  A0
-00120:  MOVWF  x2B
-00122:  MOVLW  01
-00124:  MOVWF  x2C
-00126:  MOVLW  A6
-00128:  MOVWF  x2E
-0012A:  MOVLW  90
-0012C:  MOVWF  x2F
-0012E:  MOVLB  E
-00130:  BSF    xFD.3
-00132:  MOVLW  A0
-00134:  MOVWF  xFB
-00136:  MOVLW  01
-00138:  MOVWF  xFC
-0013A:  MOVLW  A6
-0013C:  MOVWF  xFE
-0013E:  MOVLW  90
-00140:  MOVWF  xFF
-00142:  BSF    F92.0
-00144:  BCF    F92.1
-00146:  BCF    F92.3
-00148:  BCF    F89.3
-0014A:  BSF    F93.5
-0014C:  BCF    F93.4
-0014E:  BCF    F93.2
-00150:  BCF    F8A.2
-00152:  BSF    F96.0
-00154:  BCF    F96.6
-00156:  BCF    F96.1
-00158:  BCF    F8D.1
-0015A:  CLRF   05
-0015C:  CLRF   04
-0015E:  CLRF   xD9
-00160:  CLRF   xDA
-00162:  CLRF   xCE
-00164:  CLRF   xCF
-00166:  CLRF   xD0
-00168:  CLRF   xD1
-0016A:  CLRF   xD2
-0016C:  CLRF   xD3
-0016E:  CLRF   xD4
-00170:  CLRF   xD5
-00172:  CLRF   x45
-00174:  CLRF   x46
-00176:  CLRF   x47
-00178:  BCF    x8D.7
-0017A:  BCF    x8D.6
-0017C:  BCF    x8D.5
-0017E:  MOVLB  F
-00180:  CLRF   x53
-00182:  CLRF   x38
-00184:  CLRF   x37
-00186:  BCF    06.0
-00188:  CLRF   08
-0018A:  CLRF   07
+0010E:  CLRF   FF8
+00110:  BCF    FD0.7
+00112:  MOVLB  E
+00114:  MOVLW  55
+00116:  MOVWF  F7E
+00118:  MOVLW  AA
+0011A:  MOVWF  F7E
+0011C:  BCF    F66.6
+0011E:  MOVLW  F8
+00120:  MOVWF  x2A
+00122:  MOVLW  F5
+00124:  MOVWF  x2B
+00126:  MOVLW  F8
+00128:  MOVWF  x2C
+0012A:  MOVLW  F9
+0012C:  MOVWF  x2D
+0012E:  MOVLW  20
+00130:  MOVWF  x1D
+00132:  MOVLW  30
+00134:  MOVWF  x22
+00136:  MOVLW  20
+00138:  MOVWF  x24
+0013A:  MOVLW  01
+0013C:  MOVWF  x25
+0013E:  MOVLW  55
+00140:  MOVWF  F7E
+00142:  MOVLW  AA
+00144:  MOVWF  F7E
+00146:  BSF    F66.6
+00148:  CLRF   F9B
+0014A:  CLRF   F64
+0014C:  CLRF   F65
+0014E:  CLRF   F66
+00150:  MOVLW  02
+00152:  MOVWF  FD3
+00154:  BSF    F67.3
+00156:  MOVLW  A0
+00158:  MOVWF  FAF
+0015A:  MOVLW  01
+0015C:  MOVLB  F
+0015E:  MOVWF  x30
+00160:  MOVLW  A6
+00162:  MOVWF  FAC
+00164:  MOVLW  90
+00166:  MOVWF  FAB
+00168:  BSF    x31.3
+0016A:  MOVLW  A0
+0016C:  MOVWF  x1F
+0016E:  MOVLW  01
+00170:  MOVWF  x20
+00172:  MOVLW  A6
+00174:  MOVWF  x32
+00176:  MOVLW  90
+00178:  MOVWF  x33
+0017A:  BSF    x2D.3
+0017C:  MOVLW  A0
+0017E:  MOVWF  x2B
+00180:  MOVLW  01
+00182:  MOVWF  x2C
+00184:  MOVLW  A6
+00186:  MOVWF  x2E
+00188:  MOVLW  90
+0018A:  MOVWF  x2F
+0018C:  MOVLB  E
+0018E:  BSF    xFD.3
+00190:  MOVLW  A0
+00192:  MOVWF  xFB
+00194:  MOVLW  01
+00196:  MOVWF  xFC
+00198:  MOVLW  A6
+0019A:  MOVWF  xFE
+0019C:  MOVLW  90
+0019E:  MOVWF  xFF
+001A0:  BSF    F92.0
+001A2:  BCF    F92.1
+001A4:  BCF    F92.3
+001A6:  BCF    F89.3
+001A8:  BSF    F93.5
+001AA:  BCF    F93.4
+001AC:  BCF    F93.2
+001AE:  BCF    F8A.2
+001B0:  BSF    F96.0
+001B2:  BCF    F96.6
+001B4:  BCF    F96.1
+001B6:  BCF    F8D.1
+001B8:  CLRF   05
+001BA:  CLRF   04
+001BC:  CLRF   xD9
+001BE:  CLRF   xDA
+001C0:  CLRF   xCE
+001C2:  CLRF   xCF
+001C4:  CLRF   xD0
+001C6:  CLRF   xD1
+001C8:  CLRF   xD2
+001CA:  CLRF   xD3
+001CC:  CLRF   xD4
+001CE:  CLRF   xD5
+001D0:  CLRF   x45
+001D2:  CLRF   x46
+001D4:  CLRF   x47
+001D6:  BCF    x8D.7
+001D8:  BCF    x8D.6
+001DA:  BCF    x8D.5
+001DC:  MOVLB  F
+001DE:  CLRF   x53
+001E0:  CLRF   x38
+001E2:  CLRF   x37
+001E4:  BCF    07.0
+001E6:  CLRF   09
+001E8:  CLRF   08
+001EA:  CLRF   0B
+001EC:  CLRF   0A
+001EE:  BCF    07.1
 .................... {
-....................     int1 led_on = 0;
-....................     int16 led_timer = 0;
 ....................     char command;
+....................     int1 is_blinking = 0;
+....................     int16 blink_interval = 0;
+....................     int16 time_counter = 0;
+....................     int1 led_current_state = 0;
+.................... 
+....................     fprintf(PORT1, "\r\nUART2 Test Program (Non-blocking)\r\n");
+001F0:  MOVLW  06
+001F2:  MOVWF  FF6
+001F4:  MOVLW  00
+001F6:  MOVWF  FF7
+001F8:  MOVLW  00
+001FA:  MOVWF  FF8
+001FC:  MOVLB  0
+001FE:  RCALL  0092
 .................... 
 ....................     while (TRUE)
 ....................     {
 ....................         if (kbhit(PORT1))
-0018C:  BTFSS  F9E.5
-0018E:  BRA    01F6
+00200:  BTFSS  F9E.5
+00202:  BRA    02A6
 ....................         {
 ....................             command = getc(PORT1);
-00190:  BTFSS  F9E.5
-00192:  BRA    0190
-00194:  MOVFF  FAE,09
-....................             fprintf(PORT1, "\r\nYou entered: %c\r\n", command);
-00198:  MOVLW  06
-0019A:  MOVWF  FF6
-0019C:  MOVLW  00
-0019E:  MOVWF  FF7
-001A0:  MOVLW  00
-001A2:  MOVWF  FF8
-001A4:  MOVLW  0F
-001A6:  MOVWF  0A
-001A8:  MOVLB  0
-001AA:  BRA    0034
-001AC:  MOVF   09,W
-001AE:  BTFSS  F9E.4
-001B0:  BRA    01AE
-001B2:  MOVWF  FAD
-001B4:  MOVLW  0D
-001B6:  BTFSS  F9E.4
-001B8:  BRA    01B6
-001BA:  MOVWF  FAD
-001BC:  MOVLW  0A
-001BE:  BTFSS  F9E.4
-001C0:  BRA    01BE
-001C2:  MOVWF  FAD
-....................             if (command == 'a')
-001C4:  MOVF   09,W
-001C6:  SUBLW  61
-001C8:  BNZ   01D6
-....................             {
-....................                 led_on = 1;
-001CA:  BSF    06.0
-....................                 led_timer = 500;
-001CC:  MOVLW  01
-001CE:  MOVWF  08
-001D0:  MOVLW  F4
-001D2:  MOVWF  07
-....................             }
-001D4:  BRA    01F4
-....................             else if (command == 'b')
-001D6:  MOVF   09,W
-001D8:  SUBLW  62
-001DA:  BNZ   01E6
-....................             {
-....................                 led_on = 1;
-001DC:  BSF    06.0
-....................                 led_timer = 250;
-001DE:  CLRF   08
-001E0:  MOVLW  FA
-001E2:  MOVWF  07
-....................             }
-001E4:  BRA    01F4
-....................             else if (command == 'c')
-001E6:  MOVF   09,W
-001E8:  SUBLW  63
-001EA:  BNZ   01F4
-....................             {
-....................                 led_on = 0;
-001EC:  BCF    06.0
-....................                 led_timer = 10;
-001EE:  CLRF   08
-001F0:  MOVLW  0A
-001F2:  MOVWF  07
-001F4:  MOVLB  F
-....................             }
-....................         }
-....................         if (led_on == 1)
-001F6:  BTFSS  06.0
-001F8:  BRA    0226
-....................         {
-....................             fprintf(PORT1, "LED is ON\r\n");
-001FA:  MOVLW  1A
-001FC:  MOVWF  FF6
-001FE:  MOVLW  00
-00200:  MOVWF  FF7
-00202:  MOVLW  00
-00204:  MOVWF  FF8
-00206:  MOVLB  0
-00208:  RCALL  005E
-....................             delay_ms(led_timer);
-0020A:  MOVFF  08,0A
-0020E:  INCF   0A,F
-00210:  DECF   0A,F
-00212:  BTFSC  FD8.2
-00214:  BRA    021C
-00216:  SETF   0B
-00218:  RCALL  0088
-0021A:  BRA    0210
-0021C:  MOVFF  07,0B
-00220:  RCALL  0088
-....................         }
-00222:  BRA    024E
-00224:  MOVLB  F
-....................             else
-....................             {
-....................                 fprintf(PORT1, "LED is OFF\r\n");
-00226:  MOVLW  26
+00204:  BTFSS  F9E.5
+00206:  BRA    0204
+00208:  MOVFF  FAE,06
+....................             fprintf(PORT1, "\r\nCommand: %c -> ", command);
+0020C:  MOVLW  2C
+0020E:  MOVWF  FF6
+00210:  MOVLW  00
+00212:  MOVWF  FF7
+00214:  MOVLW  00
+00216:  MOVWF  FF8
+00218:  MOVLW  0B
+0021A:  MOVWF  0C
+0021C:  RCALL  00BC
+0021E:  MOVF   06,W
+00220:  BTFSS  F9E.4
+00222:  BRA    0220
+00224:  MOVWF  FAD
+00226:  MOVLW  39
 00228:  MOVWF  FF6
 0022A:  MOVLW  00
 0022C:  MOVWF  FF7
 0022E:  MOVLW  00
 00230:  MOVWF  FF8
-00232:  MOVLB  0
-00234:  RCALL  005E
-....................                 delay_ms(led_timer);
-00236:  MOVFF  08,0A
-0023A:  INCF   0A,F
-0023C:  DECF   0A,F
-0023E:  BTFSC  FD8.2
-00240:  BRA    0248
-00242:  SETF   0B
-00244:  RCALL  0088
-00246:  BRA    023C
-00248:  MOVFF  07,0B
-0024C:  RCALL  0088
+00232:  MOVLW  04
+00234:  MOVWF  0C
+00236:  RCALL  00BC
+.................... 
+....................             if (command == 'a')
+00238:  MOVF   06,W
+0023A:  SUBLW  61
+0023C:  BNZ   0262
+....................             {
+....................                 is_blinking = 1;
+0023E:  BSF    07.0
+....................                 blink_interval = 500;
+00240:  MOVLW  01
+00242:  MOVWF  09
+00244:  MOVLW  F4
+00246:  MOVWF  08
+....................                 time_counter = 0;
+00248:  CLRF   0B
+0024A:  CLRF   0A
+....................                 led_current_state = 1;
+0024C:  BSF    07.1
+....................                 output_high(DIO_3);
+0024E:  BCF    F98.0
+00250:  BSF    F8F.0
+....................                 fprintf(PORT1, "Mode A (500ms Blink)\r\n");
+00252:  MOVLW  3E
+00254:  MOVWF  FF6
+00256:  MOVLW  00
+00258:  MOVWF  FF7
+0025A:  MOVLW  00
+0025C:  MOVWF  FF8
+0025E:  RCALL  0092
 ....................             }
-0024E:  MOVLB  F
-00250:  BRA    018C
+00260:  BRA    02A6
+....................             else if (command == 'b')
+00262:  MOVF   06,W
+00264:  SUBLW  62
+00266:  BNZ   028A
+....................             {
+....................                 is_blinking = 1;
+00268:  BSF    07.0
+....................                 blink_interval = 250;
+0026A:  CLRF   09
+0026C:  MOVLW  FA
+0026E:  MOVWF  08
+....................                 time_counter = 0;
+00270:  CLRF   0B
+00272:  CLRF   0A
+....................                 led_current_state = 1;
+00274:  BSF    07.1
+....................                 output_high(DIO_3);
+00276:  BCF    F98.0
+00278:  BSF    F8F.0
+....................                 fprintf(PORT1, "Mode B (250ms Blink)\r\n");
+0027A:  MOVLW  56
+0027C:  MOVWF  FF6
+0027E:  MOVLW  00
+00280:  MOVWF  FF7
+00282:  MOVLW  00
+00284:  MOVWF  FF8
+00286:  RCALL  0092
+....................             }
+00288:  BRA    02A6
+....................             else if (command == 'c')
+0028A:  MOVF   06,W
+0028C:  SUBLW  63
+0028E:  BNZ   02A6
+....................             {
+....................                 is_blinking = 0;
+00290:  BCF    07.0
+....................                 output_low(DIO_3);
+00292:  BCF    F98.0
+00294:  BCF    F8F.0
+....................                 led_current_state = 0;
+00296:  BCF    07.1
+....................                 fprintf(PORT1, "Mode C (OFF)\r\n");
+00298:  MOVLW  6E
+0029A:  MOVWF  FF6
+0029C:  MOVLW  00
+0029E:  MOVWF  FF7
+002A0:  MOVLW  00
+002A2:  MOVWF  FF8
+002A4:  RCALL  0092
+....................             }
+....................         }
+.................... 
+....................         if (is_blinking == 1)
+002A6:  BTFSS  07.0
+002A8:  BRA    02EA
+....................         {
+.................... 
+....................             if (time_counter >= blink_interval)
+002AA:  MOVF   09,W
+002AC:  SUBWF  0B,W
+002AE:  BNC   02EA
+002B0:  BNZ   02B8
+002B2:  MOVF   08,W
+002B4:  SUBWF  0A,W
+002B6:  BNC   02EA
+....................             {
+....................                 time_counter = 0;
+002B8:  CLRF   0B
+002BA:  CLRF   0A
+.................... 
+....................                 if (led_current_state == 0)
+002BC:  BTFSC  07.1
+002BE:  BRA    02D6
+....................                 {
+....................                     fprintf(PORT1, "LED ON\r\n");
+002C0:  MOVLW  7E
+002C2:  MOVWF  FF6
+002C4:  MOVLW  00
+002C6:  MOVWF  FF7
+002C8:  MOVLW  00
+002CA:  MOVWF  FF8
+002CC:  RCALL  0092
+....................                     output_high(DIO_3);
+002CE:  BCF    F98.0
+002D0:  BSF    F8F.0
+....................                     led_current_state = 1;
+002D2:  BSF    07.1
+....................                 }
+002D4:  BRA    02EA
+....................                 else
+....................                 {
+....................                     fprintf(PORT1, "LED OFF\r\n");
+002D6:  MOVLW  88
+002D8:  MOVWF  FF6
+002DA:  MOVLW  00
+002DC:  MOVWF  FF7
+002DE:  MOVLW  00
+002E0:  MOVWF  FF8
+002E2:  RCALL  0092
+....................                     output_low(DIO_3);
+002E4:  BCF    F98.0
+002E6:  BCF    F8F.0
+....................                     led_current_state = 0;
+002E8:  BCF    07.1
+....................                 }
+....................             }
+....................         }
+.................... 
+....................         delay_ms(1);
+002EA:  MOVLW  01
+002EC:  MOVWF  0C
+002EE:  BRA    00E4
+....................         time_counter++;
+002F0:  INCF   0A,F
+002F2:  BTFSC  FD8.2
+002F4:  INCF   0B,F
+.................... 
+....................         if(time_counter > 32000) time_counter = blink_interval + 1;
+002F6:  MOVF   0B,W
+002F8:  SUBLW  7C
+002FA:  BC    0312
+002FC:  XORLW  FF
+002FE:  BNZ   0306
+00300:  MOVF   0A,W
+00302:  SUBLW  00
+00304:  BC    0312
+00306:  MOVLW  01
+00308:  ADDWF  08,W
+0030A:  MOVWF  0A
+0030C:  MOVLW  00
+0030E:  ADDWFC 09,W
+00310:  MOVWF  0B
+00312:  BRA    0200
 ....................     }
 .................... }
-00252:  SLEEP 
+00314:  SLEEP 
 
 Configuration Fuses:
    Word  1: F7A0   STVREN NOXINST NODEBUG BROWNOUT_SW BORV18 NOPROTECT

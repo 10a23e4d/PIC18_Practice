@@ -1,9 +1,9 @@
-D G "__PCH__" 0 100 ""5.104""
-D G "__DEVICE__" 0 100 "6794"
-D G "__DATE__" 0 100 ""17-Feb-26""
-D G "__TIME__" 0 100 ""12:38:14""
-D G "_UNICODE" 0 100 ""?""
-D G "__EVAL" 0 100 ""?"" "LED1/////"
+D G "__PCH__" 0 126 ""5.104""
+D G "__DEVICE__" 0 126 "6794"
+D G "__DATE__" 0 126 ""17-Feb-26""
+D G "__TIME__" 0 126 ""13:54:04""
+D G "_UNICODE" 0 126 ""?""
+D G "__EVAL" 0 126 ""?"" "LED1/////"
 c L "set_tris_a" 2 1 26 "FUNCTION"
 F N "set_tris_a" 2 77 ""
 V L "value" 2 77 "int8" `55 
@@ -1958,9 +1958,11 @@ D G "DIO_58" 0 55 "PIN_D0"
 D G "DIO_59" 0 56 "PIN_E7"
 F N "main" 0 59 ""
 F G "main" 0 60 "void()" `972 
-V L "led_on" 0 61 "int1" `973 
-V L "led_timer" 0 62 "int16" `974 
-V L "command" 0 63 "int8" `975 
+V L "command" 0 61 "int8" `973 
+V L "is_blinking" 0 62 "int1" `974 
+V L "blink_interval" 0 63 "int16" `975 
+V L "time_counter" 0 64 "int16" `976 
+V L "led_current_state" 0 65 "int1" `977 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
