@@ -1,0 +1,420 @@
+CCS PCH C Compiler, Version 5.104, 57077               17-2-26 12:38
+
+               Filename:   C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\UART2.lst
+
+               ROM used:   596 bytes (0%)
+                           Largest free fragment is 65520
+               RAM used:   11 (0%) at main() level
+                           14 (0%) worst case
+               Stack used: 0 locations
+               Stack size: 31
+
+*
+00000:  NOP   
+00002:  GOTO   00B0
+.................... /////LED1/////
+.................... //#include <18F67J94.h>
+.................... #include "UART2.h"
+.................... #include <18F67J94.h>
+.................... //////////// Standard Header file for the PIC18F67J94 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC18F67J94
+00006:  DATA 0D,0A
+00008:  DATA 59,6F
+0000A:  DATA 75,20
+0000C:  DATA 65,6E
+0000E:  DATA 74,65
+00010:  DATA 72,65
+00012:  DATA 64,3A
+00014:  DATA 20,25
+00016:  DATA 63,0D
+00018:  DATA 0A,00
+0001A:  DATA 4C,45
+0001C:  DATA 44,20
+0001E:  DATA 69,73
+00020:  DATA 20,4F
+00022:  DATA 4E,0D
+00024:  DATA 0A,00
+00026:  DATA 4C,45
+00028:  DATA 44,20
+0002A:  DATA 69,73
+0002C:  DATA 20,4F
+0002E:  DATA 46,46
+00030:  DATA 0D,0A
+00032:  DATA 00,00
+00034:  TBLRD*+
+00036:  MOVFF  FF6,0B
+0003A:  MOVFF  FF7,0C
+0003E:  MOVFF  FF8,0D
+00042:  MOVF   FF5,W
+00044:  BTFSS  F9E.4
+00046:  BRA    0044
+00048:  MOVWF  FAD
+0004A:  MOVFF  0B,FF6
+0004E:  MOVFF  0C,FF7
+00052:  MOVFF  0D,FF8
+00056:  DECFSZ 0A,F
+00058:  BRA    0034
+0005A:  GOTO   01AC (RETURN)
+0005E:  TBLRD*+
+00060:  MOVF   FF5,F
+00062:  BZ    0086
+00064:  MOVFF  FF6,0A
+00068:  MOVFF  FF7,0B
+0006C:  MOVFF  FF8,0C
+00070:  MOVF   FF5,W
+00072:  BTFSS  F9E.4
+00074:  BRA    0072
+00076:  MOVWF  FAD
+00078:  MOVFF  0A,FF6
+0007C:  MOVFF  0B,FF7
+00080:  MOVFF  0C,FF8
+00084:  BRA    005E
+00086:  RETURN 0
+.................... 
+.................... #list
+.................... 
+.................... #FUSES NOWDT                    //No Watch Dog Timer
+.................... #device ADC = 12
+.................... #use delay(crystal=16000000)
+00088:  CLRF   FEA
+0008A:  MOVLW  0B
+0008C:  MOVWF  FE9
+0008E:  MOVF   FEF,W
+00090:  BZ    00AE
+00092:  MOVLW  05
+00094:  MOVWF  01
+00096:  CLRF   00
+00098:  DECFSZ 00,F
+0009A:  BRA    0098
+0009C:  DECFSZ 01,F
+0009E:  BRA    0096
+000A0:  MOVLW  2E
+000A2:  MOVWF  00
+000A4:  DECFSZ 00,F
+000A6:  BRA    00A4
+000A8:  BRA    00AA
+000AA:  DECFSZ FEF,F
+000AC:  BRA    0092
+000AE:  RETURN 0
+.................... 
+.................... 
+.................... 
+.................... 
+.................... 
+.................... #pin_select U1TX = PIN_F7
+.................... #pin_select U1RX = PIN_F5
+.................... #use rs232(baud=9600, UART1, parity=N,bits=8,stream=PORT1)
+.................... 
+.................... #pin_select U2TX = PIN_D3
+.................... #pin_select U2RX =    PIN_D2
+.................... #use rs232(baud=9600, UART2, parity=N,bits=8,stream=PORT2)
+.................... 
+.................... #pin_select U3TX = PIN_E5
+.................... #pin_select U3RX = PIN_E4
+.................... #use rs232(baud=9600, UART3, parity=N,bits=8,stream=PORT3)
+.................... 
+.................... #pin_select U4TX = PIN_E3
+.................... #pin_select U4RX = PIN_F2
+.................... #use rs232(baud=9600, UART4, parity=N,bits=8,stream=PORT4)
+.................... 
+.................... #define SPI1_CS PIN_A2
+.................... #use spi (MASTER, CLK = PIN_A3, DI = PIN_A0, DO = PIN_A1,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
+.................... 
+.................... #define SPI2_CS PIN_B3
+.................... #use spi (MASTER, CLK = PIN_B2, DI = PIN_B5, DO = PIN_B4,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
+.................... 
+.................... #define SPI3_CS PIN_E2
+.................... #use spi (MASTER, CLK = PIN_E1, DI = PIN_E0, DO = PIN_E6,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
+.................... 
+.................... 
+.................... #define DIO_3 PIN_G0
+.................... #define DIO_4 PIN_G1
+.................... #define DIO_5 PIN_G2
+.................... #define DIO_6 PIN_G3
+.................... #define DIO_8 PIN_G4
+.................... #define DIO_12 PIN_F6
+.................... #define DIO_27 PIN_A5
+.................... #define DIO_28 PIN_A4
+.................... #define DIO_29 PIN_C1
+.................... #define DIO_30 PIN_C0
+.................... #define DIO_31 PIN_C6
+.................... #define DIO_32 PIN_C7
+.................... #define DIO_33 PIN_C2
+.................... #define DIO_34 PIN_C3
+.................... #define DIO_35 PIN_C4
+.................... #define DIO_36 PIN_C5
+.................... #define DIO_47 PIN_B1
+.................... #define DIO_48 PIN_B0
+.................... #define DIO_49 PIN_D7
+.................... #define DIO_50 PIN_D6
+.................... #define DIO_51 PIN_D5
+.................... #define DIO_52 PIN_D4
+.................... #define DIO_55 PIN_D1
+.................... #define DIO_58 PIN_D0
+.................... #define DIO_59 PIN_E7
+.................... 
+.................... 
+.................... void main()
+000B0:  CLRF   FF8
+000B2:  BCF    FD0.7
+000B4:  MOVLB  E
+000B6:  MOVLW  55
+000B8:  MOVWF  F7E
+000BA:  MOVLW  AA
+000BC:  MOVWF  F7E
+000BE:  BCF    F66.6
+000C0:  MOVLW  F8
+000C2:  MOVWF  x2A
+000C4:  MOVLW  F5
+000C6:  MOVWF  x2B
+000C8:  MOVLW  F8
+000CA:  MOVWF  x2C
+000CC:  MOVLW  F9
+000CE:  MOVWF  x2D
+000D0:  MOVLW  20
+000D2:  MOVWF  x1D
+000D4:  MOVLW  30
+000D6:  MOVWF  x22
+000D8:  MOVLW  20
+000DA:  MOVWF  x24
+000DC:  MOVLW  01
+000DE:  MOVWF  x25
+000E0:  MOVLW  55
+000E2:  MOVWF  F7E
+000E4:  MOVLW  AA
+000E6:  MOVWF  F7E
+000E8:  BSF    F66.6
+000EA:  CLRF   F9B
+000EC:  CLRF   F64
+000EE:  CLRF   F65
+000F0:  CLRF   F66
+000F2:  MOVLW  02
+000F4:  MOVWF  FD3
+000F6:  BSF    F67.3
+000F8:  MOVLW  A0
+000FA:  MOVWF  FAF
+000FC:  MOVLW  01
+000FE:  MOVLB  F
+00100:  MOVWF  x30
+00102:  MOVLW  A6
+00104:  MOVWF  FAC
+00106:  MOVLW  90
+00108:  MOVWF  FAB
+0010A:  BSF    x31.3
+0010C:  MOVLW  A0
+0010E:  MOVWF  x1F
+00110:  MOVLW  01
+00112:  MOVWF  x20
+00114:  MOVLW  A6
+00116:  MOVWF  x32
+00118:  MOVLW  90
+0011A:  MOVWF  x33
+0011C:  BSF    x2D.3
+0011E:  MOVLW  A0
+00120:  MOVWF  x2B
+00122:  MOVLW  01
+00124:  MOVWF  x2C
+00126:  MOVLW  A6
+00128:  MOVWF  x2E
+0012A:  MOVLW  90
+0012C:  MOVWF  x2F
+0012E:  MOVLB  E
+00130:  BSF    xFD.3
+00132:  MOVLW  A0
+00134:  MOVWF  xFB
+00136:  MOVLW  01
+00138:  MOVWF  xFC
+0013A:  MOVLW  A6
+0013C:  MOVWF  xFE
+0013E:  MOVLW  90
+00140:  MOVWF  xFF
+00142:  BSF    F92.0
+00144:  BCF    F92.1
+00146:  BCF    F92.3
+00148:  BCF    F89.3
+0014A:  BSF    F93.5
+0014C:  BCF    F93.4
+0014E:  BCF    F93.2
+00150:  BCF    F8A.2
+00152:  BSF    F96.0
+00154:  BCF    F96.6
+00156:  BCF    F96.1
+00158:  BCF    F8D.1
+0015A:  CLRF   05
+0015C:  CLRF   04
+0015E:  CLRF   xD9
+00160:  CLRF   xDA
+00162:  CLRF   xCE
+00164:  CLRF   xCF
+00166:  CLRF   xD0
+00168:  CLRF   xD1
+0016A:  CLRF   xD2
+0016C:  CLRF   xD3
+0016E:  CLRF   xD4
+00170:  CLRF   xD5
+00172:  CLRF   x45
+00174:  CLRF   x46
+00176:  CLRF   x47
+00178:  BCF    x8D.7
+0017A:  BCF    x8D.6
+0017C:  BCF    x8D.5
+0017E:  MOVLB  F
+00180:  CLRF   x53
+00182:  CLRF   x38
+00184:  CLRF   x37
+00186:  BCF    06.0
+00188:  CLRF   08
+0018A:  CLRF   07
+.................... {
+....................     int1 led_on = 0;
+....................     int16 led_timer = 0;
+....................     char command;
+.................... 
+....................     while (TRUE)
+....................     {
+....................         if (kbhit(PORT1))
+0018C:  BTFSS  F9E.5
+0018E:  BRA    01F6
+....................         {
+....................             command = getc(PORT1);
+00190:  BTFSS  F9E.5
+00192:  BRA    0190
+00194:  MOVFF  FAE,09
+....................             fprintf(PORT1, "\r\nYou entered: %c\r\n", command);
+00198:  MOVLW  06
+0019A:  MOVWF  FF6
+0019C:  MOVLW  00
+0019E:  MOVWF  FF7
+001A0:  MOVLW  00
+001A2:  MOVWF  FF8
+001A4:  MOVLW  0F
+001A6:  MOVWF  0A
+001A8:  MOVLB  0
+001AA:  BRA    0034
+001AC:  MOVF   09,W
+001AE:  BTFSS  F9E.4
+001B0:  BRA    01AE
+001B2:  MOVWF  FAD
+001B4:  MOVLW  0D
+001B6:  BTFSS  F9E.4
+001B8:  BRA    01B6
+001BA:  MOVWF  FAD
+001BC:  MOVLW  0A
+001BE:  BTFSS  F9E.4
+001C0:  BRA    01BE
+001C2:  MOVWF  FAD
+....................             if (command == 'a')
+001C4:  MOVF   09,W
+001C6:  SUBLW  61
+001C8:  BNZ   01D6
+....................             {
+....................                 led_on = 1;
+001CA:  BSF    06.0
+....................                 led_timer = 500;
+001CC:  MOVLW  01
+001CE:  MOVWF  08
+001D0:  MOVLW  F4
+001D2:  MOVWF  07
+....................             }
+001D4:  BRA    01F4
+....................             else if (command == 'b')
+001D6:  MOVF   09,W
+001D8:  SUBLW  62
+001DA:  BNZ   01E6
+....................             {
+....................                 led_on = 1;
+001DC:  BSF    06.0
+....................                 led_timer = 250;
+001DE:  CLRF   08
+001E0:  MOVLW  FA
+001E2:  MOVWF  07
+....................             }
+001E4:  BRA    01F4
+....................             else if (command == 'c')
+001E6:  MOVF   09,W
+001E8:  SUBLW  63
+001EA:  BNZ   01F4
+....................             {
+....................                 led_on = 0;
+001EC:  BCF    06.0
+....................                 led_timer = 10;
+001EE:  CLRF   08
+001F0:  MOVLW  0A
+001F2:  MOVWF  07
+001F4:  MOVLB  F
+....................             }
+....................         }
+....................         if (led_on == 1)
+001F6:  BTFSS  06.0
+001F8:  BRA    0226
+....................         {
+....................             fprintf(PORT1, "LED is ON\r\n");
+001FA:  MOVLW  1A
+001FC:  MOVWF  FF6
+001FE:  MOVLW  00
+00200:  MOVWF  FF7
+00202:  MOVLW  00
+00204:  MOVWF  FF8
+00206:  MOVLB  0
+00208:  RCALL  005E
+....................             delay_ms(led_timer);
+0020A:  MOVFF  08,0A
+0020E:  INCF   0A,F
+00210:  DECF   0A,F
+00212:  BTFSC  FD8.2
+00214:  BRA    021C
+00216:  SETF   0B
+00218:  RCALL  0088
+0021A:  BRA    0210
+0021C:  MOVFF  07,0B
+00220:  RCALL  0088
+....................         }
+00222:  BRA    024E
+00224:  MOVLB  F
+....................             else
+....................             {
+....................                 fprintf(PORT1, "LED is OFF\r\n");
+00226:  MOVLW  26
+00228:  MOVWF  FF6
+0022A:  MOVLW  00
+0022C:  MOVWF  FF7
+0022E:  MOVLW  00
+00230:  MOVWF  FF8
+00232:  MOVLB  0
+00234:  RCALL  005E
+....................                 delay_ms(led_timer);
+00236:  MOVFF  08,0A
+0023A:  INCF   0A,F
+0023C:  DECF   0A,F
+0023E:  BTFSC  FD8.2
+00240:  BRA    0248
+00242:  SETF   0B
+00244:  RCALL  0088
+00246:  BRA    023C
+00248:  MOVFF  07,0B
+0024C:  RCALL  0088
+....................             }
+0024E:  MOVLB  F
+00250:  BRA    018C
+....................     }
+.................... }
+00252:  SLEEP 
+
+Configuration Fuses:
+   Word  1: F7A0   STVREN NOXINST NODEBUG BROWNOUT_SW BORV18 NOPROTECT
+   Word  2: FF82   PR SOSC_DIG NOCLOCKOUT IESO NOPLL
+   Word  3: F032   HS
+   Word  4: F7FF   WPFP WPDIS WPEND NOWPCFG
+   Word  5: FF03   T5G_IS_T5G CINA_DEFAULT IOL1WAY LS48MHZ MSSP2MSK7 MSSPMSK7
+   Word  6: FCFF   WDTWIN_25% WDTCLK_FRC WDT32768 NOWDT WINDIS WPRES128
+   Word  7: F01D   NOVREGSLEEP VBATBOR DSBOR DS_SW
+   Word  8: F3F8   DSWDT_25DAYS NODSWDT DSWDTOSC_INT

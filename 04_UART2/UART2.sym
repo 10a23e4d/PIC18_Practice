@@ -1,0 +1,122 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-005 @sprintf_string
+006     @SPI_XFER_1.P1
+006     @SPI_XFER_3.P2
+006.0   main.led_on
+006     @SPI_XFER_2.P1
+007     @SPI_XFER_1.P1
+007     @SPI_XFER_2.P2
+007     @SPI_XFER_3.P3
+007-008 main.led_timer
+008     @SPI_XFER_2.P1
+008     @SPI_XFER_3.P2
+008     @SPI_XFER_1.P3
+009     main.command
+00A     @PSTRINGCN_9600_31791_31789.P1
+00A     main.@SCRATCH1
+00A     @PSTRINGC_9600_31791_31789.@SCRATCH1
+00B     @delay_ms1.P1
+00B     @PSTRINGCN_9600_31791_31789.@SCRATCH1
+00B     @PSTRINGC_9600_31791_31789.@SCRATCH2
+00C     @PSTRINGCN_9600_31791_31789.@SCRATCH2
+00C     @PSTRINGC_9600_31791_31789.@SCRATCH3
+00D     @PSTRINGCN_9600_31791_31789.@SCRATCH3
+EEF.0   MDBIT
+EEF.3   MDOUT
+F08     CCP_7
+F08     CCP_7_LOW
+F09     CCP_7_HIGH
+F0B     CCP_6_LOW
+F0B     CCP_6
+F0C     CCP_6_HIGH
+F0E     CCP_5
+F0E     CCP_5_LOW
+F0F     CCP_5_HIGH
+F11     CCP_4
+F11     CCP_4_LOW
+F12     CCP_4_HIGH
+F21     DSGPR3
+F22     DSGPR2
+F23     DSGPR1
+F24     DSGPR0
+F41     CCP_10
+F41     CCP_10_LOW
+F42     CCP_10_HIGH
+F44     CCP_9
+F44     CCP_9_LOW
+F45     CCP_9_HIGH
+F47     CCP_8_LOW
+F47     CCP_8
+F48     CCP_8_HIGH
+F4A     CCP_3
+F4A     CCP_3_LOW
+F4B     CCP_3_HIGH
+F4F     CCP_2
+F4F     CCP_2_LOW
+F50     CCP_2_HIGH
+F83     PSP_DATA
+FBA     CCP_1_LOW
+FBA     CCP_1
+FBB     CCP_1_HIGH
+FC4.0   C1OUT
+FC4.1   C2OUT
+FC4.2   C3OUT
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000006  @const978.call
+00001A  @const981.call
+000026  @const986.call
+000034  @PSTRINGCN_9600_31791_31789
+00005E  @PSTRINGC_9600_31791_31789
+000088  @delay_ms1
+0000B0  main
+0000B0  @cinit1
+000186  @cinit2
+
+Project Directory:
+    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\
+
+Project Files:
+    UART2.c                                                 [17-2-26 12:38  CRC=4D370BAA]
+    UART2.h                                                 [13-2-26 17:30  CRC=D872A938]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h [13-5-21 13:54  CRC=CB5C8DE4]
+
+Source signature=BC62D0AA
+Program memory checksum=0000
+Hex file CRC=9DE0
+
+Units:
+    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\UART2 (main)
+
+Compiler Settings:
+    Processor:      PIC18F67J94
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   UART2.xsym
+    Errors:      UART2.err
+    Ext Symbols: UART2.esym
+    INHX32:      UART2.hex
+    Symbols:     UART2.sym
+    List:        UART2.lst
+    Debug/COFF:  UART2.cof
+    Project:     UART2.ccspjt
+    Call Tree:   UART2.tre
+    Statistics:  UART2.STA
