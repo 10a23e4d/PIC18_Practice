@@ -58,6 +58,38 @@
 
 void main()
 {
-    
+    while (TRUE)
+    {
+        if (kbhit(PORT1))
+        {
+            command = getc(PORT1);
+            fprintf(PORT1, "\r\nYou entered: %c\r\n", command);
+            if (command == 'a')
+            {
+                led-on = true;
+                led-timer = 500;
+            }
+            else if (command == 'b')
+            {
+                led-on = true;
+                led-timer = 250;
+            }
+            else if (command == 'c')
+            {
+                led-on = false;
+                led-timer = 10;
+            }
+        }
+        if (led-on == true)
+        {
+            fprintf(PORT1, 'LED is ON\r\n');
+            delay_ms(led-timer);
+        }
+            else
+            {
+                fprintf(PORT1, 'LED is OFF\r\n');
+                delay_ms(led-timer);
+            }
+    }
 }
 
