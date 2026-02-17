@@ -1,0 +1,32 @@
+[PROJECT]
+Target=FLASH1.hex
+Processor_Text=PIC18F67J94
+CCSVersion=5.104
+Compiler=PCH
+[Target Data]
+FileList=FLASH1.c
+[FLASH1.c]
+Type=4
+[mru-list]
+1=FLASH1.c
+
+[defines]
+buildcount=7
+
+[Opened Files]
+1=FLASH1.c
+t1=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=17-02-2026
+D1_L=2
+D1_L1=[58438]Project Closed.
+D1_L2=[58970]Project Opened.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=FLASH1 (main)

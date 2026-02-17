@@ -65,11 +65,6 @@ void main()
     int1 led_current_state = 0;
     fprintf(PORT1, "\r\nUART2 Test Program\r\n");
     fprintf(PORT1, "Hello World\r\n");
-    fprintf(PORT2, "\r\nUART2 Test Program\r\n");
-    fprintf(PORT2, "Hello World\r\n");
-    fprintf(PORT3, "\r\nUART2 Test Program\r\n");
-    fprintf(PORT3, "Hello World\r\n");
-    
     while (TRUE)
     {
         if (kbhit(PORT1))

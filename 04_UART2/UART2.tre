@@ -1,9 +1,13 @@
 읕UART2
-   읕main  0/534  Ram=7
+   읕main  0/590  Ram=7
       쳐@cinit1  (Inline)  Ram=0
       쳐@cinit2  (Inline)  Ram=0
       쳐@PSTRINGC_9600_31791_31789  0/42  Ram=3
       쳐@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      쳐@PSTRINGC_9600_31771_31770  0/46  Ram=3
+      쳐@PSTRINGC_9600_31771_31770  0/46  Ram=3
+      쳐@PSTRINGC_9600_31781_31780  0/46  Ram=3
+      쳐@PSTRINGC_9600_31781_31780  0/46  Ram=3
       쳐@PSTRINGCN_9600_31791_31789  0/40  Ram=4
       쳐@PSTRINGCN_9600_31791_31789  0/40  Ram=4
       쳐@PSTRINGC_9600_31791_31789  0/42  Ram=3

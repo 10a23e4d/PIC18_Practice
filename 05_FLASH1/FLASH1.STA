@@ -1,0 +1,64 @@
+
+ROM used:   1298/131056 (1%)
+            1298/131056 (1%) including unused fragments
+
+            0.8 Average locations per line
+            18.8 Average locations per statement
+
+RAM used:   16/3578 (0%) at main() level
+            31/3578 (1%) worst case
+
+Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  161    69 100  FLASH1.c
+    7     0   0  FLASH1.h
+ 1487     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
+----- -----
+ 1655    69 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     40   2    1             @delay_ms1
+0     16   1    3             @SPI_XFER_1_8
+0     16   1    0     59  1.6  Flash_Write_Enable
+0     30   1    1    163  3.5  Flash_Wait_Busy
+0     78   3    8    323  2.9  Flash_Read_ID
+0     66   3    9    290  2.8  Flash_Sector_Erase
+0     72   3   10    349  2.8  Flash_Write_Byte
+0    110   4   15    481  5.9  Flash_Read_Data
+0    532  20   10    875  4.9  MAIN
+0     38   1    0             @const980
+0     42   2    3             @PSTRINGC_9600_31791_31789
+0     32   1    0             @const985
+0     40   2    4             @PSTRINGCN_9600_31791_31789
+0     66   3    2             @PRINTF_X_9600_31791_31789
+0     30   1    0             @const991
+0     44   2    0             @const992
+0     20   1    0             @const993
+0     12   0    0             @const994
+0      8   0    0             @const995
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               7
+    Statements              69
+    Comments                292
+    Volume (V)              3763
+    Difficulty (D)          23.4
+    Effort to implement (E) 87966
+    Time to implement (T)   1 hours, 21 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   4
+    Maintainability (MI)    74
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00004     6  0  
+00006-0FFFE  1292  64238  
+10000-1FFEE     0  65520  
+
+
+

@@ -1,0 +1,58 @@
+ÀÄFLASH1
+   ÀÄMAIN  0/532  Ram=10
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/40  Ram=1
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄFlash_Read_ID  0/78  Ram=8
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÀÄ@SPI_XFER_1_8  0/16  Ram=3
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PRINTF_X_9600_31791_31789  0/66  Ram=2
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PRINTF_X_9600_31791_31789  0/66  Ram=2
+      ÃÄ@PRINTF_X_9600_31791_31789  0/66  Ram=2
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄFlash_Sector_Erase  0/66  Ram=9
+      ³  ÃÄFlash_Wait_Busy  0/30  Ram=1
+      ³  ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ³  ÀÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄFlash_Write_Enable  0/16  Ram=0
+      ³  ³  ÀÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÀÄFlash_Wait_Busy  0/30  Ram=1
+      ³     ÀÄ*
+      ÃÄFlash_Write_Byte  0/72  Ram=10
+      ³  ÃÄFlash_Wait_Busy  0/30  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄFlash_Write_Enable  0/16  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÀÄFlash_Wait_Busy  0/30  Ram=1
+      ³     ÀÄ*
+      ÃÄFlash_Read_Data  0/110  Ram=15
+      ³  ÃÄFlash_Wait_Busy  0/30  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÃÄ@SPI_XFER_1_8  0/16  Ram=3
+      ³  ÀÄ@SPI_XFER_1_8  0/16  Ram=3
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PRINTF_X_9600_31791_31789  0/66  Ram=2
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PRINTF_X_9600_31791_31789  0/66  Ram=2
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÀÄ@delay_ms1  0/40  Ram=1

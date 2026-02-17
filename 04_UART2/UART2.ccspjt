@@ -11,18 +11,29 @@ Type=4
 1=UART2.c
 
 [defines]
-buildcount=7
+buildcount=8
 
 [Opened Files]
 1=UART2.c
-t1=1
+t1=41
 Count=1
-[Units]
-Count=1
-1=UART2 (main)
 
 [ProjectLog]
 Days=1
 D1=17-02-2026
-D1_L=1
+D1_L=5
 D1_L1=[50792]Project Closed.
+D1_L2=[58470]Project Opened.
+D1_L3=[58486]Started Editing.
+D1_L4=[58824]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L5=[58949]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=UART2 (main)
