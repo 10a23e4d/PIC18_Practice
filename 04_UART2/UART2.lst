@@ -1,8 +1,8 @@
-CCS PCH C Compiler, Version 5.104, 57077               17-2-26 13:54
+CCS PCH C Compiler, Version 5.104, 57077               17-2-26 13:59
 
                Filename:   C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\UART2.lst
 
-               ROM used:   790 bytes (1%)
+               ROM used:   804 bytes (1%)
                            Largest free fragment is 65520
                RAM used:   13 (0%) at main() level
                            16 (0%) worst case
@@ -37,14 +37,14 @@ CCS PCH C Compiler, Version 5.104, 57077               17-2-26 13:54
 00014:  DATA 72,6F
 00016:  DATA 67,72
 00018:  DATA 61,6D
-0001A:  DATA 20,28
-0001C:  DATA 4E,6F
-0001E:  DATA 6E,2D
-00020:  DATA 62,6C
-00022:  DATA 6F,63
-00024:  DATA 6B,69
-00026:  DATA 6E,67
-00028:  DATA 29,0D
+0001A:  DATA 0D,0A
+0001C:  DATA 00,00
+0001E:  DATA 48,65
+00020:  DATA 6C,6C
+00022:  DATA 6F,20
+00024:  DATA 57,6F
+00026:  DATA 72,6C
+00028:  DATA 64,0D
 0002A:  DATA 0A,00
 0002C:  DATA 0D,0A
 0002E:  DATA 43,6F
@@ -151,7 +151,7 @@ CCS PCH C Compiler, Version 5.104, 57077               17-2-26 13:54
 00104:  BRA    0106
 00106:  DECFSZ FEF,F
 00108:  BRA    00EE
-0010A:  GOTO   02F0 (RETURN)
+0010A:  GOTO   02FE (RETURN)
 .................... 
 .................... 
 .................... 
@@ -331,7 +331,7 @@ CCS PCH C Compiler, Version 5.104, 57077               17-2-26 13:54
 ....................     int16 time_counter = 0;
 ....................     int1 led_current_state = 0;
 .................... 
-....................     fprintf(PORT1, "\r\nUART2 Test Program (Non-blocking)\r\n");
+....................     fprintf(PORT1, "\r\nUART2 Test Program\r\n");
 001F0:  MOVLW  06
 001F2:  MOVWF  FF6
 001F4:  MOVLW  00
@@ -340,207 +340,215 @@ CCS PCH C Compiler, Version 5.104, 57077               17-2-26 13:54
 001FA:  MOVWF  FF8
 001FC:  MOVLB  0
 001FE:  RCALL  0092
+....................     fprintf(PORT1, "Hello World\r\n");
+00200:  MOVLW  1E
+00202:  MOVWF  FF6
+00204:  MOVLW  00
+00206:  MOVWF  FF7
+00208:  MOVLW  00
+0020A:  MOVWF  FF8
+0020C:  RCALL  0092
 .................... 
 ....................     while (TRUE)
 ....................     {
 ....................         if (kbhit(PORT1))
-00200:  BTFSS  F9E.5
-00202:  BRA    02A6
+0020E:  BTFSS  F9E.5
+00210:  BRA    02B4
 ....................         {
 ....................             command = getc(PORT1);
-00204:  BTFSS  F9E.5
-00206:  BRA    0204
-00208:  MOVFF  FAE,06
+00212:  BTFSS  F9E.5
+00214:  BRA    0212
+00216:  MOVFF  FAE,06
 ....................             fprintf(PORT1, "\r\nCommand: %c -> ", command);
-0020C:  MOVLW  2C
-0020E:  MOVWF  FF6
-00210:  MOVLW  00
-00212:  MOVWF  FF7
-00214:  MOVLW  00
-00216:  MOVWF  FF8
-00218:  MOVLW  0B
-0021A:  MOVWF  0C
-0021C:  RCALL  00BC
-0021E:  MOVF   06,W
-00220:  BTFSS  F9E.4
-00222:  BRA    0220
-00224:  MOVWF  FAD
-00226:  MOVLW  39
-00228:  MOVWF  FF6
-0022A:  MOVLW  00
-0022C:  MOVWF  FF7
-0022E:  MOVLW  00
-00230:  MOVWF  FF8
-00232:  MOVLW  04
-00234:  MOVWF  0C
-00236:  RCALL  00BC
+0021A:  MOVLW  2C
+0021C:  MOVWF  FF6
+0021E:  MOVLW  00
+00220:  MOVWF  FF7
+00222:  MOVLW  00
+00224:  MOVWF  FF8
+00226:  MOVLW  0B
+00228:  MOVWF  0C
+0022A:  RCALL  00BC
+0022C:  MOVF   06,W
+0022E:  BTFSS  F9E.4
+00230:  BRA    022E
+00232:  MOVWF  FAD
+00234:  MOVLW  39
+00236:  MOVWF  FF6
+00238:  MOVLW  00
+0023A:  MOVWF  FF7
+0023C:  MOVLW  00
+0023E:  MOVWF  FF8
+00240:  MOVLW  04
+00242:  MOVWF  0C
+00244:  RCALL  00BC
 .................... 
 ....................             if (command == 'a')
-00238:  MOVF   06,W
-0023A:  SUBLW  61
-0023C:  BNZ   0262
+00246:  MOVF   06,W
+00248:  SUBLW  61
+0024A:  BNZ   0270
 ....................             {
 ....................                 is_blinking = 1;
-0023E:  BSF    07.0
+0024C:  BSF    07.0
 ....................                 blink_interval = 500;
-00240:  MOVLW  01
-00242:  MOVWF  09
-00244:  MOVLW  F4
-00246:  MOVWF  08
+0024E:  MOVLW  01
+00250:  MOVWF  09
+00252:  MOVLW  F4
+00254:  MOVWF  08
 ....................                 time_counter = 0;
-00248:  CLRF   0B
-0024A:  CLRF   0A
+00256:  CLRF   0B
+00258:  CLRF   0A
 ....................                 led_current_state = 1;
-0024C:  BSF    07.1
+0025A:  BSF    07.1
 ....................                 output_high(DIO_3);
-0024E:  BCF    F98.0
-00250:  BSF    F8F.0
+0025C:  BCF    F98.0
+0025E:  BSF    F8F.0
 ....................                 fprintf(PORT1, "Mode A (500ms Blink)\r\n");
-00252:  MOVLW  3E
-00254:  MOVWF  FF6
-00256:  MOVLW  00
-00258:  MOVWF  FF7
-0025A:  MOVLW  00
-0025C:  MOVWF  FF8
-0025E:  RCALL  0092
+00260:  MOVLW  3E
+00262:  MOVWF  FF6
+00264:  MOVLW  00
+00266:  MOVWF  FF7
+00268:  MOVLW  00
+0026A:  MOVWF  FF8
+0026C:  RCALL  0092
 ....................             }
-00260:  BRA    02A6
+0026E:  BRA    02B4
 ....................             else if (command == 'b')
-00262:  MOVF   06,W
-00264:  SUBLW  62
-00266:  BNZ   028A
+00270:  MOVF   06,W
+00272:  SUBLW  62
+00274:  BNZ   0298
 ....................             {
 ....................                 is_blinking = 1;
-00268:  BSF    07.0
+00276:  BSF    07.0
 ....................                 blink_interval = 250;
-0026A:  CLRF   09
-0026C:  MOVLW  FA
-0026E:  MOVWF  08
+00278:  CLRF   09
+0027A:  MOVLW  FA
+0027C:  MOVWF  08
 ....................                 time_counter = 0;
-00270:  CLRF   0B
-00272:  CLRF   0A
+0027E:  CLRF   0B
+00280:  CLRF   0A
 ....................                 led_current_state = 1;
-00274:  BSF    07.1
+00282:  BSF    07.1
 ....................                 output_high(DIO_3);
-00276:  BCF    F98.0
-00278:  BSF    F8F.0
+00284:  BCF    F98.0
+00286:  BSF    F8F.0
 ....................                 fprintf(PORT1, "Mode B (250ms Blink)\r\n");
-0027A:  MOVLW  56
-0027C:  MOVWF  FF6
-0027E:  MOVLW  00
-00280:  MOVWF  FF7
-00282:  MOVLW  00
-00284:  MOVWF  FF8
-00286:  RCALL  0092
+00288:  MOVLW  56
+0028A:  MOVWF  FF6
+0028C:  MOVLW  00
+0028E:  MOVWF  FF7
+00290:  MOVLW  00
+00292:  MOVWF  FF8
+00294:  RCALL  0092
 ....................             }
-00288:  BRA    02A6
+00296:  BRA    02B4
 ....................             else if (command == 'c')
-0028A:  MOVF   06,W
-0028C:  SUBLW  63
-0028E:  BNZ   02A6
+00298:  MOVF   06,W
+0029A:  SUBLW  63
+0029C:  BNZ   02B4
 ....................             {
 ....................                 is_blinking = 0;
-00290:  BCF    07.0
+0029E:  BCF    07.0
 ....................                 output_low(DIO_3);
-00292:  BCF    F98.0
-00294:  BCF    F8F.0
+002A0:  BCF    F98.0
+002A2:  BCF    F8F.0
 ....................                 led_current_state = 0;
-00296:  BCF    07.1
+002A4:  BCF    07.1
 ....................                 fprintf(PORT1, "Mode C (OFF)\r\n");
-00298:  MOVLW  6E
-0029A:  MOVWF  FF6
-0029C:  MOVLW  00
-0029E:  MOVWF  FF7
-002A0:  MOVLW  00
-002A2:  MOVWF  FF8
-002A4:  RCALL  0092
+002A6:  MOVLW  6E
+002A8:  MOVWF  FF6
+002AA:  MOVLW  00
+002AC:  MOVWF  FF7
+002AE:  MOVLW  00
+002B0:  MOVWF  FF8
+002B2:  RCALL  0092
 ....................             }
 ....................         }
 .................... 
 ....................         if (is_blinking == 1)
-002A6:  BTFSS  07.0
-002A8:  BRA    02EA
+002B4:  BTFSS  07.0
+002B6:  BRA    02F8
 ....................         {
 .................... 
 ....................             if (time_counter >= blink_interval)
-002AA:  MOVF   09,W
-002AC:  SUBWF  0B,W
-002AE:  BNC   02EA
-002B0:  BNZ   02B8
-002B2:  MOVF   08,W
-002B4:  SUBWF  0A,W
-002B6:  BNC   02EA
+002B8:  MOVF   09,W
+002BA:  SUBWF  0B,W
+002BC:  BNC   02F8
+002BE:  BNZ   02C6
+002C0:  MOVF   08,W
+002C2:  SUBWF  0A,W
+002C4:  BNC   02F8
 ....................             {
 ....................                 time_counter = 0;
-002B8:  CLRF   0B
-002BA:  CLRF   0A
+002C6:  CLRF   0B
+002C8:  CLRF   0A
 .................... 
 ....................                 if (led_current_state == 0)
-002BC:  BTFSC  07.1
-002BE:  BRA    02D6
+002CA:  BTFSC  07.1
+002CC:  BRA    02E4
 ....................                 {
 ....................                     fprintf(PORT1, "LED ON\r\n");
-002C0:  MOVLW  7E
-002C2:  MOVWF  FF6
-002C4:  MOVLW  00
-002C6:  MOVWF  FF7
-002C8:  MOVLW  00
-002CA:  MOVWF  FF8
-002CC:  RCALL  0092
+002CE:  MOVLW  7E
+002D0:  MOVWF  FF6
+002D2:  MOVLW  00
+002D4:  MOVWF  FF7
+002D6:  MOVLW  00
+002D8:  MOVWF  FF8
+002DA:  RCALL  0092
 ....................                     output_high(DIO_3);
-002CE:  BCF    F98.0
-002D0:  BSF    F8F.0
+002DC:  BCF    F98.0
+002DE:  BSF    F8F.0
 ....................                     led_current_state = 1;
-002D2:  BSF    07.1
+002E0:  BSF    07.1
 ....................                 }
-002D4:  BRA    02EA
+002E2:  BRA    02F8
 ....................                 else
 ....................                 {
 ....................                     fprintf(PORT1, "LED OFF\r\n");
-002D6:  MOVLW  88
-002D8:  MOVWF  FF6
-002DA:  MOVLW  00
-002DC:  MOVWF  FF7
-002DE:  MOVLW  00
-002E0:  MOVWF  FF8
-002E2:  RCALL  0092
+002E4:  MOVLW  88
+002E6:  MOVWF  FF6
+002E8:  MOVLW  00
+002EA:  MOVWF  FF7
+002EC:  MOVLW  00
+002EE:  MOVWF  FF8
+002F0:  RCALL  0092
 ....................                     output_low(DIO_3);
-002E4:  BCF    F98.0
-002E6:  BCF    F8F.0
+002F2:  BCF    F98.0
+002F4:  BCF    F8F.0
 ....................                     led_current_state = 0;
-002E8:  BCF    07.1
+002F6:  BCF    07.1
 ....................                 }
 ....................             }
 ....................         }
 .................... 
 ....................         delay_ms(1);
-002EA:  MOVLW  01
-002EC:  MOVWF  0C
-002EE:  BRA    00E4
+002F8:  MOVLW  01
+002FA:  MOVWF  0C
+002FC:  BRA    00E4
 ....................         time_counter++;
-002F0:  INCF   0A,F
-002F2:  BTFSC  FD8.2
-002F4:  INCF   0B,F
+002FE:  INCF   0A,F
+00300:  BTFSC  FD8.2
+00302:  INCF   0B,F
 .................... 
 ....................         if(time_counter > 32000) time_counter = blink_interval + 1;
-002F6:  MOVF   0B,W
-002F8:  SUBLW  7C
-002FA:  BC    0312
-002FC:  XORLW  FF
-002FE:  BNZ   0306
-00300:  MOVF   0A,W
-00302:  SUBLW  00
-00304:  BC    0312
-00306:  MOVLW  01
-00308:  ADDWF  08,W
-0030A:  MOVWF  0A
-0030C:  MOVLW  00
-0030E:  ADDWFC 09,W
-00310:  MOVWF  0B
-00312:  BRA    0200
+00304:  MOVF   0B,W
+00306:  SUBLW  7C
+00308:  BC    0320
+0030A:  XORLW  FF
+0030C:  BNZ   0314
+0030E:  MOVF   0A,W
+00310:  SUBLW  00
+00312:  BC    0320
+00314:  MOVLW  01
+00316:  ADDWF  08,W
+00318:  MOVWF  0A
+0031A:  MOVLW  00
+0031C:  ADDWFC 09,W
+0031E:  MOVWF  0B
+00320:  BRA    020E
 ....................     }
 .................... }
-00314:  SLEEP 
+00322:  SLEEP 
 
 Configuration Fuses:
    Word  1: F7A0   STVREN NOXINST NODEBUG BROWNOUT_SW BORV18 NOPROTECT

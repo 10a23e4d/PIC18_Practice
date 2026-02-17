@@ -11,7 +11,7 @@ Type=4
 1=UART2.c
 
 [defines]
-buildcount=6
+buildcount=7
 
 [Opened Files]
 1=UART2.c

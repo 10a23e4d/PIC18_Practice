@@ -35,8 +35,8 @@ F09     CCP_7_HIGH
 F0B     CCP_6
 F0B     CCP_6_LOW
 F0C     CCP_6_HIGH
-F0E     CCP_5_LOW
 F0E     CCP_5
+F0E     CCP_5_LOW
 F0F     CCP_5_HIGH
 F11     CCP_4_LOW
 F11     CCP_4
@@ -45,8 +45,8 @@ F21     DSGPR3
 F22     DSGPR2
 F23     DSGPR1
 F24     DSGPR0
-F41     CCP_10_LOW
 F41     CCP_10
+F41     CCP_10_LOW
 F42     CCP_10_HIGH
 F44     CCP_9
 F44     CCP_9_LOW
@@ -57,8 +57,8 @@ F48     CCP_8_HIGH
 F4A     CCP_3_LOW
 F4A     CCP_3
 F4B     CCP_3_HIGH
-F4F     CCP_2
 F4F     CCP_2_LOW
+F4F     CCP_2
 F50     CCP_2_HIGH
 F83     PSP_DATA
 FBA     CCP_1
@@ -70,38 +70,39 @@ FC4.2   C3OUT
 FE1-FE2 @READ_PACKED_MEMORY.P1
 FE1-FE2 @WRITE_PACKED_MEMORY.P2
 FE9-FEA @READ_PROGRAM_MEMORY.P1
-FE9-FEA @WRITE_PROGRAM_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
 FE9-FEA @READ_PACKED_MEMORY.P4
 FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000006  @const980.call
-00002C  @const985.call
-00003E  @const988.call
-000056  @const989.call
-00006E  @const990.call
-00007E  @const991.call
-000088  @const992.call
+00001E  @const985.call
+00002C  @const986.call
+00003E  @const989.call
+000056  @const990.call
+00006E  @const991.call
+00007E  @const992.call
+000088  @const993.call
 000092  @PSTRINGC_9600_31791_31789
 0000BC  @PSTRINGCN_9600_31791_31789
 0000E4  @delay_ms1
-00010E  @cinit1
 00010E  main
+00010E  @cinit1
 0001E4  @cinit2
 
 Project Directory:
     C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\
 
 Project Files:
-    UART2.c                                                 [17-2-26 13:53  CRC=1131189A]
+    UART2.c                                                 [17-2-26 13:58  CRC=B18F6E17]
     UART2.h                                                 [13-2-26 17:30  CRC=D872A938]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h [13-5-21 13:54  CRC=CB5C8DE4]
 
-Source signature=805CDD9A
+Source signature=20BB3317
 Program memory checksum=0000
-Hex file CRC=D1B1
+Hex file CRC=4CD8
 
 Units:
     C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\UART2 (main)

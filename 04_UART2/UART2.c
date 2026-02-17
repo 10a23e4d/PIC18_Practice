@@ -63,17 +63,14 @@ void main()
     int16 blink_interval = 0;
     int16 time_counter = 0;
     int1 led_current_state = 0;
-
     fprintf(PORT1, "\r\nUART2 Test Program\r\n");
     fprintf(PORT1, "Hello World\r\n");
-
     while (TRUE)
     {
         if (kbhit(PORT1))
         {
             command = getc(PORT1);
             fprintf(PORT1, "\r\nCommand: %c -> ", command);
-
             if (command == 'a')
             {
                 is_blinking = 1;
@@ -100,14 +97,11 @@ void main()
                 fprintf(PORT1, "Mode C (OFF)\r\n");
             }
         }
-
         if (is_blinking == 1)
         {
-
             if (time_counter >= blink_interval)
             {
                 time_counter = 0;
-
                 if (led_current_state == 0)
                 {
                     fprintf(PORT1, "LED ON\r\n");
@@ -122,10 +116,8 @@ void main()
                 }
             }
         }
-
         delay_ms(1);
         time_counter++;
-
         if(time_counter > 32000) time_counter = blink_interval + 1;
     }
 }
