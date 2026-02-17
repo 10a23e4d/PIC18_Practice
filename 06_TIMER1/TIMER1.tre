@@ -1,0 +1,14 @@
+ÀÄTIMER1
+   ÃÄMAIN  0/342  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÃÄ@PSTRINGC_9600_31791_31789  0/44  Ram=3
+   ³  ÃÄ@PSTRINGCN_9600_31791_31789  0/42  Ram=4
+   ³  ÃÄ@PRINTF_U_9600_31791_31789  0/108  Ram=2
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÀÄ@DIV88  0/40  Ram=3
+   ³  ÃÄ@PRINTF_U_9600_31791_31789  0/108  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÀÄ@PRINTF_U_9600_31791_31789  0/108  Ram=2
+   ³     ÀÄ*
+   ÀÄtimer0_isr  0/48  Ram=0

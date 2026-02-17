@@ -89,9 +89,9 @@ void  timer0_isr(void)
 
 void main()
 {
-   fprintf(PORT1, "Timer0 Clock Started\r\n");
+   printf("Timer0 Clock Started\r\n");
 
-   setup_timer_0(T0_INTERNAL | T0_DIV_256);
+   setup_timer_0(T0_INTERNAL | T0_DIV_256 | T0_16_BIT);
 
    set_timer0(49911);
 
@@ -103,7 +103,7 @@ void main()
       if(time_updated)
       {
          time_updated = 0;
-         fprintf(PORT1, "Time: %02u:%02u:%02u\r", hours, minutes, seconds);
+         printf("Time: %02u:%02u:%02u\r", hours, minutes, seconds);
       }
    }
 }
