@@ -1,6 +1,6 @@
 /////LED1/////
 //#include <18F67J94.h>
-#include "LED1.h"
+#include "UART2.h"
 
 
 #pin_select U1TX = PIN_F7
@@ -92,4 +92,3 @@ void main()
             }
     }
 }
-

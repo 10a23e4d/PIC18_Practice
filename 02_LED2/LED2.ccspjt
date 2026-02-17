@@ -21,7 +21,7 @@ Count=1
 [ProjectLog]
 Days=1
 D1=17-02-2026
-D1_L=3
+D1_L=4
 D1_L1=[41674]Stopped Editing.
 TotalEdit=1
 TotalDebug=0
@@ -29,6 +29,7 @@ D1_E=1
 D1_D=0
 D1_L2=[41750]Project Closed.
 D1_L3=[41768]Project Opened.
+D1_L4=[45013]Project Closed.
 
 [fileformats]
 forcecoff=0
