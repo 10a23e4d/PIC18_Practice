@@ -4,5 +4,5 @@
       쳐@cinit2  (Inline)  Ram=0
       쳐@PSTRINGC_9600_31791_31789  0/42  Ram=3
       쳐@delay_ms1  0/40  Ram=1
-      쳐@delay_ms1  0/40  Ram=1
-      읕@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      쳐@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      읕@delay_ms1  0/40  Ram=1

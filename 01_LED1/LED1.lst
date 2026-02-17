@@ -1,6 +1,6 @@
-CCS PCH C Compiler, Version 5.104, 57077               13-2-26 17:35
+CCS PCH C Compiler, Version 5.104, 57077               16-2-26 18:45
 
-               Filename:   C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\00_参考資料\PIC18_Practice\LED1\LED1.lst
+               Filename:   C:\Users\Gardens_QFH\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\01_LED1\LED1.lst
 
                ROM used:   396 bytes (0%)
                            Largest free fragment is 65520
@@ -268,25 +268,25 @@ CCS PCH C Compiler, Version 5.104, 57077               13-2-26 17:35
 00160:  RCALL  0046
 00162:  DECFSZ 06,F
 00164:  BRA    015C
-....................         output_low(DIO_3);
-00166:  BCF    F98.0
-00168:  BCF    F8F.0
-....................         delay_ms(500);
-0016A:  MOVLW  02
-0016C:  MOVWF  06
-0016E:  MOVLW  FA
-00170:  MOVWF  07
-00172:  RCALL  0046
-00174:  DECFSZ 06,F
-00176:  BRA    016E
 ....................         fprintf(PORT1, "LED1 off\r\n");
-00178:  MOVLW  10
-0017A:  MOVWF  FF6
-0017C:  MOVLW  00
-0017E:  MOVWF  FF7
-00180:  MOVLW  00
-00182:  MOVWF  FF8
-00184:  RCALL  001C
+00166:  MOVLW  10
+00168:  MOVWF  FF6
+0016A:  MOVLW  00
+0016C:  MOVWF  FF7
+0016E:  MOVLW  00
+00170:  MOVWF  FF8
+00172:  RCALL  001C
+....................         output_low(DIO_3);
+00174:  BCF    F98.0
+00176:  BCF    F8F.0
+....................         delay_ms(500);
+00178:  MOVLW  02
+0017A:  MOVWF  06
+0017C:  MOVLW  FA
+0017E:  MOVWF  07
+00180:  RCALL  0046
+00182:  DECFSZ 06,F
+00184:  BRA    017C
 00186:  MOVLB  F
 00188:  BRA    0144
 ....................     }

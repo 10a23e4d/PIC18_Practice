@@ -31,7 +31,7 @@ D1_L16=[63364]Project Closed.
 t1=1
 Count=3
 2=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
-t2=419
+t2=1
 3=LED1.h
 t3=1
 [PROJECT]
@@ -47,7 +47,7 @@ Type=4
 1=LED1.c
 
 [defines]
-buildcount=13
+buildcount=14
 [Units]
 Count=1
 1=LED1 (main)

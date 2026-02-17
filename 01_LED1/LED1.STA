@@ -24,21 +24,21 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     40   5    1             @delay_ms1
 0    286  36    1    154  2.1  main
 0     10   1    0             @const975
-0     42   5    3    132  1.6  @PSTRINGC_9600_31791_31789
-0     12   2    0    132  1.6  @const980
+0     42   5    3             @PSTRINGC_9600_31791_31789
+0     12   2    0             @const980
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               3
+    Functions               1
     Statements              8
     Comments                277
-    Volume (V)              572
-    Difficulty (D)          5.1
-    Effort to implement (E) 2908
-    Time to implement (T)   3 minutes
+    Volume (V)              163
+    Difficulty (D)          1.6
+    Effort to implement (E) 266
+    Time to implement (T)   0 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    164
+    Maintainability (MI)    141
 
  Segment     Used  Free
 -----------  ----  ----
