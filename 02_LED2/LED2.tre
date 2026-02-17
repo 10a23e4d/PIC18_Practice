@@ -1,0 +1,20 @@
+ÀÄLED2
+   ÀÄmain  0/446  Ram=2
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PRINTF_D_9600_31791_31789  0/178  Ram=6
+      ³  ÃÄ@DIV88  0/40  Ram=3
+      ³  ÀÄ@DIV88  0/40  Ram=3
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@delay_ms1  0/40  Ram=1
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PRINTF_D_9600_31791_31789  0/178  Ram=6
+      ³  ÀÄ*
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@delay_ms1  0/40  Ram=1
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÀÄ@delay_ms1  0/40  Ram=1

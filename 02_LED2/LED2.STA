@@ -1,0 +1,57 @@
+
+ROM used:   910/131056 (1%)
+            910/131056 (1%) including unused fragments
+
+            0.6 Average locations per line
+            47.9 Average locations per statement
+
+RAM used:   8/3578 (0%) at main() level
+            17/3578 (0%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   85    19 100  LED2.c
+    7     0   0  LED2.h
+ 1487     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
+----- -----
+ 1579    19 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     40   2    1             @delay_ms1
+0    446  25    2    579  5.6  main
+0     24   1    0             @const976
+0     42   2    3             @PSTRINGC_9600_31791_31789
+0     12   1    0             @const981
+0     24   1    0             @const982
+0     16   1    0             @const983
+0     40   2    4             @PSTRINGCN_9600_31791_31789
+0     40   2    3             @DIV88
+0    178  10    6             @PRINTF_D_9600_31791_31789
+0     18   1    0             @const992
+0     24   1    0             @const993
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              19
+    Comments                277
+    Volume (V)              605
+    Difficulty (D)          4.5
+    Effort to implement (E) 2721
+    Time to implement (T)   3 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   2
+    Maintainability (MI)    120
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00004     6  0  
+00006-0FFFE   904  64626  
+10000-1FFEE     0  65520  
+
+
+

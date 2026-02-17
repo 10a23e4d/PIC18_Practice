@@ -1,6 +1,6 @@
 /////LED1/////
 //#include <18F67J94.h>
-#include "LED1.h"
+#include "LED2.h"
 
 
 #pin_select U1TX = PIN_F7
@@ -56,42 +56,29 @@
 #define DIO_59 PIN_E7
 
 
+
 void main()
 {
     port_b_pullups(TRUE);
-
-    int1 current_state = 1;
-    int1 last_state = 1;
     int8 i;
-
-
     fprintf(PORT1, "Starting LED2 Program\r\n");
-
     while (TRUE)
     {
-        current_state = input(DIO_47);
-
-        if (current_state == 0 && last_state == 1)
+        if(input(DIO_47) == 1)
         {
-            delay_ms(20);
-            if(input(DIO_47) == 0)
+            fprintf(PORT1, "Switch ON\r\n");
+            fprintf(PORT1, "Starting Blinking LED\r\n");
+            for (i = 0; i < 5; i++)
             {
-                fprintf(PORT1, "Button Pressed\r\n");
-                fprintf(PORT1, "Starting Blinking LED\r\n");
-                for (i = 0; i < 5; i++)
-                {
-                    output_high(DIO_3);
-                    fprintf(PORT1, "LED ON (%d/5)\r\n", i + 1);
-                    delay_ms(500);
-                    output_low(DIO_3);
-                    fprintf(PORT1, "LED OFF (%d/5)\r\n", i + 1);
-                    delay_ms(500);
-                }
-                fprintf(PORT1, "Finished Blinking LED\r\n");
+                output_high(DIO_3);
+                fprintf(PORT1, "LED ON (%d/5)\r\n", i + 1);
+                delay_ms(500);
+                output_low(DIO_3);
+                fprintf(PORT1, "LED OFF (%d/5)\r\n", i + 1);
+                delay_ms(500);
             }
+            fprintf(PORT1, "Finished Blinking LED\r\n");
         }
-        last_state = current_state;
-        delay_ms(10);
     }
+    delay_ms(10);
 }
-
