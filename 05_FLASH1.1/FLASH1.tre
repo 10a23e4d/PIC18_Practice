@@ -1,5 +1,5 @@
 ÀÄ05_FLASH1
-   ÀÄMAIN  0/472  Ram=1
+   ÀÄMAIN  0/842  Ram=47
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄ@cinit2  (Inline)  Ram=0
       ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
@@ -22,6 +22,22 @@
       ³  ÀÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
       ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
       ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PUTCHARI_BIU_1  0/8  Ram=0
+      ÃÄ@PUTCHARI_BIU_1  0/8  Ram=0
+      ÃÄ@PUTCHARI_BIU_1  0/8  Ram=0
+      ÃÄ@PUTCHARI_BIU_1  0/8  Ram=0
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PSTRINGR_9600_31791_31789  0/38  Ram=2
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PRINTF_U_9600_31791_31789  0/110  Ram=2
+      ³  ÃÄ@DIV88  0/40  Ram=3
+      ³  ÀÄ@DIV88  0/40  Ram=3
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
       ÃÄsector_erase_flash1g  0/178  Ram=14
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
@@ -36,7 +52,7 @@
       ³  ÀÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
       ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
       ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
-      ÃÄwrite_data_byte_flash1g  0/192  Ram=15
+      ÃÄwrite_data_bytes_flash1g  0/216  Ram=18
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
@@ -51,13 +67,14 @@
       ³  ÀÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
       ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
       ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
-      ÃÄread_data_byte_flash1g  0/130  Ram=14
+      ÃÄread_data_bytes_flash1g  0/150  Ram=17
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
       ³  ÃÄ@SPI_XFER_1  0/56  Ram=6
       ³  ÀÄ@SPI_XFER_1  0/56  Ram=6
-      ÃÄ@PSTRINGCN_9600_31791_31789  0/42  Ram=4
-      ÃÄ@PRINTF_X_9600_31791_31789  0/66  Ram=2
-      ÀÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÃÄ@PSTRINGCN_9600_31791_31789  0/40  Ram=4
+      ÃÄ@PSTRINGR_9600_31791_31789  0/38  Ram=2
+      ÃÄ@PSTRINGC_9600_31791_31789  0/42  Ram=3
+      ÀÄ@PRINTF_X_9600_31791_31789  0/66  Ram=2

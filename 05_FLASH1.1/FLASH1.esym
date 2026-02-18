@@ -1,9 +1,9 @@
-D G "__PCH__" 0 263 ""5.104""
-D G "__DEVICE__" 0 263 "6794"
-D G "__DATE__" 0 263 ""18-Feb-26""
-D G "__TIME__" 0 263 ""16:45:59""
-D G "_UNICODE" 0 263 ""?""
-D G "__EVAL" 0 263 ""?"" "Standard Header file for the PIC18F67J94 device ////////////////"
+D G "__PCH__" 0 108 ""5.104""
+D G "__DEVICE__" 0 108 "6794"
+D G "__DATE__" 0 108 ""18-Feb-26""
+D G "__TIME__" 0 108 ""17:01:53""
+D G "_UNICODE" 0 108 ""?""
+D G "__EVAL" 0 108 ""?"" "Standard Header file for the PIC18F67J94 device ////////////////"
 c L "set_tris_a" 2 3 26 "FUNCTION"
 F N "set_tris_a" 2 77 ""
 V L "value" 2 77 "int8" `55 
@@ -2109,10 +2109,35 @@ C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
 V L "i" 3 334 "int8" `1022 
 C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
 C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
-C L "MAIN" 0 3 23 "FUNCTION"
-F N "MAIN" 0 33 ""
-F G "MAIN" 0 34 "void()" `1024 
-V L "get_data" 0 35 "int8" `1025 
+C L "MAIN" 0 3 73 "FUNCTION"
+F N "MAIN" 0 113 ""
+F G "MAIN" 0 114 "void()" `1024  "入�
+�用と読み出し用のバッファ"
+V L "write_str" 0 116 "int8[21]" `1025 
+V L "read_buf" 0 117 "int8[21]" `1026 
+V L "data_len" 0 119 "int8" `1027 
+V L "i" 0 120 "int8" `1028 
+V L "c" 0 121 "int8" `1029 
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 2 "FUNCTION"
+C L "MAIN" 0 3 2 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

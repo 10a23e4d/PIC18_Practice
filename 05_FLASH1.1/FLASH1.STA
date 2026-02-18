@@ -1,81 +1,91 @@
 
-ROM used:   2044/131056 (2%)
-            2044/131056 (2%) including unused fragments
+ROM used:   2828/131056 (2%)
+            2828/131056 (2%) including unused fragments
 
-            0.8 Average locations per line
-            10.1 Average locations per statement
+            1.1 Average locations per line
+            11.6 Average locations per statement
 
-RAM used:   7/3578 (0%) at main() level
-            36/3578 (1%) worst case
+RAM used:   53/3578 (1%) at main() level
+            80/3578 (2%) worst case
 
 Stack used: 2 worst case (2 in main + 0 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  264    20  10  FLASH1.c
+  222    61  25  FLASH1.c
    60     0   0  FLASH1.h
  1487     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
-  697   183  90  GDNS_tbd_FlashOperation.c
+  697   183  75  GDNS_tbd_FlashOperation.c
    60     0   0  GDNS_tbd_FlashOperation.h
 ----- -----
- 2568   203 Total
+ 2526   244 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     40   1    1             @delay_ms1
+0      8   0    0             @PUTCHARI_BIU_1
 0     56   1    6             @SPI_XFER_1
 0      8   0    0     19  0.5  flash_setting
-0     68   2    2    210  3.7  status_register_flash1g
+0     68   1    2    210  3.7  status_register_flash1g
 0     20   0    0             @const985
 0     42   1    3             @PSTRINGC_9600_31791_31789
-0    202   5   24    635  5.6  read_id_flash1g
+0    202   4   24    635  5.6  read_id_flash1g
 0     10   0    0             @const992
-0     66   2    2             @PRINTF_X_9600_31791_31789
+0     66   1    2             @PRINTF_X_9600_31791_31789
 0     20   0    0             @const998
 0     20   0    0             @const999
-0    178   4   14   1161  8.7  sector_erase_flash1g
+0    178   3   14   1161  8.7  sector_erase_flash1g
 0     14   0    0             @const1002
 0     14   0    0             @const1005
 0     14   0    0             @const1008
-0    130   3   14    792  5.1  read_data_byte_flash1g
-0    192   5   15   1231  8.8  write_data_byte_flash1g
+0    150   3   17    931  7.5  read_data_bytes_flash1g
 0     14   0    0             @const1019
+0    216   4   18   1386 10.6  write_data_bytes_flash1g
 0     14   0    0             @const1023
-0    472  12    1    696  2.4  MAIN
-0     20   0    0             @const1028
-0     28   1    0             @const1029
-0     22   1    0             @const1030
-0     38   1    0             @const1031
-0     32   1    0             @const1032
-0     30   1    0             @const1033
-0     24   1    0             @const1034
-0     36   1    0             @const1035
-0     30   1    0             @const1036
-0     34   1    0             @const1037
-0     28   1    0             @const1038
-0     32   1    0             @const1039
-0     22   1    0             @const1040
-0     42   1    4             @PSTRINGCN_9600_31791_31789
-0     26   1    0             @const1043
+0    842  15   47   2507 10.1  MAIN
+0     20   0    0             @const1032
+0     28   0    0             @const1033
+0     22   0    0             @const1034
+0     38   1    0             @const1035
+0     32   1    0             @const1036
+0     30   1    0             @const1037
+0     22   0    0             @const1038
+0     46   1    0             @const1039
+0     24   0    0             @const1040
+0     38   1    0             @const1041
+0     54   1    0             @const1042
+0     30   1    0             @const1044
+0     34   1    0             @const1045
+0     40   1    4             @PSTRINGCN_9600_31791_31789
+0     38   1    2             @PSTRINGR_9600_31791_31789
+0     40   1    3             @DIV88
+0    110   2    2             @PRINTF_U_9600_31791_31789
+0     42   1    0             @const1055
+0     22   0    0             @const1056
+0     18   0    0             @const1057
+0     14   0    0             @const1058
+0     18   0    0             @const1059
+0     26   0    0             @const1060
+0     20   0    0             @const1061
  Inline         0             @cinit1
 
 Program metrics:
     Functions               7
-    Statements              203
-    Comments                591
-    Volume (V)              6752
-    Difficulty (D)          33.3
-    Effort to implement (E) 224686
-    Time to implement (T)   3 hours, 28 minutes
-    Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   8
-    Maintainability (MI)    130
+    Statements              244
+    Comments                501
+    Volume (V)              9428
+    Difficulty (D)          44.1
+    Effort to implement (E) 415513
+    Time to implement (T)   6 hours, 25 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   18
+    Maintainability (MI)    101
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00004     6  0  
-00006-0FFFE  2038  63492  
+00006-0FFFE  2822  62708  
 10000-1FFEE     0  65520  
 
 

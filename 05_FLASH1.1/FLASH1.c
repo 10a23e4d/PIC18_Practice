@@ -1,35 +1,7 @@
 #include "FLASH1.h"
 
-//#include <GDNS_tbd_FlashOperation.h>
-
-
 /*
-// --- MT25QL01GBBB コマンド定義 ---
-#define CMD_READ_ID       0x9F
-#define CMD_WRITE_ENABLE  0x06
-#define CMD_READ_STATUS   0x05
-#define CMD_READ_DATA     0x03
-#define CMD_PAGE_PROGRAM  0x02 // 3-byte address page program
-#define CMD_SECTOR_ERASE  0x20 // 4KB Subsector Erase (3-byte address)
-#define CMD_BULK_ERASE    0xC7
-
-
-// ★★★ 動作モード切り替え ★★★
-// 0: ID読み取り (通常)
-// 1: GPIOテスト (テスター用)
-// 2: SPI連続送信 (オシロ用)
-// 3: Flash書き込み/読み出しテスト (NEW!)
-#define OPERATION_MODE 3
-
-// --- 関数プロトタイプ宣言 ---
-
-void flash_write_enable();
-void flash_wait_busy();
-void flash_sector_erase(int32 addr);
-void flash_page_program(int32 addr, int8 *data, int16 len);
-void flash_read_data(int32 addr, int8 *buffer, int16 len);
-*/
-
+// ABが出力される（正常）
 void main()
 {
    int8 get_data;
@@ -62,202 +34,190 @@ void main()
    fprintf(PORT1, "Read Data Flash1G done.\r\n");
 
 }
+*/
 
+/*
 
+// NOIHSが表示されるもの (正常）
+void main()
+{
+   // ここに書き込みたい文字列を指定してください（5文字程度推奨）
+   char write_str[] = "NOIHS";
 
+   // 定義した文字列を表示
+   fprintf(PORT1, "String to Write: %s\r\n", write_str);
 
+   // 文字列の長さを計算（終端のヌル文字分を除く）
+   int8 data_len = sizeof(write_str) - 1;
 
-/*// --- メイン関数 ---
-void main() {
-   int8 manufacturer_id, memory_type, memory_capacity;
-   int8 write_buf[10] = {0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 1, 2, 3, 4, 5};
-   int8 read_buf[10];
-   int i;
+   // 読み出したデータを格納するバッファ（少し大きめに確保）
+   int8 read_buf[20];
+   int8 i;
 
-      setup_adc_ports(NO_ANALOGS);
+   fprintf(PORT1, "==Program Start==\r\n");
 
-   // CS初期化
-   output_high(SPI2_CS);
+   fprintf(PORT1, "Flash Setting Starting...\r\n");
+   flash_setting();
+   fprintf(PORT1, "Flash Setting done.\r\n");
 
-   fprintf(PORT1, "\r\n=== System Started ===\r\n");
-   delay_ms(100);
+   fprintf(PORT1, "Status Register Flash1G Starting...\r\n");
+   status_register_flash1g();
+   fprintf(PORT1, "Status Register Flash1G done.\r\n");
 
-#if OPERATION_MODE == 3
-   // --- モード3: Flash R/W テスト ---
-   fprintf(PORT1, "Mode 3: Flash Read/Write Test Start.\r\n");
+   fprintf(PORT1, "Read ID Flash1G Starting...\r\n");
+   read_id_flash1g();
+   fprintf(PORT1, "Read ID Flash1G done.\r\n");
 
-   while(TRUE) {
-      // 1. まずID確認
-      output_high(SPI2_CS);
-      spi_xfer(SPI2, CMD_READ_ID);
-      manufacturer_id = spi_xfer(SPI2, 0x00);
-      spi_xfer(SPI2, 0x00); spi_xfer(SPI2, 0x00); // 残りは読み飛ばし
-      output_high(SPI2_CS);
+   fprintf(PORT1, "Sector Erase Flash1G Starting...\r\n");
+   // アドレス 0x0000 を含むセクタを消去
+   sector_erase_flash1g(0x0000);
+   fprintf(PORT1, "Sector Erase Flash1G done.\r\n");
 
+   fprintf(PORT1, "Write Data Flash1G Starting...\r\n");
 
-      if(manufacturer_id != 0x20) {
-         fprintf(PORT1, "Error: Flash ID mismatch (0x%X). Check connection.\r\n", manufacturer_id);
-         delay_ms(1000);
-         continue;
+   // 文字列の書き込み
+   fprintf(PORT1, "Writing String: %s (Length: %u)\r\n", write_str, data_len);
+   // (アドレス, 長さ, データポインタ)
+   write_data_bytes_flash1g(0x0000, data_len, (int8*)write_str);
+
+   fprintf(PORT1, "Write Data Flash1G done.\r\n");
+
+   fprintf(PORT1, "Read Data Flash1G Starting...\r\n");
+
+   // 読み出しバッファを一旦0(ヌル文字)でクリアしておく
+   for(i = 0; i < sizeof(read_buf); i++) {
+      read_buf[i] = 0;
+   }
+
+   // データの読み出し
+   // (アドレス, 長さ, データ格納先ポインタ)
+   read_data_bytes_flash1g(0x0000, data_len, read_buf);
+
+   // 結果の表示
+   // %s で文字列として表示
+   fprintf(PORT1, "Read Data(String): %s\r\n", read_buf);
+
+   // 1バイトずつHEXで表示して詳細確認
+   fprintf(PORT1, "Read Data(Hex): ");
+   for(i = 0; i < data_len; i++) {
+      fprintf(PORT1, "%02X ", read_buf[i]);
+   }
+   fprintf(PORT1, "\r\n");
+
+   fprintf(PORT1, "Read Data Flash1G done.\r\n");
+}
+*/
+
+/*
+// キーボード入力を受け付け (正常)
+void main()
+{
+   // 入力用と読み出し用のバッファ
+   char write_str[21];
+   int8 read_buf[21];
+
+   int8 data_len;
+   int8 i;
+   char c;
+
+   fprintf(PORT1, "==Program Start==\r\n");
+
+   fprintf(PORT1, "Flash Setting Starting...\r\n");
+   flash_setting();
+   fprintf(PORT1, "Flash Setting done.\r\n");
+
+   fprintf(PORT1, "Status Register Flash1G Starting...\r\n");
+   status_register_flash1g();
+   fprintf(PORT1, "Status Register Flash1G done.\r\n");
+
+   fprintf(PORT1, "Read ID Flash1G Starting...\r\n");
+   if(read_id_flash1g()) {
+      fprintf(PORT1, "Flash ID Check OK.\r\n");
+   } else {
+      fprintf(PORT1, "Flash ID Check FAILED. (Check Connections)\r\n");
+   }
+   fprintf(PORT1, "Read ID Flash1G done.\r\n");
+
+   // メインループ：何度も入力→書き込み→読み出しを行えるようにする
+   while(TRUE)
+   {
+      fprintf(PORT1, "\r\n================================\r\n");
+      fprintf(PORT1, "Please enter text (max 20 chars) and press ENTER:\r\n> ");
+
+      // --- 文字列入力処理 (エコーバック付き) ---
+      data_len = 0;
+      while(TRUE)
+      {
+         c = fgetc(PORT1); // UART1から1文字受信 (ブロッキング)
+
+         if(c == '\r') // Enterキーが押されたら終了
+         {
+             break;
+         }
+         else if(c == 0x08 || c == 0x7F) // バックスペースキーの処理
+         {
+             if(data_len > 0)
+             {
+                 data_len--;
+                 fputc(0x08, PORT1); // カーソルを戻す
+                 fputc(' ', PORT1);  // 空白で文字を消す
+                 fputc(0x08, PORT1); // 再度カーソルを戻す
+             }
+         }
+         else if(data_len < 20) // 通常の文字入力 (バッファ上限まで)
+         {
+             write_str[data_len] = c;
+             data_len++;
+             fputc(c, PORT1); // 入力した文字を画面に表示 (エコーバック)
+         }
       }
 
-      fprintf(PORT1, "1. Flash Found. Test Addr: 0x001000\r\n");
+      write_str[data_len] = '\0'; // 文字列の終端処理
+      fprintf(PORT1, "\r\n"); // 改行
 
-      // 2. セクタ消去 (4KB Erase)
-      // 書き込みの前には必ず消去が必要です。
-      fprintf(PORT1, "2.1 Erasing Sector... ");
-      flash_write_enable();
-      flash_sector_erase(0x001000);
-      fprintf(PORT1, "2.2 Erase Command Sent. Waiting... ");
-      flash_wait_busy(); // 消去完了待ち
-      fprintf(PORT1, "Done.\r\n");
-
-      // 3. 書き込み (Page Program)
-      fprintf(PORT1, "3. Writing Data {0xAA, 0xBB...}... ");
-      flash_write_enable();
-      flash_page_program(0x001000, write_buf, 10);
-      flash_wait_busy(); // 書き込み完了待ち
-      fprintf(PORT1, "Done.\r\n");
-
-      // 4. 読み出し検証
-      fprintf(PORT1, "4. Reading Data... ");
-      // バッファクリア
-      for(i=0; i<10; i++) read_buf[i] = 0;
-
-      flash_read_data(0x001000, read_buf, 10);
-
-      // 比較
-      int match = 1;
-      for(i=0; i<10; i++) {
-         if(read_buf[i] != write_buf[i]) match = 0;
+      // 何も入力されなかった場合はスキップ
+      if (data_len == 0) {
+          fprintf(PORT1, "No text entered. Try again.\r\n");
+          continue;
       }
 
-      if(match) {
-         fprintf(PORT1, "[SUCCESS] Data Matches!\r\n");
-         for(i=0; i<10; i++) fprintf(PORT1, "%02X ", read_buf[i]);
-         fprintf(PORT1, "\r\n");
-      } else {
-         fprintf(PORT1, "[FAIL] Data Mismatch.\r\n");
-         fprintf(PORT1, "Read: ");
-         for(i=0; i<10; i++) fprintf(PORT1, "%02X ", read_buf[i]);
-         fprintf(PORT1, "\r\n");
+      fprintf(PORT1, "Input received: %s (Length: %u)\r\n", write_str, data_len);
+
+      // --- セクタ消去 ---
+      // 書き込み前に対象セクタ(ここでは0x0000を含むセクタ)を消去する必要があります
+      fprintf(PORT1, "Sector Erase Flash1G (Addr: 0x0000)...\r\n");
+      sector_erase_flash1g(0x0000);
+      fprintf(PORT1, "Sector Erase done.\r\n");
+
+      // --- 書き込み ---
+      fprintf(PORT1, "Writing Data...\r\n");
+      // (アドレス, 長さ, データポインタ)
+      write_data_bytes_flash1g(0x0000, data_len, (int8*)write_str);
+      fprintf(PORT1, "Write done.\r\n");
+
+      // --- 読み出し検証 ---
+      fprintf(PORT1, "Reading Data...\r\n");
+
+      // 読み出しバッファをクリア
+      for(i = 0; i < sizeof(read_buf); i++) read_buf[i] = 0;
+
+      // データの読み出し
+      read_data_bytes_flash1g(0x0000, data_len, read_buf);
+
+      // 結果の表示
+      fprintf(PORT1, "Read Result(String): %s\r\n", read_buf);
+
+      // 詳細なHEX表示
+      fprintf(PORT1, "Read Result(Hex): ");
+      for(i = 0; i < data_len; i++) {
+         fprintf(PORT1, "%02X ", read_buf[i]);
       }
+      fprintf(PORT1, "\r\n");
 
-      fprintf(PORT1, "--- Test Finished (Wait 5s) ---\r\n");
-      delay_ms(5000);
+      // 一致確認
+      // 簡易的なチェック（先頭文字と長さが合っているかなど）
+      // 必要であれば strcmp などで厳密に比較可能
    }
-
-#elif OPERATION_MODE == 1
-   // --- モード1: GPIOテスト ---
-   // ... (以前と同じコード) ...
-   fprintf(PORT1, "Mode 1: GPIO Toggle Test.\r\n");
-   while(TRUE) {
-      output_low(SPI2_CS); delay_ms(2000);
-      output_high(SPI2_CS); delay_ms(2000);
-      output_low(PIN_A3); delay_ms(2000);
-      output_high(PIN_A3); delay_ms(2000);
-      output_low(PIN_A1); delay_ms(2000);
-      output_high(PIN_A1); delay_ms(2000);
-   }
-
-#elif OPERATION_MODE == 2
-   // --- モード2: SPI連続送信 ---
-   // ... (以前と同じコード) ...
-   output_low(SPI2_CS);
-   while(TRUE) {
-      spi_xfer(SPI2, 0x55);
-   }
-
-#else
-   // --- モード0: ID読み取りのみ ---
-   fprintf(PORT1, "Mode 0: Read ID Only.\r\n");
-   while(TRUE) {
-      output_low(SPI2_CS);
-      spi_xfer(SPI2, CMD_READ_ID);
-      manufacturer_id = spi_xfer(SPI2, 0x00);
-      memory_type = spi_xfer(SPI2, 0x00);
-      memory_capacity = spi_xfer(SPI2, 0x00);
-      output_high(SPI2_CS);
-      fprintf(PORT1, "ID: %02X %02X %02X\r\n", manufacturer_id, memory_type, memory_capacity);
-      delay_ms(1000);
-   }
-#endif
 }
+*/
 
-// --- Flash操作関数群 ---
-
-// 書き込み許可 (Write Enable)
-void flash_write_enable() {
-   output_low(SPI2_CS);
-   spi_xfer(SPI2, CMD_WRITE_ENABLE); // 0x06
-   output_high(SPI2_CS);
-}
-
-// ビジー待機 (Status RegisterのWIPビット監視)
-void flash_wait_busy() {
-   int8 status;
-   //do {
-      output_low(SPI2_CS);
-      fprintf(PORT1, "Output Low\n\r");
-      spi_xfer(SPI2, WRITE_ENABLE); // 0x05
-      fprintf(PORT1, "WRITE ENABLE\n\r");
-      status = spi_xfer(SPI2, 0x00);
-      fprintf(PORT1, "spi_xfer done\n\r");
-      output_high(SPI2_CS);
-      fprintf(PORT1, "Output high\n\r");
-      // Bit 0 が WIP (Write In Progress)
-   //} while (status & 0x01);
-}
-
-// セクタ消去 (4KB Subsector Erase)
-void flash_sector_erase(int32 addr) {
-   output_low(SPI2_CS);
-   spi_xfer(SPI2, CMD_SECTOR_ERASE); // 0x20
-
-   // 3バイトアドレス送信 (MSB First)
-   spi_xfer(SPI2, (addr >> 16) & 0xFF);
-   spi_xfer(SPI2, (addr >> 8) & 0xFF);
-   spi_xfer(SPI2, addr & 0xFF);
-
-   output_high(SPI2_CS);
-}
-
-// ページプログラム (データ書き込み)
-void flash_page_program(int32 addr, int8 *data, int16 len) {
-   int16 i;
-
-   output_low(SPI2_CS);
-   spi_xfer(SPI2, CMD_PAGE_PROGRAM); // 0x02
-
-   // 3バイトアドレス送信
-   spi_xfer(SPI2, (addr >> 16) & 0xFF);
-   spi_xfer(SPI2, (addr >> 8) & 0xFF);
-   spi_xfer(SPI2, addr & 0xFF);
-
-   // データ送信
-   for(i=0; i<len; i++) {
-      spi_xfer(SPI2, data[i]);
-   }
-
-   output_high(SPI2_CS);
-}
-
-// データ読み出し
-void flash_read_data(int32 addr, int8 *buffer, int16 len) {
-   int16 i;
-
-   output_low(SPI2_CS);
-   spi_xfer(SPI2, CMD_READ_DATA); // 0x03
-
-   // 3バイトアドレス送信
-   spi_xfer(SPI2, (addr >> 16) & 0xFF);
-   spi_xfer(SPI2, (addr >> 8) & 0xFF);
-   spi_xfer(SPI2, addr & 0xFF);
-
-   // データ受信
-   for(i=0; i<len; i++) {
-      buffer[i] = spi_xfer(SPI2, 0x00);
-   }
-
-   output_high(SPI2_CS);
-}*/
