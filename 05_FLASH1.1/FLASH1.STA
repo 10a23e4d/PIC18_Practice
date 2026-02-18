@@ -1,30 +1,33 @@
 
-ROM used:   2828/131056 (2%)
-            2828/131056 (2%) including unused fragments
+ROM used:   2800/131056 (2%)
+            2800/131056 (2%) including unused fragments
 
-            1.1 Average locations per line
-            11.6 Average locations per statement
+            0.6 Average locations per line
+            4.0 Average locations per statement
 
-RAM used:   53/3578 (1%) at main() level
-            80/3578 (2%) worst case
+RAM used:   29/3578 (1%) at main() level
+            54/3578 (2%) worst case
 
-Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack used: 0 worst case (0 in main + 0 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  222    61  25  FLASH1.c
+  345    35   5  FLASH1.c
    60     0   0  FLASH1.h
  1487     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
-  697   183  75  GDNS_tbd_FlashOperation.c
+  697   183  26  GDNS_tbd_FlashOperation.c
    60     0   0  GDNS_tbd_FlashOperation.h
+ 1354   359  51  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+  435   129  18  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
 ----- -----
- 2526   244 Total
+ 4498   706 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     40   1    1             @delay_ms1
-0      8   0    0             @PUTCHARI_BIU_1
 0     56   1    6             @SPI_XFER_1
 0      8   0    0     19  0.5  flash_setting
 0     68   1    2    210  3.7  status_register_flash1g
@@ -43,49 +46,44 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     14   0    0             @const1019
 0    216   4   18   1386 10.6  write_data_bytes_flash1g
 0     14   0    0             @const1023
-0    842  15   47   2507 10.1  MAIN
-0     20   0    0             @const1032
-0     28   0    0             @const1033
-0     22   0    0             @const1034
-0     38   1    0             @const1035
-0     32   1    0             @const1036
-0     30   1    0             @const1037
-0     22   0    0             @const1038
-0     46   1    0             @const1039
-0     24   0    0             @const1040
-0     38   1    0             @const1041
-0     54   1    0             @const1042
-0     30   1    0             @const1044
-0     34   1    0             @const1045
+0     86   2   14             @MUL3232
+0    106   2    4    101  3.8  rand
+0     68   1    5             @DIV1616
+0    752  13   15   1593  8.4  MAIN
+0     38   1    0             @const1306
+0     24   0    0             @const1307
+0     16   0    0             @const1308
+0     34   1    0             @const1309
+0     18   0    0             @const1310
+0     56   1    0             @const1311
+0     32   1    0             @const1313
+0     28   0    0             @const1314
 0     40   1    4             @PSTRINGCN_9600_31791_31789
-0     38   1    2             @PSTRINGR_9600_31791_31789
-0     40   1    3             @DIV88
-0    110   2    2             @PRINTF_U_9600_31791_31789
-0     42   1    0             @const1055
-0     22   0    0             @const1056
-0     18   0    0             @const1057
-0     14   0    0             @const1058
-0     18   0    0             @const1059
-0     26   0    0             @const1060
-0     20   0    0             @const1061
+0    172   3    9             @PRINTF_LU_9600_31791_31789
+0     32   1    0             @const1319
+0     30   1    0             @const1320
+0     14   0    0             @const1321
+0     16   0    0             @const1322
+0     36   1    0             @const1323
+0     30   1    4     98  3.5  get_adc_sample
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               7
-    Statements              244
-    Comments                501
-    Volume (V)              9428
-    Difficulty (D)          44.1
-    Effort to implement (E) 415513
-    Time to implement (T)   6 hours, 25 minutes
+    Functions               9
+    Statements              706
+    Comments                2343
+    Volume (V)              8823
+    Difficulty (D)          50.4
+    Effort to implement (E) 444973
+    Time to implement (T)   6 hours, 52 minutes
     Est Delivered Bugs (B)  2
-    Cyclomatic Complexity   18
-    Maintainability (MI)    101
+    Cyclomatic Complexity   13
+    Maintainability (MI)    57
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00004     6  0  
-00006-0FFFE  2822  62708  
+00006-0FFFE  2794  62736  
 10000-1FFEE     0  65520  
 
 

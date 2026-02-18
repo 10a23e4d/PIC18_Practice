@@ -11,7 +11,7 @@ Type=4
 1=FLASH1.c
 
 [defines]
-buildcount=16
+buildcount=18
 
 [Opened Files]
 1=FLASH1.c
@@ -22,7 +22,9 @@ t2=1
 t3=1
 4=GDNS_tbd_FlashOperation.h
 t4=1
-Count=4
+Count=5
+5=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
+t5=472
 
 [ProjectLog]
 Days=1
