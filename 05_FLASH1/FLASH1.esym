@@ -1,9 +1,9 @@
-D G "__PCH__" 0 0 ""5.104""
-D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""17-Feb-26""
-D G "__TIME__" 0 0 ""16:22:57""
-D G "_UNICODE" 0 0 ""?""
-D G "__EVAL" 0 0 ""?"" "Standard Header file for the PIC18F67J94 device ////////////////"
+D G "__PCH__" 0 218 ""5.104""
+D G "__DEVICE__" 0 218 "6794"
+D G "__DATE__" 0 218 ""18-Feb-26""
+D G "__TIME__" 0 218 ""13:42:00""
+D G "_UNICODE" 0 218 ""?""
+D G "__EVAL" 0 218 ""?"" "Standard Header file for the PIC18F67J94 device ////////////////"
 c L "set_tris_a" 2 3 26 "FUNCTION"
 F N "set_tris_a" 2 77 ""
 V L "value" 2 77 "int8" `55 
@@ -1033,9 +1033,9 @@ F N "setup_act" 2 1031 ""
 F B "setup_act" 2 1031 "int8()" `442 
 F N "setup_act" 2 1032 ""
 V L "mode" 2 1032 "int8" `444 
-f G "setup_act" 2 1032 "int8(int8 mode)" `443 
+f G "setup_act" 2 1032 "int8(int8 mode,int32 mode)" `443 
 F N "act_status" 2 1033 ""
-F B "act_status" 2 1033 "int8(int8 mode)" `443  "Constants used in setup_oscillator() are:"
+F B "act_status" 2 1033 "int8(int8 mode,int32 mode)" `443  "Constants used in setup_oscillator() are:"
 D G "OSC_31000" 2 1036 "0x00000005"
 D G "OSC_31250" 2 1037 "0x00070000"
 D G "OSC_125KHZ" 2 1038 "0x00060000"
@@ -1084,9 +1084,9 @@ F N "read_adc" 2 1089 ""
 f G "read_adc" 2 1089 "int16()" `449 
 F N "read_adc" 2 1090 ""
 V L "mode" 2 1090 "int8" `450 
-f G "read_adc" 2 1090 "int16(int8 mode)" `449 
+f G "read_adc" 2 1090 "int16(int8 mode,int32 pins)" `449 
 F N "adc_done" 2 1091 ""
-F B "adc_done" 2 1091 "int8(int8 mode)" `449  "Constants used for SETUP_ADC() are:"
+F B "adc_done" 2 1091 "int8(int8 mode,int32 pins)" `449  "Constants used for SETUP_ADC() are:"
 D G "ADC_OFF" 2 1093 "0x10000"
 D G "ADC_CLOCK" 2 1094 "0x0000"
 D G "ADC_CLOCK_DIV_2" 2 1095 "0x0001"
@@ -1551,9 +1551,9 @@ F B "i2c_transfer_in" 2 1286 "int8(int8 stream,int8 address,*int8 rData,int8 rCo
 F N "spi_xfer" 2 1289 ""
 F B "spi_xfer" 2 1289 "int8()" `750 
 F N "spi_xfer" 2 1290 ""
-f G "spi_xfer" 2 1290 "int16()" `751 
+f G "spi_xfer" 2 1290 "int16(int8 data)" `751 
 F N "spi_xfer" 2 1291 ""
-f G "spi_xfer" 2 1291 "int32()" `751 
+f G "spi_xfer" 2 1291 "int32(int8 data)" `751 
 F N "spi_xfer" 2 1292 ""
 V L "data" 2 1292 "int8" `752 
 F B "spi_xfer" 2 1292 "int8(int8 data)" `751 
@@ -1633,18 +1633,18 @@ F B "spi_prewrite" 2 1311 "void(int8 ,int32 data)" `804
 F N "spi_xfer_in" 2 1312 ""
 F B "spi_xfer_in" 2 1312 "int8()" `807 
 F N "spi_xfer_in" 2 1313 ""
-f G "spi_xfer_in" 2 1313 "int16()" `808 
+f G "spi_xfer_in" 2 1313 "int16(int8 bits)" `808 
 F N "spi_xfer_in" 2 1314 ""
-f G "spi_xfer_in" 2 1314 "int32()" `808 
+f G "spi_xfer_in" 2 1314 "int32(int8 bits)" `808 
 F N "spi_xfer_in" 2 1315 ""
 V L "bits" 2 1315 "int8" `809 
 F B "spi_xfer_in" 2 1315 "int8(int8 bits)" `808 
 F N "spi_xfer_in" 2 1316 ""
 V L "bits" 2 1316 "int8" `811 
-f G "spi_xfer_in" 2 1316 "int16(int8 bits)" `810 
+f G "spi_xfer_in" 2 1316 "int16(int8 bits,int8 bits)" `810 
 F N "spi_xfer_in" 2 1317 ""
 V L "bits" 2 1317 "int8" `811 
-f G "spi_xfer_in" 2 1317 "int32(int8 bits)" `810 
+f G "spi_xfer_in" 2 1317 "int32(int8 bits,int8 bits)" `810 
 F N "spi_xfer_in" 2 1318 ""
 V L "stream" 2 1318 "int8" `811 
 V L "bits" 2 1318 "int8" `812 
@@ -1652,11 +1652,11 @@ F B "spi_xfer_in" 2 1318 "int8(int8 stream,int8 bits)" `810
 F N "spi_xfer_in" 2 1319 ""
 V L "stream" 2 1319 "int8" `811 
 V L "bits" 2 1319 "int8" `815 
-f G "spi_xfer_in" 2 1319 "int16(int8 stream,int8 bits)" `813 
+f G "spi_xfer_in" 2 1319 "int16(int8 stream,int8 bits,int16 count)" `813 
 F N "spi_xfer_in" 2 1320 ""
 V L "stream" 2 1320 "int8" `811 
 V L "bits" 2 1320 "int8" `815 
-f G "spi_xfer_in" 2 1320 "int32(int8 stream,int8 bits)" `813 
+f G "spi_xfer_in" 2 1320 "int32(int8 stream,int8 bits,int16 count)" `813 
 F N "spi_transfer" 2 1321 ""
 V L "wData" 2 1321 "*int8" `814 
 V L "rData" 2 1321 "*int8" `815 
@@ -1725,9 +1725,9 @@ F B "rtos_stats" 2 1341 "void(int8 task,*int8 stat)" `856  "#use timer() Prototy
 F N "get_ticks" 2 1344 ""
 F B "get_ticks" 2 1344 "int8()" `859 
 F N "get_ticks" 2 1345 ""
-f G "get_ticks" 2 1345 "int16()" `860 
+f G "get_ticks" 2 1345 "int16(int8 stream)" `860 
 F N "get_ticks" 2 1346 ""
-f G "get_ticks" 2 1346 "int32()" `860 
+f G "get_ticks" 2 1346 "int32(int8 stream)" `860 
 F N "get_ticks" 2 1347 ""
 V L "stream" 2 1347 "int8" `861 
 F B "get_ticks" 2 1347 "int8(int8 stream)" `860 
@@ -1928,50 +1928,266 @@ D G "INT_RDA3" 2 1481 "0x006120"
 D G "INT_TBE4" 2 1482 "0x006140"
 D G "INT_RDA4" 2 1483 "0x006180"
 D G "INT_IOC" 2 1484 "0x0FFFF208"
-D G "SPI1_CS" 0 19 "PIN_A2"
-D G "FLASH_CMD_WREN" 0 28 "0x06"
-D G "FLASH_CMD_RDID" 0 29 "0x9F"
-D G "FLASH_CMD_RDSR" 0 30 "0x05"
-D G "FLASH_CMD_READ" 0 31 "0x03"
-D G "FLASH_CMD_PP" 0 32 "0x02"
-D G "FLASH_CMD_SE" 0 33 "0x20"
-C L "jump_to_isr" 0 4 1 "FUNCTION"
-F N "Flash_Write_Enable" 0 39 ""
-F G "Flash_Write_Enable" 0 39 "void()" `954 
-F N "Flash_Wait_Busy" 0 45 ""
-F G "Flash_Wait_Busy" 0 45 "void()" `955 
-V L "status" 0 46 "int8" `956 
-F N "Flash_Read_ID" 0 55 ""
-V L "mfg_id" 0 55 "*int8" `958 
-V L "dev_id" 0 55 "*int16" `959 
-F G "Flash_Read_ID" 0 55 "void(*int8 mfg_id,*int16 dev_id)" `957 
-V L "d1" 0 56 "int8" `960 
-V L "d2" 0 56 "int8" `961 
-F N "Flash_Sector_Erase" 0 70 ""
-V L "address" 0 70 "int32" `963 
-F G "Flash_Sector_Erase" 0 70 "void(int32 address)" `962 
-F N "Flash_Write_Byte" 0 84 ""
-V L "address" 0 84 "int32" `965 
-V L "data" 0 84 "int8" `966 
-F G "Flash_Write_Byte" 0 84 "void(int32 address,int8 data)" `964 
-F N "Flash_Read_Data" 0 99 ""
-V L "address" 0 99 "int32" `968 
-V L "buffer" 0 99 "*int8" `969 
-V L "length" 0 99 "int16" `970 
-F G "Flash_Read_Data" 0 99 "void(int32 address,*int8 buffer,int16 length)" `967 
-V L "i" 0 100 "int16" `971 
-C L "MAIN" 0 4 1 "FUNCTION"
-F N "MAIN" 0 118 ""
-F G "MAIN" 0 118 "void()" `972 
-V L "mfg_id" 0 119 "int8" `973 
-V L "dev_id" 0 120 "int16" `974 
-V L "target_addr" 0 121 "int32" `975 
-V L "write_val" 0 122 "int8" `976 
-V L "read_val" 0 123 "int8" `977 
-C L "MAIN" 0 4 1 "FUNCTION"
-C L "MAIN" 0 4 1 "FUNCTION"
-C L "MAIN" 0 4 1 "FUNCTION"
-C L "MAIN" 0 4 1 "FUNCTION"
+D G "SPI2_CS" 1 25 "PIN_B3"
+D G "DIO_3" 1 28 "PIN_G0"
+D G "DIO_4" 1 29 "PIN_G1"
+D G "DIO_5" 1 30 "PIN_G2"
+D G "DIO_6" 1 31 "PIN_G3"
+D G "DIO_8" 1 32 "PIN_G4"
+D G "DIO_12" 1 33 "PIN_F6"
+D G "DIO_27" 1 34 "PIN_A5"
+D G "DIO_28" 1 35 "PIN_A4"
+D G "DIO_29" 1 36 "PIN_C1"
+D G "DIO_30" 1 37 "PIN_C0"
+D G "DIO_31" 1 38 "PIN_C6"
+D G "DIO_32" 1 39 "PIN_C7"
+D G "DIO_33" 1 40 "PIN_C2"
+D G "DIO_34" 1 41 "PIN_C3"
+D G "DIO_35" 1 42 "PIN_C4"
+D G "DIO_36" 1 43 "PIN_C5"
+D G "DIO_47" 1 44 "PIN_B1"
+D G "DIO_48" 1 45 "PIN_B0"
+D G "DIO_49" 1 46 "PIN_D7"
+D G "DIO_50" 1 47 "PIN_D6"
+D G "DIO_51" 1 48 "PIN_D5"
+D G "DIO_52" 1 49 "PIN_D4"
+D G "DIO_55" 1 50 "PIN_D1"
+D G "DIO_58" 1 51 "PIN_D0"
+D G "DIO_59" 1 52 "PIN_E7"
+D G "DEBUG" 4 1 ""
+D G "USE_FLASH1G" 4 2 "" "MT25QL01GBBB:SMF,CF"
+D G "DEBUG_PORT" 4 7 "PORT1"
+D G "FLASH1G" 4 11 "FM" "port for 1 Gbit Flash"
+D G "FLASH1G_CS" 4 12 "PIN_C2"
+D G "READ_ID" 4 21 "0x9F"
+D G "READ_STATUS_REGISTER" 4 22 "0x05"
+D G "READ" 4 23 "0x03"
+D G "READ_4BYTE" 4 24 "0x13"
+D G "WRITE_ENABLE" 4 25 "0x06"
+D G "PAGE_PROGRAM" 4 26 "0x02"
+D G "PAGE_PROGRAM_4BYTE" 4 27 "0x12"
+D G "SUBSECTOR_4KB_ERASE" 4 28 "0x20"
+D G "SUBSECTOR_4KB_ERASE_4BYTE" 4 29 "0x21"
+D G "SUBSECTOR_32KB_ERASE" 4 30 "0x52"
+D G "SUBSECTOR_32KB_ERASE_4BYTE" 4 31 "0x5C"
+D G "SECTOR_ERASE" 4 32 "0xD8"
+D G "SECTOR_ERASE_4BYTE" 4 33 "0xDC"
+C L "jump_to_isr" 4 3 1 "FUNCTION"
+F N "status_register_flash1g" 4 37 ""
+f G "status_register_flash1g" 4 37 "int8()" `962  "bit[7:2]status register control bit,bit[1]write enable bit T:ennable F:disable,bit[0]write in progress bit T:busy F:ready"
+F N "read_id_flash1g" 4 38 ""
+f G "read_id_flash1g" 4 38 "int8()" `963  "T:Flash id read successfully(connect OK),F:Flash id read failed"
+F N "sector_erase_flash1g" 4 39 ""
+V L "sector_address" 4 39 "int32" `965 
+f G "sector_erase_flash1g" 4 39 "void(int32 sector_address)" `964  "64kByte erase"
+F N "subsector_32kByte_erase_flash1g" 4 40 ""
+V L "subsector_address" 4 40 "int32" `967 
+f G "subsector_32kByte_erase_flash1g" 4 40 "void(int32 subsector_address)" `966  "32kByte erase"
+F N "subsector_4kByte_erase_flash1g" 4 41 ""
+V L "subsector_address" 4 41 "int32" `969 
+f G "subsector_4kByte_erase_flash1g" 4 41 "void(int32 subsector_address)" `968  "4kByte erase"
+F N "read_data_byte_flash1g" 4 42 ""
+V L "read_address" 4 42 "int32" `971 
+f G "read_data_byte_flash1g" 4 42 "int8(int32 read_address)" `970  "read 1 Byte data"
+F N "read_data_bytes_flash1g" 4 43 ""
+V L "read_address" 4 43 "int32" `973 
+V L "amount" 4 43 "int32" `974 
+V L "read_data" 4 43 "*int8" `975 
+f G "read_data_bytes_flash1g" 4 43 "void(int32 read_address,int32 amount,*int8 read_data)" `972  "read multi Bytes data(max 128 MByte) and store to "read data""
+F N "write_data_byte_flash1g" 4 44 ""
+V L "write_address" 4 44 "int32" `977 
+V L "write_data" 4 44 "int8" `978 
+f G "write_data_byte_flash1g" 4 44 "void(int32 write_address,int8 write_data)" `976  "write 1 Byte data to flash"
+F N "write_data_bytes_flash1g" 4 45 ""
+V L "write_address" 4 45 "int32" `980 
+V L "amount" 4 45 "int8" `981 
+V L "write_data" 4 45 "*int8" `982 
+f G "write_data_bytes_flash1g" 4 45 "void(int32 write_address,int8 amount,*int8 write_data)" `979  "write multi Bytes data(max128 Byte) to flash"
+F N "flash_setting" 3 3 ""
+F G "flash_setting" 3 4 "void()" `983 
+F N "status_register_flash1g" 3 14 ""
+F G "status_register_flash1g" 3 15 "int8()" `962 
+V L "status_reg" 3 16 "int8" `984 
+C L "status_register_flash1g" 3 17 1 "FUNCTION"
+C L "status_register_flash1g" 3 17 1 "FUNCTION"
+C L "status_register_flash1g" 3 17 1 "FUNCTION"
+C L "status_register_flash1g" 3 17 1 "FUNCTION"
+F N "read_id_flash1g" 3 28 ""
+C L "read_id_flash1g" 3 17 1 "FUNCTION"
+F G "read_id_flash1g" 3 29 "int8()" `963 
+V L "chip_id" 3 30 "int8[21]" `990 
+V L "i" 3 32 "int8" `991 
+C L "read_id_flash1g" 3 17 1 "FUNCTION"
+F N "sector_erase_flash1g" 3 70 ""
+V L "sector_address" 3 70 "int32" `1001 
+F G "sector_erase_flash1g" 3 71 "void(int32 sector_address)" `964 
+V L "address" 3 72 "int8[4]" `1000 
+V L "timeout_counter" 3 73 "int8" `1001 
+C L "sector_erase_flash1g" 3 17 1 "FUNCTION"
+C L "sector_erase_flash1g" 3 17 1 "FUNCTION"
+C L "sector_erase_flash1g" 3 17 1 "FUNCTION"
+C L "sector_erase_flash1g" 3 17 2 "FUNCTION"
+C L "sector_erase_flash1g" 3 17 1 "FUNCTION"
+C L "sector_erase_flash1g" 3 17 1 "FUNCTION"
+C L "sector_erase_flash1g" 3 17 1 "FUNCTION"
+C L "sector_erase_flash1g" 3 17 1 "FUNCTION"
+F N "subsector_32kByte_erase_flash1g" 3 117 ""
+V L "subsector_address" 3 117 "int32" `1004 
+F G "subsector_32kByte_erase_flash1g" 3 118 "void(int32 subsector_address)" `966 
+V L "address" 3 119 "int8[4]" `1003 
+V L "timeout_counter" 3 120 "int8" `1004 
+C L "subsector_32kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_32kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_32kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_32kByte_erase_flash1g" 3 17 2 "FUNCTION"
+C L "subsector_32kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_32kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_32kByte_erase_flash1g" 3 17 1 "FUNCTION"
+F N "subsector_4kByte_erase_flash1g" 3 162 ""
+V L "subsector_address" 3 162 "int32" `969  "4kByte erase"
+F G "subsector_4kByte_erase_flash1g" 3 163 "void(int32 subsector_address)" `968 
+V L "address" 3 164 "int8[4]" `1006 
+V L "timeout_counter" 3 165 "int8" `1007 
+C L "subsector_4kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_4kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_4kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_4kByte_erase_flash1g" 3 17 2 "FUNCTION"
+C L "subsector_4kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_4kByte_erase_flash1g" 3 17 1 "FUNCTION"
+C L "subsector_4kByte_erase_flash1g" 3 17 1 "FUNCTION"
+F N "read_data_byte_flash1g" 3 209 ""
+V L "read_address" 3 209 "int32" `1010 
+F G "read_data_byte_flash1g" 3 210 "int8(int32 read_address)" `970 
+V L "read_data" 3 211 "int8" `1009 
+V L "address" 3 212 "int8[4]" `1010 
+C L "read_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "read_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "read_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "read_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "read_data_byte_flash1g" 3 17 1 "FUNCTION"
+F N "read_data_bytes_flash1g" 3 235 ""
+V L "read_address" 3 235 "int32" `1012 
+V L "amount" 3 235 "int8" `1013 
+V L "read_data" 3 235 "*int8" `1014 
+F G "read_data_bytes_flash1g" 3 236 "void(int32 read_address,int8 amount,*int8 read_data)" `1011 
+V L "address" 3 237 "int8[4]" `1015 
+C L "read_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "read_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "read_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "read_data_bytes_flash1g" 3 17 1 "FUNCTION"
+V L "i" 3 252 "int8" `1016 
+C L "read_data_bytes_flash1g" 3 17 1 "FUNCTION"
+F N "write_data_byte_flash1g" 3 262 ""
+V L "write_address" 3 262 "int32" `977 
+V L "write_data" 3 262 "int8" `1019 
+F G "write_data_byte_flash1g" 3 263 "void(int32 write_address,int8 write_data)" `976 
+V L "address" 3 264 "int8[4]" `1017 
+V L "timeout_counter" 3 265 "int8" `1018 
+C L "write_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_byte_flash1g" 3 17 2 "FUNCTION"
+C L "write_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_byte_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_byte_flash1g" 3 17 1 "FUNCTION"
+F N "write_data_bytes_flash1g" 3 310 ""
+V L "write_address" 3 310 "int32" `980 
+V L "amount" 3 310 "int8" `981 
+V L "write_data" 3 310 "*int8" `1023 
+F G "write_data_bytes_flash1g" 3 311 "void(int32 write_address,int8 amount,*int8 write_data)" `979 
+V L "address" 3 312 "int8[4]" `1020 
+V L "timeout_counter" 3 313 "int8" `1021 
+C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_bytes_flash1g" 3 17 2 "FUNCTION"
+C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
+V L "i" 3 334 "int8" `1022 
+C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
+C L "write_data_bytes_flash1g" 3 17 1 "FUNCTION"
+D G "CMD_READ_ID" 0 7 "0x9F"
+D G "CMD_WRITE_ENABLE" 0 8 "0x06"
+D G "CMD_READ_STATUS" 0 9 "0x05"
+D G "CMD_READ_DATA" 0 10 "0x03"
+D G "CMD_PAGE_PROGRAM" 0 11 "0x02" "3-byte address page program"
+D G "CMD_SECTOR_ERASE" 0 12 "0x20" "4KB Subsector Erase (3-byte address)"
+D G "CMD_BULK_ERASE" 0 13 "0xC7"
+D G "OPERATION_MODE" 0 20 "3"
+C L "flash_write_enable" 0 3 1 "FUNCTION"
+F N "flash_write_enable" 0 23 ""
+f G "flash_write_enable" 0 23 "void()" `1024 
+F N "flash_wait_busy" 0 24 ""
+f G "flash_wait_busy" 0 24 "void()" `1025 
+F N "flash_sector_erase" 0 25 ""
+V L "addr" 0 25 "int32" `1027 
+f G "flash_sector_erase" 0 25 "void(int32 addr)" `1026 
+F N "flash_page_program" 0 26 ""
+V L "addr" 0 26 "int32" `1029 
+V L "data" 0 26 "*int8" `1030 
+V L "len" 0 26 "int16" `1031 
+f G "flash_page_program" 0 26 "void(int32 addr,*int8 data,int16 len)" `1028 
+F N "flash_read_data" 0 27 ""
+V L "addr" 0 27 "int32" `1033 
+V L "buffer" 0 27 "*int8" `1034 
+V L "len" 0 27 "int16" `1035 
+f G "flash_read_data" 0 27 "void(int32 addr,*int8 buffer,int16 len)" `1032  "--- メイン関数 ---"
+F N "MAIN" 0 30 ""
+F G "MAIN" 0 30 "void()" `1036 
+V L "manufacturer_id" 0 31 "int8" `1037 
+V L "memory_type" 0 31 "int8" `1038 
+V L "memory_capacity" 0 31 "int8" `1039 
+V L "write_buf" 0 32 "int8[10]" `1040 
+V L "read_buf" 0 33 "int8[10]" `1041 
+V L "i" 0 34 "int8" `1042 
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 2 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+V L "match" 0 87 "int8" `1056 
+C L "flash_write_enable" 0 3 2 "FUNCTION"
+F N "flash_write_enable" 0 147 ""
+F G "flash_write_enable" 0 147 "void()" `1024 
+C L "flash_write_enable" 0 3 1 "FUNCTION"
+C L "flash_wait_busy" 0 3 1 "FUNCTION"
+F N "flash_wait_busy" 0 154 ""
+F G "flash_wait_busy" 0 154 "void()" `1025 
+V L "status" 0 155 "int8" `1065 
+C L "flash_wait_busy" 0 3 1 "FUNCTION"
+C L "flash_wait_busy" 0 3 1 "FUNCTION"
+C L "flash_sector_erase" 0 3 1 "FUNCTION"
+F N "flash_sector_erase" 0 166 ""
+V L "addr" 0 166 "int32" `1067 
+F G "flash_sector_erase" 0 166 "void(int32 addr)" `1026 
+C L "flash_sector_erase" 0 3 2 "FUNCTION"
+C L "flash_page_program" 0 3 1 "FUNCTION"
+F N "flash_page_program" 0 179 ""
+V L "addr" 0 179 "int32" `1029 
+V L "data" 0 179 "*int8" `1030 
+V L "len" 0 179 "int16" `1069 
+F G "flash_page_program" 0 179 "void(int32 addr,*int8 data,int16 len)" `1028 
+V L "i" 0 180 "int16" `1066 
+C L "flash_page_program" 0 3 2 "FUNCTION"
+C L "flash_page_program" 0 3 1 "FUNCTION"
+C L "flash_read_data" 0 3 1 "FUNCTION"
+F N "flash_read_data" 0 199 ""
+V L "addr" 0 199 "int32" `1033 
+V L "buffer" 0 199 "*int8" `1034 
+V L "len" 0 199 "int16" `1070 
+F G "flash_read_data" 0 199 "void(int32 addr,*int8 buffer,int16 len)" `1032 
+V L "i" 0 200 "int16" `1067 
+C L "flash_read_data" 0 3 2 "FUNCTION"
+C L "flash_read_data" 0 3 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
@@ -2180,5 +2396,3 @@ F B "spi_xfer" 0 3
 F B "spi_transfer" 3 4
 F B "spi_transfer_write" 2 3
 F B "spi_transfer_read" 2 3
-F B "spi_speed" 1 3
-F B "spi_init" 1 2

@@ -11,22 +11,35 @@ Type=4
 1=FLASH1.c
 
 [defines]
-buildcount=7
+buildcount=3
 
 [Opened Files]
-1=FLASH1.c
+1=Flash_Memory.c
 t1=1
+2=GDNS_tbd_FlashOperation.c
+t2=8
+3=Flash_Memory.c
+t3=8
+4=GDNS_tbd_FlashOperation.h
+t4=1
 Count=1
 
 [ProjectLog]
 Days=1
-D1=17-02-2026
-D1_L=2
-D1_L1=[58438]Project Closed.
-D1_L2=[58970]Project Opened.
-
-[fileformats]
-forcecoff=0
+D1=18-02-2026
+D1_L=5
+D1_L1=[46849]Stopped Editing.
+TotalEdit=5
+TotalDebug=0
+D1_E=5
+D1_D=0
+D1_L2=[47172]Project Closed.
+D1_L3=[49251]Project Closed.
+D1_L4=[49265]Project Opened.
+D1_L5=[49326]Project Closed.
 [Units]
 Count=1
 1=FLASH1 (main)
+
+[fileformats]
+forcecoff=0

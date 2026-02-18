@@ -1,0 +1,30 @@
+[PROJECT]
+Target=TEMP.hex
+Processor_Text=PIC18F67J94
+CCSVersion=5.104
+Compiler=PCH
+[Target Data]
+FileList=TEMP.c
+[TEMP.c]
+Type=4
+[mru-list]
+1=TEMP.c
+[Units]
+Count=1
+1=TEMP (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=2
+D1=17-02-2026
+D1_L=1
+D1_L1=[61890]Project Closed.
+D2=18-02-2026
+D2_L=2
+D2_L1=[40634]Project Opened.
+D2_L2=[40639]Project Closed.
+
+[fileformats]
+forcecoff=0

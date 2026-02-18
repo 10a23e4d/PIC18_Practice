@@ -1,0 +1,46 @@
+
+ROM used:   100/131056 (0%)
+            100/131056 (0%) including unused fragments
+
+            0.1 Average locations per line
+            14.3 Average locations per statement
+
+RAM used:   4/3578 (0%) at main() level
+            4/3578 (0%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   21     7 100  TEMP.c
+    7     0   0  TEMP.h
+ 1487     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
+----- -----
+ 1515     7 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     94  47    0    106  1.7  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              7
+    Comments                286
+    Volume (V)              108
+    Difficulty (D)          1.6
+    Effort to implement (E) 170
+    Time to implement (T)   0 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    159
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00004     6  0  
+00006-0FFFE    94  65436  
+10000-1FFEE     0  65520  
+
+
+

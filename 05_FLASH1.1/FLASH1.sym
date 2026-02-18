@@ -1,0 +1,159 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-005 @sprintf_string
+006-01A read_id_flash1g.chip_id
+006-009 sector_erase_flash1g.sector_address
+006-009 write_data_byte_flash1g.write_address
+006-009 read_data_byte_flash1g.read_address
+00A     write_data_byte_flash1g.write_data
+00A     read_data_byte_flash1g.read_data
+00A-00D sector_erase_flash1g.address
+00B-00E read_data_byte_flash1g.address
+00B-00E write_data_byte_flash1g.address
+00E     sector_erase_flash1g.timeout_counter
+00F     write_data_byte_flash1g.timeout_counter
+00F     sector_erase_flash1g.@SCRATCH1
+00F     read_data_byte_flash1g.@SCRATCH1
+010     @delay_ms1.P1
+010     status_register_flash1g.status_reg
+010     sector_erase_flash1g.@SCRATCH2
+010     read_data_byte_flash1g.@SCRATCH2
+010     write_data_byte_flash1g.@SCRATCH1
+011     status_register_flash1g.@SCRATCH1
+011     sector_erase_flash1g.@SCRATCH3
+011     read_data_byte_flash1g.@SCRATCH3
+011     write_data_byte_flash1g.@SCRATCH2
+012     sector_erase_flash1g.@SCRATCH4
+012     read_data_byte_flash1g.@SCRATCH4
+012     write_data_byte_flash1g.@SCRATCH3
+013     sector_erase_flash1g.@SCRATCH5
+013     read_data_byte_flash1g.@SCRATCH5
+013     write_data_byte_flash1g.@SCRATCH4
+014     write_data_byte_flash1g.@SCRATCH5
+01B     read_id_flash1g.i
+01C     @PSTRINGC_9600_31791_31789.@SCRATCH1
+01C     read_id_flash1g.@SCRATCH1
+01D     @PRINTF_X_9600_31791_31789.P1
+01D     @PSTRINGC_9600_31791_31789.@SCRATCH2
+01D     read_id_flash1g.@SCRATCH2
+01E     @SPI_XFER_1.P1
+01E     @PRINTF_X_9600_31791_31789.P2
+01E     @PSTRINGC_9600_31791_31789.@SCRATCH3
+01F     @SPI_XFER_1.P1
+020     @SPI_XFER_1.P1
+021     @SPI_XFER_1.@SCRATCH1
+022     @SPI_XFER_1.@SCRATCH2
+EEF.0   MDBIT
+EEF.3   MDOUT
+F08     CCP_7
+F08     CCP_7_LOW
+F09     CCP_7_HIGH
+F0B     CCP_6_LOW
+F0B     CCP_6
+F0C     CCP_6_HIGH
+F0E     CCP_5_LOW
+F0E     CCP_5
+F0F     CCP_5_HIGH
+F11     CCP_4
+F11     CCP_4_LOW
+F12     CCP_4_HIGH
+F21     DSGPR3
+F22     DSGPR2
+F23     DSGPR1
+F24     DSGPR0
+F41     CCP_10
+F41     CCP_10_LOW
+F42     CCP_10_HIGH
+F44     CCP_9
+F44     CCP_9_LOW
+F45     CCP_9_HIGH
+F47     CCP_8
+F47     CCP_8_LOW
+F48     CCP_8_HIGH
+F4A     CCP_3
+F4A     CCP_3_LOW
+F4B     CCP_3_HIGH
+F4F     CCP_2
+F4F     CCP_2_LOW
+F50     CCP_2_HIGH
+F83     PSP_DATA
+FBA     CCP_1_LOW
+FBA     CCP_1
+FBB     CCP_1_HIGH
+FC4.0   C1OUT
+FC4.1   C2OUT
+FC4.2   C3OUT
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000006  @const985.call
+00001A  @const992.call
+000024  @const998.call
+000038  @const999.call
+00004C  @const1002.call
+00005A  @const1005.call
+000068  @const1008.call
+000076  @const1019.call
+000084  @const1023.call
+000092  @const1027.call
+0000A6  @PSTRINGC_9600_31791_31789
+0000D0  flash_setting
+0000D8  @SPI_XFER_1
+000110  status_register_flash1g
+000154  @PRINTF_X_9600_31791_31789
+000198  read_id_flash1g
+000262  @delay_ms1
+00028A  sector_erase_flash1g
+00033C  write_data_byte_flash1g
+0003FC  read_data_byte_flash1g
+00047E  MAIN
+00047E  @cinit1
+000544  @cinit2
+
+Project Directory:
+    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\05_FLASH1.1\
+
+Project Files:
+    FLASH1.c                                                [18-2-26 14:43  CRC=E2691B75]
+    FLASH1.h                                                [18-2-26 12:54  CRC=76F857D0]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h [13-5-21 13:54  CRC=CB5C8DE4]
+    GDNS_tbd_FlashOperation.c                               [18-3-25 15:06  CRC=6C874E47]
+    GDNS_tbd_FlashOperation.h                               [18-2-26 12:54  CRC=84B2634C]
+
+Source signature=9AAA1608
+Program memory checksum=0000
+Hex file CRC=93F0
+
+Units:
+    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\05_FLASH1.1\FLASH1 (main)
+
+Compiler Settings:
+    Processor:      PIC18F67J94
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   FLASH1.xsym
+    Errors:      FLASH1.err
+    Ext Symbols: FLASH1.esym
+    INHX32:      FLASH1.hex
+    Symbols:     FLASH1.sym
+    List:        FLASH1.lst
+    Debug/COFF:  FLASH1.cof
+    Project:     FLASH1.ccspjt
+    Call Tree:   FLASH1.tre
+    Statistics:  FLASH1.STA

@@ -1,17 +1,17 @@
-CCS PCH C Compiler, Version 5.104, 57077               17-2-26 16:22
+CCS PCH C Compiler, Version 5.104, 57077               18-2-26 12:29
 
                Filename:   C:\Users\rice_\Chiba Institute of Technology\6���@ - �h�L�������g\TMP_MIS\02_Software\PIC18_Practice\05_FLASH1\FLASH1.lst
 
-               ROM used:   1298 bytes (1%)
+               ROM used:   1904 bytes (1%)
                            Largest free fragment is 65520
-               RAM used:   16 (0%) at main() level
-                           31 (1%) worst case
+               RAM used:   33 (1%) at main() level
+                           51 (1%) worst case
                Stack used: 2 locations
                Stack size: 31
 
 *
 00000:  NOP   
-00002:  GOTO   02FE
+00002:  GOTO   0416
 .................... #include "FLASH1.h"
 .................... #include <18F67J94.h>
 .................... //////////// Standard Header file for the PIC18F67J94 device ////////////////
@@ -26,161 +26,241 @@ CCS PCH C Compiler, Version 5.104, 57077               17-2-26 16:22
 .................... ///////////////////////////////////////////////////////////////////////////
 .................... #device PIC18F67J94
 00006:  DATA 0D,0A
-00008:  DATA 0D,0A
-0000A:  DATA 3D,3D
-0000C:  DATA 3D,20
-0000E:  DATA 46,6C
-00010:  DATA 61,73
-00012:  DATA 68,20
-00014:  DATA 54,65
-00016:  DATA 73,74
-00018:  DATA 20,28
-0001A:  DATA 50,50
-0001C:  DATA 53,20
-0001E:  DATA 41,64
-00020:  DATA 64,65
-00022:  DATA 64,29
-00024:  DATA 20,3D
-00026:  DATA 3D,3D
-00028:  DATA 0D,0A
-0002A:  DATA 00,00
-0002C:  DATA 49,44
-0002E:  DATA 20,52
-00030:  DATA 65,61
-00032:  DATA 64,3A
-00034:  DATA 20,4D
-00036:  DATA 66,67
-00038:  DATA 3D,30
-0003A:  DATA 78,25
-0003C:  DATA 58,2C
-0003E:  DATA 20,44
-00040:  DATA 65,76
-00042:  DATA 3D,30
-00044:  DATA 78,25
-00046:  DATA 4C,58
-00048:  DATA 0D,0A
-0004A:  DATA 00,00
-0004C:  DATA 5B,4F
-0004E:  DATA 4B,5D
-00050:  DATA 20,4D
-00052:  DATA 69,63
-00054:  DATA 72,6F
-00056:  DATA 6E,20
-00058:  DATA 46,6C
-0005A:  DATA 61,73
-0005C:  DATA 68,20
-0005E:  DATA 44,65
-00060:  DATA 74,65
-00062:  DATA 63,74
-00064:  DATA 65,64
-00066:  DATA 2E,0D
-00068:  DATA 0A,00
-0006A:  DATA 5B,45
-0006C:  DATA 52,52
-0006E:  DATA 5D,20
-00070:  DATA 49,44
-00072:  DATA 20,52
-00074:  DATA 65,61
-00076:  DATA 64,20
-00078:  DATA 46,61
-0007A:  DATA 69,6C
-0007C:  DATA 65,64
-0007E:  DATA 2E,20
-00080:  DATA 43,68
-00082:  DATA 65,63
-00084:  DATA 6B,20
-00086:  DATA 63,6F
-00088:  DATA 6E,6E
-0008A:  DATA 65,63
-0008C:  DATA 74,69
-0008E:  DATA 6F,6E
-00090:  DATA 73,2E
-00092:  DATA 0D,0A
-00094:  DATA 00,00
-00096:  DATA 57,3A
-00098:  DATA 30,78
-0009A:  DATA 25,58
-0009C:  DATA 2C,20
-0009E:  DATA 52,3A
-000A0:  DATA 30,78
-000A2:  DATA 25,58
-000A4:  DATA 20,2D
-000A6:  DATA 3E,20
-000A8:  DATA 00,00
-000AA:  DATA 53,55
-000AC:  DATA 43,43
-000AE:  DATA 45,53
-000B0:  DATA 53,21
-000B2:  DATA 0D,0A
-000B4:  DATA 00,00
-000B6:  DATA 46,41
-000B8:  DATA 49,4C
-000BA:  DATA 0D,0A
-000BC:  DATA 00,00
+00008:  DATA 3D,3D
+0000A:  DATA 3D,20
+0000C:  DATA 53,79
+0000E:  DATA 73,74
+00010:  DATA 65,6D
+00012:  DATA 20,53
+00014:  DATA 74,61
+00016:  DATA 72,74
+00018:  DATA 65,64
+0001A:  DATA 20,3D
+0001C:  DATA 3D,3D
+0001E:  DATA 0D,0A
+00020:  DATA 00,00
+00022:  DATA 4D,6F
+00024:  DATA 64,65
+00026:  DATA 20,33
+00028:  DATA 3A,20
+0002A:  DATA 46,6C
+0002C:  DATA 61,73
+0002E:  DATA 68,20
+00030:  DATA 52,65
+00032:  DATA 61,64
+00034:  DATA 2F,57
+00036:  DATA 72,69
+00038:  DATA 74,65
+0003A:  DATA 20,54
+0003C:  DATA 65,73
+0003E:  DATA 74,20
+00040:  DATA 53,74
+00042:  DATA 61,72
+00044:  DATA 74,2E
+00046:  DATA 0D,0A
+00048:  DATA 00,00
+0004A:  DATA 45,72
+0004C:  DATA 72,6F
+0004E:  DATA 72,3A
+00050:  DATA 20,46
+00052:  DATA 6C,61
+00054:  DATA 73,68
+00056:  DATA 20,49
+00058:  DATA 44,20
+0005A:  DATA 6D,69
+0005C:  DATA 73,6D
+0005E:  DATA 61,74
+00060:  DATA 63,68
+00062:  DATA 20,28
+00064:  DATA 30,78
+00066:  DATA 25,58
+00068:  DATA 29,2E
+0006A:  DATA 20,43
+0006C:  DATA 68,65
+0006E:  DATA 63,6B
+00070:  DATA 20,63
+00072:  DATA 6F,6E
+00074:  DATA 6E,65
+00076:  DATA 63,74
+00078:  DATA 69,6F
+0007A:  DATA 6E,2E
+0007C:  DATA 0D,0A
+0007E:  DATA 00,00
+00080:  DATA 31,2E
+00082:  DATA 20,46
+00084:  DATA 6C,61
+00086:  DATA 73,68
+00088:  DATA 20,46
+0008A:  DATA 6F,75
+0008C:  DATA 6E,64
+0008E:  DATA 2E,20
+00090:  DATA 54,65
+00092:  DATA 73,74
+00094:  DATA 20,41
+00096:  DATA 64,64
+00098:  DATA 72,3A
+0009A:  DATA 20,30
+0009C:  DATA 78,30
+0009E:  DATA 30,31
+000A0:  DATA 30,30
+000A2:  DATA 30,0D
+000A4:  DATA 0A,00
+000A6:  DATA 32,2E
+000A8:  DATA 20,45
+000AA:  DATA 72,61
+000AC:  DATA 73,69
+000AE:  DATA 6E,67
+000B0:  DATA 20,53
+000B2:  DATA 65,63
+000B4:  DATA 74,6F
+000B6:  DATA 72,2E
+000B8:  DATA 2E,2E
+000BA:  DATA 20,00
+000BC:  DATA 44,6F
+000BE:  DATA 6E,65
+000C0:  DATA 2E,0D
+000C2:  DATA 0A,00
+000C4:  DATA 33,2E
+000C6:  DATA 20,57
+000C8:  DATA 72,69
+000CA:  DATA 74,69
+000CC:  DATA 6E,67
+000CE:  DATA 20,44
+000D0:  DATA 61,74
+000D2:  DATA 61,20
+000D4:  DATA 7B,30
+000D6:  DATA 78,41
+000D8:  DATA 41,2C
+000DA:  DATA 20,30
+000DC:  DATA 78,42
+000DE:  DATA 42,2E
+000E0:  DATA 2E,2E
+000E2:  DATA 7D,2E
+000E4:  DATA 2E,2E
+000E6:  DATA 20,00
+000E8:  DATA 44,6F
+000EA:  DATA 6E,65
+000EC:  DATA 2E,0D
+000EE:  DATA 0A,00
+000F0:  DATA 34,2E
+000F2:  DATA 20,52
+000F4:  DATA 65,61
+000F6:  DATA 64,69
+000F8:  DATA 6E,67
+000FA:  DATA 20,44
+000FC:  DATA 61,74
+000FE:  DATA 61,2E
+00100:  DATA 2E,2E
+00102:  DATA 20,00
+00104:  DATA 5B,53
+00106:  DATA 55,43
+00108:  DATA 43,45
+0010A:  DATA 53,53
+0010C:  DATA 5D,20
+0010E:  DATA 44,61
+00110:  DATA 74,61
+00112:  DATA 20,4D
+00114:  DATA 61,74
+00116:  DATA 63,68
+00118:  DATA 65,73
+0011A:  DATA 21,0D
+0011C:  DATA 0A,00
+0011E:  DATA 5B,46
+00120:  DATA 41,49
+00122:  DATA 4C,5D
+00124:  DATA 20,44
+00126:  DATA 61,74
+00128:  DATA 61,20
+0012A:  DATA 4D,69
+0012C:  DATA 73,6D
+0012E:  DATA 61,74
+00130:  DATA 63,68
+00132:  DATA 2E,0D
+00134:  DATA 0A,00
+00136:  DATA 52,65
+00138:  DATA 61,64
+0013A:  DATA 3A,20
+0013C:  DATA 00,00
+0013E:  DATA 2D,2D
+00140:  DATA 2D,20
+00142:  DATA 54,65
+00144:  DATA 73,74
+00146:  DATA 20,46
+00148:  DATA 69,6E
+0014A:  DATA 69,73
+0014C:  DATA 68,65
+0014E:  DATA 64,20
+00150:  DATA 28,57
+00152:  DATA 61,69
+00154:  DATA 74,20
+00156:  DATA 35,73
+00158:  DATA 29,20
+0015A:  DATA 2D,2D
+0015C:  DATA 2D,0D
+0015E:  DATA 0A,00
+00160:  TBLRD*+
+00162:  MOVF   FF5,F
+00164:  BZ    0188
+00166:  MOVFF  FF6,1F
+0016A:  MOVFF  FF7,20
+0016E:  MOVFF  FF8,21
+00172:  MOVF   FF5,W
+00174:  BTFSS  F9E.4
+00176:  BRA    0174
+00178:  MOVWF  FAD
+0017A:  MOVFF  1F,FF6
+0017E:  MOVFF  20,FF7
+00182:  MOVFF  21,FF8
+00186:  BRA    0160
+00188:  RETURN 0
 *
-000E6:  TBLRD*+
-000E8:  MOVF   FF5,F
-000EA:  BZ    010E
-000EC:  MOVFF  FF6,0F
-000F0:  MOVFF  FF7,10
-000F4:  MOVFF  FF8,11
-000F8:  MOVF   FF5,W
-000FA:  BTFSS  F9E.4
-000FC:  BRA    00FA
-000FE:  MOVWF  FAD
-00100:  MOVFF  0F,FF6
-00104:  MOVFF  10,FF7
-00108:  MOVFF  11,FF8
-0010C:  BRA    00E6
-0010E:  RETURN 0
-*
-0016E:  TBLRD*+
-00170:  MOVFF  FF6,10
-00174:  MOVFF  FF7,11
-00178:  MOVFF  FF8,12
-0017C:  MOVF   FF5,W
-0017E:  BTFSS  F9E.4
-00180:  BRA    017E
-00182:  MOVWF  FAD
-00184:  MOVFF  10,FF6
-00188:  MOVFF  11,FF7
-0018C:  MOVFF  12,FF8
-00190:  DECFSZ 0F,F
-00192:  BRA    016E
-00194:  RETURN 0
-00196:  BTFSC  10.7
-00198:  BRA    01BA
-0019A:  MOVLW  0F
-0019C:  MOVWF  00
-0019E:  SWAPF  0F,W
-001A0:  ANDWF  00,F
-001A2:  MOVLW  0A
-001A4:  SUBWF  00,W
-001A6:  BC    01AE
-001A8:  MOVLW  30
-001AA:  ADDWF  00,F
-001AC:  BRA    01B2
-001AE:  MOVF   10,W
-001B0:  ADDWF  00,F
-001B2:  MOVF   00,W
-001B4:  BTFSS  F9E.4
-001B6:  BRA    01B4
-001B8:  MOVWF  FAD
-001BA:  MOVLW  0F
-001BC:  ANDWF  0F,F
-001BE:  MOVLW  0A
-001C0:  SUBWF  0F,W
-001C2:  BC    01C8
-001C4:  MOVLW  30
-001C6:  BRA    01CC
-001C8:  BCF    10.7
-001CA:  MOVF   10,W
-001CC:  ADDWF  0F,F
-001CE:  MOVF   0F,W
-001D0:  BTFSS  F9E.4
-001D2:  BRA    01D0
-001D4:  MOVWF  FAD
-001D6:  RETURN 0
+001EA:  TBLRD*+
+001EC:  MOVFF  FF6,20
+001F0:  MOVFF  FF7,21
+001F4:  MOVFF  FF8,22
+001F8:  MOVF   FF5,W
+001FA:  BTFSS  F9E.4
+001FC:  BRA    01FA
+001FE:  MOVWF  FAD
+00200:  MOVFF  20,FF6
+00204:  MOVFF  21,FF7
+00208:  MOVFF  22,FF8
+0020C:  DECFSZ 1F,F
+0020E:  BRA    01EA
+00210:  RETURN 0
+00212:  BTFSC  21.7
+00214:  BRA    0236
+00216:  MOVLW  0F
+00218:  MOVWF  00
+0021A:  SWAPF  20,W
+0021C:  ANDWF  00,F
+0021E:  MOVLW  0A
+00220:  SUBWF  00,W
+00222:  BC    022A
+00224:  MOVLW  30
+00226:  ADDWF  00,F
+00228:  BRA    022E
+0022A:  MOVF   21,W
+0022C:  ADDWF  00,F
+0022E:  MOVF   00,W
+00230:  BTFSS  F9E.4
+00232:  BRA    0230
+00234:  MOVWF  FAD
+00236:  MOVLW  0F
+00238:  ANDWF  20,F
+0023A:  MOVLW  0A
+0023C:  SUBWF  20,W
+0023E:  BC    0244
+00240:  MOVLW  30
+00242:  BRA    0248
+00244:  BCF    21.7
+00246:  MOVF   21,W
+00248:  ADDWF  20,F
+0024A:  MOVF   20,W
+0024C:  BTFSS  F9E.4
+0024E:  BRA    024C
+00250:  MOVWF  FAD
+00252:  RETURN 0
 .................... 
 .................... #list
 .................... 
@@ -188,607 +268,958 @@ CCS PCH C Compiler, Version 5.104, 57077               17-2-26 16:22
 .................... #device ADC = 12
 .................... #use delay(crystal=16000000)
 *
-000BE:  CLRF   FEA
-000C0:  MOVLW  10
-000C2:  MOVWF  FE9
-000C4:  MOVF   FEF,W
-000C6:  BZ    00E4
-000C8:  MOVLW  05
-000CA:  MOVWF  01
-000CC:  CLRF   00
-000CE:  DECFSZ 00,F
-000D0:  BRA    00CE
-000D2:  DECFSZ 01,F
-000D4:  BRA    00CC
-000D6:  MOVLW  2E
-000D8:  MOVWF  00
-000DA:  DECFSZ 00,F
-000DC:  BRA    00DA
-000DE:  BRA    00E0
-000E0:  DECFSZ FEF,F
-000E2:  BRA    00C8
-000E4:  RETURN 0
+0018A:  CLRF   FEA
+0018C:  MOVLW  20
+0018E:  MOVWF  FE9
+00190:  MOVF   FEF,W
+00192:  BZ    01B0
+00194:  MOVLW  05
+00196:  MOVWF  01
+00198:  CLRF   00
+0019A:  DECFSZ 00,F
+0019C:  BRA    019A
+0019E:  DECFSZ 01,F
+001A0:  BRA    0198
+001A2:  MOVLW  2E
+001A4:  MOVWF  00
+001A6:  DECFSZ 00,F
+001A8:  BRA    01A6
+001AA:  BRA    01AC
+001AC:  DECFSZ FEF,F
+001AE:  BRA    0194
+001B0:  RETURN 0
 .................... 
-.................... 
-.................... 
-.................... 
-.................... //=============================================================================
-.................... //  Pin & Communication Settings
-.................... //=============================================================================
-.................... 
-.................... // --- UART1 Settings (PPS) ---
 .................... #pin_select U1TX = PIN_F7
 .................... #pin_select U1RX = PIN_F5
-.................... #use rs232(baud=9600, UART1, parity=N, bits=8, stream=PORT1)
+.................... #use rs232(baud=9600, UART1, parity=N,bits=8,stream=PORT1)
 .................... 
-.................... // --- SPI1 Settings (PPS & Port A) ---
-.................... // 【重要】PIC18F67J94はPPS設定が必須です。これがないと信号が出ません。
-.................... #pin_select SDI1    = PIN_A0  // MISO: Flash DO -> PIC DI
-.................... #pin_select SDO1    = PIN_A1  // MOSI: PIC DO -> Flash DI
-.................... #pin_select SCK1OUT = PIN_A3  // CLK : Clock
+.................... #pin_select U2TX = PIN_D3
+.................... #pin_select U2RX =    PIN_D2
+.................... #use rs232(baud=9600, UART2, parity=N,bits=8,stream=PORT2)
 .................... 
-.................... // 基板の配線定義
-.................... #define SPI1_CS  PIN_A2
+.................... #pin_select U3TX = PIN_E5
+.................... #pin_select U3RX = PIN_E4
+.................... #use rs232(baud=9600, UART3, parity=N,bits=8,stream=PORT3)
 .................... 
-.................... // SPI設定
-.................... #use spi(MASTER, CLK=PIN_A3, DI=PIN_A0, DO=PIN_A1, BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
-*
-00110:  MOVF   FC9,W
-00112:  MOVFF  1E,FC9
-00116:  RRCF   FC7,W
-00118:  BNC   0116
-0011A:  MOVFF  FC9,00
-0011E:  RETURN 0
+.................... #pin_select U4TX = PIN_E3
+.................... #pin_select U4RX = PIN_F2
+.................... #use rs232(baud=9600, UART4, parity=N,bits=8,stream=PORT4)
+.................... 
+.................... //#define SPI1_CS PIN_A2
+.................... //#use spi (MASTER, CLK = PIN_A3, DI = PIN_A0, DO = PIN_A1,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
+.................... 
+.................... #define SPI2_CS PIN_B3
+.................... #use spi (MASTER, CLK = PIN_B2, DI = PIN_B5, DO = PIN_B4,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI2)
+001B2:  MOVF   2F,W
+001B4:  SUBLW  08
+001B6:  BZ    01C0
+001B8:  MOVWF  31
+001BA:  RLCF   2E,F
+001BC:  DECFSZ 31,F
+001BE:  BRA    01BA
+001C0:  BSF    F93.5
+001C2:  BCF    F93.4
+001C4:  BCF    F93.2
+001C6:  BCF    F8A.2
+001C8:  MOVFF  2F,31
+001CC:  BTFSS  2E.7
+001CE:  BCF    F8A.4
+001D0:  BTFSC  2E.7
+001D2:  BSF    F8A.4
+001D4:  RLCF   2E,F
+001D6:  BSF    F8A.2
+001D8:  RLCF   01,F
+001DA:  BTFSS  F81.5
+001DC:  BCF    01.0
+001DE:  BTFSC  F81.5
+001E0:  BSF    01.0
+001E2:  BCF    F8A.2
+001E4:  DECFSZ 31,F
+001E6:  BRA    01CC
+001E8:  RETURN 0
+.................... 
+.................... #define DIO_3 PIN_G0
+.................... #define DIO_4 PIN_G1
+.................... #define DIO_5 PIN_G2
+.................... #define DIO_6 PIN_G3
+.................... #define DIO_8 PIN_G4
+.................... #define DIO_12 PIN_F6
+.................... #define DIO_27 PIN_A5
+.................... #define DIO_28 PIN_A4
+.................... #define DIO_29 PIN_C1
+.................... #define DIO_30 PIN_C0
+.................... #define DIO_31 PIN_C6
+.................... #define DIO_32 PIN_C7
+.................... #define DIO_33 PIN_C2
+.................... #define DIO_34 PIN_C3
+.................... #define DIO_35 PIN_C4
+.................... #define DIO_36 PIN_C5
+.................... #define DIO_47 PIN_B1
+.................... #define DIO_48 PIN_B0
+.................... #define DIO_49 PIN_D7
+.................... #define DIO_50 PIN_D6
+.................... #define DIO_51 PIN_D5
+.................... #define DIO_52 PIN_D4
+.................... #define DIO_55 PIN_D1
+.................... #define DIO_58 PIN_D0
+.................... #define DIO_59 PIN_E7
+.................... 
+.................... //#include <GDNS_tbd_FlashOperation.c>
 .................... 
 .................... 
-.................... //=============================================================================
-.................... //  Flash Memory Commands (MT25QL128ABA)
-.................... //=============================================================================
-.................... #define FLASH_CMD_WREN      0x06
-.................... #define FLASH_CMD_RDID      0x9F
-.................... #define FLASH_CMD_RDSR      0x05
-.................... #define FLASH_CMD_READ      0x03
-.................... #define FLASH_CMD_PP        0x02
-.................... #define FLASH_CMD_SE        0x20
+.................... //#include <GDNS_tbd_FlashOperation.h>
 .................... 
-.................... //=============================================================================
-.................... //  Low Level Functions
-.................... //=============================================================================
 .................... 
-.................... void Flash_Write_Enable() {
-....................     output_low(SPI1_CS);
-*
-001F6:  BCF    F92.2
-001F8:  BCF    F89.2
-....................     spi_xfer(SPI1, FLASH_CMD_WREN);
-001FA:  MOVLW  06
-001FC:  MOVWF  1E
-001FE:  RCALL  0110
-....................     output_high(SPI1_CS);
-00200:  BCF    F92.2
-00202:  BSF    F89.2
-00204:  RETURN 0
-.................... }
+.................... // --- MT25QL01GBBB コマンド定義 ---
+.................... #define CMD_READ_ID       0x9F
+.................... #define CMD_WRITE_ENABLE  0x06
+.................... #define CMD_READ_STATUS   0x05
+.................... #define CMD_READ_DATA     0x03
+.................... #define CMD_PAGE_PROGRAM  0x02 // 3-byte address page program
+.................... #define CMD_SECTOR_ERASE  0x20 // 4KB Subsector Erase (3-byte address)
+.................... #define CMD_BULK_ERASE    0xC7
 .................... 
-.................... void Flash_Wait_Busy() {
-....................     int8 status;
-....................     do {
-....................         output_low(SPI1_CS);
-*
-001D8:  BCF    F92.2
-001DA:  BCF    F89.2
-....................         spi_xfer(SPI1, FLASH_CMD_RDSR);
-001DC:  MOVLW  05
-001DE:  MOVWF  1E
-001E0:  RCALL  0110
-....................         status = spi_xfer(SPI1, 0x00);
-001E2:  CLRF   1E
-001E4:  RCALL  0110
-001E6:  MOVF   01,W
-001E8:  MOVFF  00,19
-....................         output_high(SPI1_CS);
-001EC:  BCF    F92.2
-001EE:  BSF    F89.2
-....................     } while (status & 0x01);
-001F0:  BTFSC  19.0
-001F2:  BRA    01D8
-001F4:  RETURN 0
-.................... }
+.................... // ★★★ 動作モード切り替え ★★★
+.................... // 0: ID読み取り (通常)
+.................... // 1: GPIOテスト (テスター用)
+.................... // 2: SPI連続送信 (オシロ用)
+.................... // 3: Flash書き込み/読み出しテスト (NEW!)
+.................... #define OPERATION_MODE 3
 .................... 
-.................... void Flash_Read_ID(int8 *mfg_id, int16 *dev_id) {
-....................     int8 d1, d2;
+.................... // --- 関数プロトタイプ宣言 ---
+.................... void flash_write_enable();
+.................... void flash_wait_busy();
+.................... void flash_sector_erase(int32 addr);
+.................... void flash_page_program(int32 addr, int8 *data, int16 len);
+.................... void flash_read_data(int32 addr, int8 *buffer, int16 len);
 .................... 
-....................     output_low(SPI1_CS);
-*
-00120:  BCF    F92.2
-00122:  BCF    F89.2
-....................     spi_xfer(SPI1, FLASH_CMD_RDID);
-00124:  MOVLW  9F
-00126:  MOVWF  1E
-00128:  RCALL  0110
-.................... 
-....................     *mfg_id = spi_xfer(SPI1, 0x00);
-0012A:  MOVFF  10,03
-0012E:  MOVFF  0F,FE9
-00132:  MOVFF  10,FEA
-00136:  CLRF   1E
-00138:  RCALL  0110
-0013A:  MOVF   01,W
-0013C:  MOVFF  00,FEF
-....................     d1 = spi_xfer(SPI1, 0x00);
-00140:  CLRF   1E
-00142:  RCALL  0110
-00144:  MOVF   01,W
-00146:  MOVFF  00,13
-....................     d2 = spi_xfer(SPI1, 0x00);
-0014A:  CLRF   1E
-0014C:  RCALL  0110
-0014E:  MOVF   01,W
-00150:  MOVFF  00,14
-.................... 
-....................     output_high(SPI1_CS);
-00154:  BCF    F92.2
-00156:  BSF    F89.2
-.................... 
-....................     *dev_id = make16(d1, d2);
-00158:  MOVFF  11,FE9
-0015C:  MOVFF  12,FEA
-00160:  MOVFF  13,FEC
-00164:  MOVF   FED,F
-00166:  MOVFF  14,FEF
-0016A:  GOTO   03D6 (RETURN)
-.................... }
-.................... 
-.................... void Flash_Sector_Erase(int32 address) {
-....................     Flash_Wait_Busy();
-*
-00206:  RCALL  01D8
-....................     Flash_Write_Enable();
-00208:  RCALL  01F6
-.................... 
-....................     output_low(SPI1_CS);
-0020A:  BCF    F92.2
-0020C:  BCF    F89.2
-....................     spi_xfer(SPI1, FLASH_CMD_SE);
-0020E:  MOVLW  20
-00210:  MOVWF  1E
-00212:  RCALL  0110
-....................     spi_xfer(SPI1, (address >> 16) & 0xFF);
-00214:  CLRF   16
-00216:  CLRF   17
-00218:  CLRF   15
-0021A:  CLRF   16
-0021C:  CLRF   17
-0021E:  MOVFF  11,1E
-00222:  RCALL  0110
-....................     spi_xfer(SPI1, (address >> 8)  & 0xFF);
-00224:  CLRF   17
-00226:  CLRF   15
-00228:  CLRF   16
-0022A:  CLRF   17
-0022C:  MOVFF  10,1E
-00230:  RCALL  0110
-....................     spi_xfer(SPI1,  address        & 0xFF);
-00232:  CLRF   14
-00234:  CLRF   15
-00236:  CLRF   16
-00238:  MOVFF  0F,1E
-0023C:  RCALL  0110
-....................     output_high(SPI1_CS);
-0023E:  BCF    F92.2
-00240:  BSF    F89.2
-.................... 
-....................     Flash_Wait_Busy();
-00242:  RCALL  01D8
-00244:  GOTO   045E (RETURN)
-.................... }
-.................... 
-.................... void Flash_Write_Byte(int32 address, int8 data) {
-....................     Flash_Wait_Busy();
-00248:  RCALL  01D8
-....................     Flash_Write_Enable();
-0024A:  RCALL  01F6
-.................... 
-....................     output_low(SPI1_CS);
-0024C:  BCF    F92.2
-0024E:  BCF    F89.2
-....................     spi_xfer(SPI1, FLASH_CMD_PP);
-00250:  MOVLW  02
-00252:  MOVWF  1E
-00254:  RCALL  0110
-....................     spi_xfer(SPI1, (address >> 16) & 0xFF);
-00256:  CLRF   17
-00258:  CLRF   18
-0025A:  CLRF   16
-0025C:  CLRF   17
-0025E:  CLRF   18
-00260:  MOVFF  11,1E
-00264:  RCALL  0110
-....................     spi_xfer(SPI1, (address >> 8)  & 0xFF);
-00266:  CLRF   18
-00268:  CLRF   16
-0026A:  CLRF   17
-0026C:  CLRF   18
-0026E:  MOVFF  10,1E
-00272:  RCALL  0110
-....................     spi_xfer(SPI1,  address        & 0xFF);
-00274:  CLRF   15
-00276:  CLRF   16
-00278:  CLRF   17
-0027A:  MOVFF  0F,1E
-0027E:  RCALL  0110
-....................     spi_xfer(SPI1, data);
-00280:  MOVFF  13,1E
-00284:  RCALL  0110
-....................     output_high(SPI1_CS);
-00286:  BCF    F92.2
-00288:  BSF    F89.2
-.................... 
-....................     Flash_Wait_Busy();
-0028A:  RCALL  01D8
-0028C:  GOTO   0474 (RETURN)
-.................... }
-.................... 
-.................... void Flash_Read_Data(int32 address, int8 *buffer, int16 length) {
-....................     int16 i;
-....................     Flash_Wait_Busy();
-00290:  RCALL  01D8
-.................... 
-....................     output_low(SPI1_CS);
-00292:  BCF    F92.2
-00294:  BCF    F89.2
-....................     spi_xfer(SPI1, FLASH_CMD_READ);
-00296:  MOVLW  03
-00298:  MOVWF  1E
-0029A:  RCALL  0110
-....................     spi_xfer(SPI1, (address >> 16) & 0xFF);
-0029C:  CLRF   1C
-0029E:  CLRF   1D
-002A0:  CLRF   1B
-002A2:  CLRF   1C
-002A4:  CLRF   1D
-002A6:  MOVFF  11,1E
-002AA:  RCALL  0110
-....................     spi_xfer(SPI1, (address >> 8)  & 0xFF);
-002AC:  CLRF   1D
-002AE:  CLRF   1B
-002B0:  CLRF   1C
-002B2:  CLRF   1D
-002B4:  MOVFF  10,1E
-002B8:  RCALL  0110
-....................     spi_xfer(SPI1,  address        & 0xFF);
-002BA:  CLRF   1A
-002BC:  CLRF   1B
-002BE:  CLRF   1C
-002C0:  MOVFF  0F,1E
-002C4:  RCALL  0110
-.................... 
-....................     for(i=0; i<length; i++) {
-002C6:  CLRF   18
-002C8:  CLRF   17
-002CA:  MOVF   18,W
-002CC:  SUBWF  16,W
-002CE:  BNC   02F6
-002D0:  BNZ   02D8
-002D2:  MOVF   15,W
-002D4:  SUBWF  17,W
-002D6:  BC    02F6
-....................         buffer[i] = spi_xfer(SPI1, 0x00);
-002D8:  MOVF   13,W
-002DA:  ADDWF  17,W
-002DC:  MOVWF  FE9
-002DE:  MOVF   14,W
-002E0:  ADDWFC 18,W
-002E2:  MOVWF  FEA
-002E4:  CLRF   1E
-002E6:  RCALL  0110
-002E8:  MOVF   01,W
-002EA:  MOVFF  00,FEF
-002EE:  INCF   17,F
-002F0:  BTFSC  FD8.2
-002F2:  INCF   18,F
-002F4:  BRA    02CA
-....................     }
-....................     output_high(SPI1_CS);
-002F6:  BCF    F92.2
-002F8:  BSF    F89.2
-002FA:  GOTO   0492 (RETURN)
-.................... }
-.................... 
-.................... //=============================================================================
-.................... //  Main Function
-.................... //=============================================================================
+.................... // --- メイン関数 ---
 .................... void main() {
-002FE:  CLRF   FF8
-00300:  BCF    FD0.7
-00302:  MOVLB  E
-00304:  MOVLW  55
-00306:  MOVWF  F7E
-00308:  MOVLW  AA
-0030A:  MOVWF  F7E
-0030C:  BCF    F66.6
-0030E:  MOVLW  F8
-00310:  MOVWF  x2A
-00312:  MOVLW  00
-00314:  MOVWF  x2E
-00316:  MOVLW  40
-00318:  MOVWF  x12
-0031A:  MOVLW  30
-0031C:  MOVWF  x13
-0031E:  MOVLW  01
-00320:  MOVWF  x25
-00322:  MOVLW  55
-00324:  MOVWF  F7E
-00326:  MOVLW  AA
-00328:  MOVWF  F7E
-0032A:  BSF    F66.6
-0032C:  CLRF   F9B
-0032E:  CLRF   F64
-00330:  CLRF   F65
-00332:  CLRF   F66
-00334:  MOVLW  02
-00336:  MOVWF  FD3
-00338:  BSF    F67.3
-0033A:  MOVLW  A0
-0033C:  MOVWF  FAF
-0033E:  MOVLW  01
-00340:  MOVLB  F
-00342:  MOVWF  x30
-00344:  MOVLW  A6
-00346:  MOVWF  FAC
-00348:  MOVLW  90
-0034A:  MOVWF  FAB
-0034C:  BCF    FC6.5
-0034E:  MOVLW  40
-00350:  MOVWF  FC7
-00352:  MOVLW  03
-00354:  MOVWF  FC8
-00356:  MOVLW  2A
-00358:  MOVWF  FC6
-0035A:  BCF    F92.1
-0035C:  BSF    F92.0
-0035E:  BCF    F92.3
-00360:  CLRF   05
-00362:  CLRF   04
-00364:  MOVLB  E
-00366:  CLRF   xD9
-00368:  CLRF   xDA
-0036A:  CLRF   xCE
-0036C:  CLRF   xCF
-0036E:  CLRF   xD0
-00370:  CLRF   xD1
-00372:  CLRF   xD2
-00374:  CLRF   xD3
-00376:  CLRF   xD4
-00378:  CLRF   xD5
-0037A:  CLRF   x45
-0037C:  CLRF   x46
-0037E:  CLRF   x47
-00380:  BCF    x8D.7
-00382:  BCF    x8D.6
-00384:  BCF    x8D.5
-00386:  MOVLB  F
-00388:  CLRF   x53
-0038A:  CLRF   x38
-0038C:  CLRF   x37
-0038E:  CLRF   0C
-00390:  CLRF   0B
-00392:  MOVLW  10
-00394:  MOVWF  0A
-00396:  CLRF   09
-00398:  MOVLW  55
-0039A:  MOVWF  0D
-0039C:  CLRF   0E
-....................     int8 mfg_id;
-....................     int16 dev_id;
-....................     int32 target_addr = 0x001000;
-....................     int8 write_val = 0x55;
-....................     int8 read_val = 0;
+*
+00416:  CLRF   FF8
+00418:  BCF    FD0.7
+0041A:  MOVLB  E
+0041C:  MOVLW  55
+0041E:  MOVWF  F7E
+00420:  MOVLW  AA
+00422:  MOVWF  F7E
+00424:  BCF    F66.6
+00426:  MOVLW  F8
+00428:  MOVWF  x2A
+0042A:  MOVLW  F5
+0042C:  MOVWF  x2B
+0042E:  MOVLW  F8
+00430:  MOVWF  x2C
+00432:  MOVLW  F9
+00434:  MOVWF  x2D
+00436:  MOVLW  20
+00438:  MOVWF  x1D
+0043A:  MOVLW  30
+0043C:  MOVWF  x22
+0043E:  MOVLW  20
+00440:  MOVWF  x24
+00442:  MOVLW  01
+00444:  MOVWF  x25
+00446:  MOVLW  55
+00448:  MOVWF  F7E
+0044A:  MOVLW  AA
+0044C:  MOVWF  F7E
+0044E:  BSF    F66.6
+00450:  CLRF   F9B
+00452:  CLRF   F64
+00454:  CLRF   F65
+00456:  CLRF   F66
+00458:  MOVLW  02
+0045A:  MOVWF  FD3
+0045C:  BSF    F67.3
+0045E:  MOVLW  A0
+00460:  MOVWF  FAF
+00462:  MOVLW  01
+00464:  MOVLB  F
+00466:  MOVWF  x30
+00468:  MOVLW  A6
+0046A:  MOVWF  FAC
+0046C:  MOVLW  90
+0046E:  MOVWF  FAB
+00470:  BSF    x31.3
+00472:  MOVLW  A0
+00474:  MOVWF  x1F
+00476:  MOVLW  01
+00478:  MOVWF  x20
+0047A:  MOVLW  A6
+0047C:  MOVWF  x32
+0047E:  MOVLW  90
+00480:  MOVWF  x33
+00482:  BSF    x2D.3
+00484:  MOVLW  A0
+00486:  MOVWF  x2B
+00488:  MOVLW  01
+0048A:  MOVWF  x2C
+0048C:  MOVLW  A6
+0048E:  MOVWF  x2E
+00490:  MOVLW  90
+00492:  MOVWF  x2F
+00494:  MOVLB  E
+00496:  BSF    xFD.3
+00498:  MOVLW  A0
+0049A:  MOVWF  xFB
+0049C:  MOVLW  01
+0049E:  MOVWF  xFC
+004A0:  MOVLW  A6
+004A2:  MOVWF  xFE
+004A4:  MOVLW  90
+004A6:  MOVWF  xFF
+004A8:  BSF    F93.5
+004AA:  BCF    F93.4
+004AC:  BCF    F93.2
+004AE:  BCF    F8A.2
+004B0:  CLRF   05
+004B2:  CLRF   04
+004B4:  CLRF   xD9
+004B6:  CLRF   xDA
+004B8:  CLRF   xCE
+004BA:  CLRF   xCF
+004BC:  CLRF   xD0
+004BE:  CLRF   xD1
+004C0:  CLRF   xD2
+004C2:  CLRF   xD3
+004C4:  CLRF   xD4
+004C6:  CLRF   xD5
+004C8:  CLRF   x45
+004CA:  CLRF   x46
+004CC:  CLRF   x47
+004CE:  BCF    x8D.7
+004D0:  BCF    x8D.6
+004D2:  BCF    x8D.5
+004D4:  MOVLB  F
+004D6:  CLRF   x53
+004D8:  CLRF   x38
+004DA:  CLRF   x37
+....................    int8 manufacturer_id, memory_type, memory_capacity;
+....................    int8 write_buf[10] = {0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 1, 2, 3, 4, 5};
+004DC:  MOVLW  AA
+004DE:  MOVWF  09
+004E0:  MOVLW  BB
+004E2:  MOVWF  0A
+004E4:  MOVLW  CC
+004E6:  MOVWF  0B
+004E8:  MOVLW  DD
+004EA:  MOVWF  0C
+004EC:  MOVLW  EE
+004EE:  MOVWF  0D
+004F0:  MOVLW  01
+004F2:  MOVWF  0E
+004F4:  MOVLW  02
+004F6:  MOVWF  0F
+004F8:  MOVLW  03
+004FA:  MOVWF  10
+004FC:  MOVLW  04
+004FE:  MOVWF  11
+00500:  MOVLW  05
+00502:  MOVWF  12
+....................    int8 read_buf[10];
+....................    int i;
 .................... 
-....................     // --- Init ---
-....................     setup_adc_ports(NO_ANALOGS); // アナログ入力無効化
-0039E:  MOVLB  E
-003A0:  CLRF   x45
-003A2:  CLRF   x46
-003A4:  CLRF   x47
-003A6:  BCF    x8D.7
-003A8:  BCF    x8D.6
-003AA:  BCF    x8D.5
-....................     output_drive(SPI1_CS);
-003AC:  BCF    F92.2
-....................     output_high(SPI1_CS);
-003AE:  BCF    F92.2
-003B0:  BSF    F89.2
+....................       setup_adc_ports(NO_ANALOGS);
+00504:  MOVLB  E
+00506:  CLRF   x45
+00508:  CLRF   x46
+0050A:  CLRF   x47
+0050C:  BCF    x8D.7
+0050E:  BCF    x8D.6
+00510:  BCF    x8D.5
 .................... 
-....................     delay_ms(100);
-003B2:  MOVLW  64
-003B4:  MOVWF  10
-003B6:  MOVLB  0
-003B8:  RCALL  00BE
+....................    // CS初期化
+....................    output_high(SPI2_CS);
+00512:  BCF    F93.3
+00514:  BSF    F8A.3
 .................... 
-....................     fprintf(PORT1, "\r\n\r\n=== Flash Test (PPS Added) ===\r\n");
-003BA:  MOVLW  06
-003BC:  MOVWF  FF6
-003BE:  MOVLW  00
-003C0:  MOVWF  FF7
-003C2:  MOVLW  00
-003C4:  MOVWF  FF8
-003C6:  RCALL  00E6
+....................    fprintf(PORT1, "\r\n=== System Started ===\r\n");
+00516:  MOVLW  06
+00518:  MOVWF  FF6
+0051A:  MOVLW  00
+0051C:  MOVWF  FF7
+0051E:  MOVLW  00
+00520:  MOVWF  FF8
+00522:  MOVLB  0
+00524:  RCALL  0160
+....................    delay_ms(100);
+00526:  MOVLW  64
+00528:  MOVWF  20
+0052A:  RCALL  018A
 .................... 
-....................     // 1. Read Chip ID
-....................     Flash_Read_ID(&mfg_id, &dev_id);
-003C8:  CLRF   10
-003CA:  MOVLW  06
-003CC:  MOVWF  0F
-003CE:  CLRF   12
-003D0:  MOVLW  07
-003D2:  MOVWF  11
-003D4:  BRA    0120
-....................     fprintf(PORT1, "ID Read: Mfg=0x%X, Dev=0x%LX\r\n", mfg_id, dev_id);
-003D6:  MOVLW  2C
-003D8:  MOVWF  FF6
-003DA:  MOVLW  00
-003DC:  MOVWF  FF7
-003DE:  MOVLW  00
-003E0:  MOVWF  FF8
-003E2:  MOVLW  0F
-003E4:  MOVWF  0F
-003E6:  RCALL  016E
-003E8:  MOVFF  06,0F
-003EC:  MOVLW  37
-003EE:  MOVWF  10
-003F0:  RCALL  0196
-003F2:  MOVLW  3D
-003F4:  MOVWF  FF6
-003F6:  MOVLW  00
-003F8:  MOVWF  FF7
-003FA:  MOVLW  00
-003FC:  MOVWF  FF8
-003FE:  MOVLW  08
-00400:  MOVWF  0F
-00402:  RCALL  016E
-00404:  MOVFF  08,0F
-00408:  MOVLW  37
-0040A:  MOVWF  10
-0040C:  RCALL  0196
-0040E:  MOVFF  07,0F
-00412:  MOVLW  37
-00414:  MOVWF  10
-00416:  RCALL  0196
-00418:  MOVLW  0D
-0041A:  BTFSS  F9E.4
-0041C:  BRA    041A
-0041E:  MOVWF  FAD
-00420:  MOVLW  0A
-00422:  BTFSS  F9E.4
-00424:  BRA    0422
-00426:  MOVWF  FAD
+.................... #if OPERATION_MODE == 3
+....................    // --- モード3: Flash R/W テスト ---
+....................    fprintf(PORT1, "Mode 3: Flash Read/Write Test Start.\r\n");
+0052C:  MOVLW  22
+0052E:  MOVWF  FF6
+00530:  MOVLW  00
+00532:  MOVWF  FF7
+00534:  MOVLW  00
+00536:  MOVWF  FF8
+00538:  RCALL  0160
 .................... 
-....................     if(mfg_id == 0x20) {
-00428:  MOVF   06,W
-0042A:  SUBLW  20
-0042C:  BNZ   043E
-....................         fprintf(PORT1, "[OK] Micron Flash Detected.\r\n");
-0042E:  MOVLW  4C
-00430:  MOVWF  FF6
-00432:  MOVLW  00
-00434:  MOVWF  FF7
-00436:  MOVLW  00
-00438:  MOVWF  FF8
-0043A:  RCALL  00E6
-....................     } else {
-0043C:  BRA    044C
-....................         fprintf(PORT1, "[ERR] ID Read Failed. Check connections.\r\n");
-0043E:  MOVLW  6A
-00440:  MOVWF  FF6
-00442:  MOVLW  00
-00444:  MOVWF  FF7
-00446:  MOVLW  00
-00448:  MOVWF  FF8
-0044A:  RCALL  00E6
-....................     }
+....................    while(TRUE) {
+....................       // 1. まずID確認
+....................       output_high(SPI2_CS);
+0053A:  BCF    F93.3
+0053C:  BSF    F8A.3
+....................       spi_xfer(SPI2, CMD_READ_ID);
+0053E:  MOVLW  9F
+00540:  MOVWF  2E
+00542:  MOVLW  08
+00544:  MOVWF  2F
+00546:  MOVLW  01
+00548:  MOVWF  30
+0054A:  RCALL  01B2
+....................       manufacturer_id = spi_xfer(SPI2, 0x00);
+0054C:  CLRF   2E
+0054E:  MOVLW  08
+00550:  MOVWF  2F
+00552:  MOVLW  01
+00554:  MOVWF  30
+00556:  RCALL  01B2
+00558:  MOVFF  01,06
+....................       spi_xfer(SPI2, 0x00); spi_xfer(SPI2, 0x00); // 残りは読み飛ばし
+0055C:  CLRF   2E
+0055E:  MOVLW  08
+00560:  MOVWF  2F
+00562:  MOVLW  01
+00564:  MOVWF  30
+00566:  RCALL  01B2
+00568:  CLRF   2E
+0056A:  MOVLW  08
+0056C:  MOVWF  2F
+0056E:  MOVLW  01
+00570:  MOVWF  30
+00572:  RCALL  01B2
+....................       output_high(SPI2_CS);
+00574:  BCF    F93.3
+00576:  BSF    F8A.3
 .................... 
-....................     // 2. Erase/Write/Read
-....................     Flash_Sector_Erase(target_addr);
-0044C:  MOVFF  0C,12
-00450:  MOVFF  0B,11
-00454:  MOVFF  0A,10
-00458:  MOVFF  09,0F
-0045C:  BRA    0206
-....................     Flash_Write_Byte(target_addr, write_val);
-0045E:  MOVFF  0C,12
-00462:  MOVFF  0B,11
-00466:  MOVFF  0A,10
-0046A:  MOVFF  09,0F
-0046E:  MOVFF  0D,13
-00472:  BRA    0248
-....................     Flash_Read_Data(target_addr, &read_val, 1);
-00474:  MOVFF  0C,12
-00478:  MOVFF  0B,11
-0047C:  MOVFF  0A,10
-00480:  MOVFF  09,0F
-00484:  CLRF   14
-00486:  MOVLW  0E
-00488:  MOVWF  13
-0048A:  CLRF   16
-0048C:  MOVLW  01
-0048E:  MOVWF  15
-00490:  BRA    0290
+....................       if(manufacturer_id != 0x20) {
+00578:  MOVF   06,W
+0057A:  SUBLW  20
+0057C:  BZ    05BC
+....................          fprintf(PORT1, "Error: Flash ID mismatch (0x%X). Check connection.\r\n", manufacturer_id);
+0057E:  MOVLW  4A
+00580:  MOVWF  FF6
+00582:  MOVLW  00
+00584:  MOVWF  FF7
+00586:  MOVLW  00
+00588:  MOVWF  FF8
+0058A:  MOVLW  1C
+0058C:  MOVWF  1F
+0058E:  RCALL  01EA
+00590:  MOVFF  06,20
+00594:  MOVLW  37
+00596:  MOVWF  21
+00598:  RCALL  0212
+0059A:  MOVLW  68
+0059C:  MOVWF  FF6
+0059E:  MOVLW  00
+005A0:  MOVWF  FF7
+005A2:  MOVLW  00
+005A4:  MOVWF  FF8
+005A6:  MOVLW  16
+005A8:  MOVWF  1F
+005AA:  RCALL  01EA
+....................          delay_ms(1000);
+005AC:  MOVLW  04
+005AE:  MOVWF  1F
+005B0:  MOVLW  FA
+005B2:  MOVWF  20
+005B4:  RCALL  018A
+005B6:  DECFSZ 1F,F
+005B8:  BRA    05B0
+....................          continue;
+005BA:  BRA    053A
+....................       }
 .................... 
-....................     fprintf(PORT1, "W:0x%X, R:0x%X -> ", write_val, read_val);
-00492:  MOVLW  96
-00494:  MOVWF  FF6
-00496:  MOVLW  00
-00498:  MOVWF  FF7
-0049A:  MOVLW  00
-0049C:  MOVWF  FF8
-0049E:  MOVLW  04
-004A0:  MOVWF  0F
-004A2:  RCALL  016E
-004A4:  MOVFF  0D,0F
-004A8:  MOVLW  37
-004AA:  MOVWF  10
-004AC:  RCALL  0196
-004AE:  MOVLW  9C
-004B0:  MOVWF  FF6
-004B2:  MOVLW  00
-004B4:  MOVWF  FF7
-004B6:  MOVLW  00
-004B8:  MOVWF  FF8
-004BA:  MOVLW  06
-004BC:  MOVWF  0F
-004BE:  RCALL  016E
-004C0:  MOVFF  0E,0F
-004C4:  MOVLW  37
-004C6:  MOVWF  10
-004C8:  RCALL  0196
-004CA:  MOVLW  A4
-004CC:  MOVWF  FF6
-004CE:  MOVLW  00
-004D0:  MOVWF  FF7
-004D2:  MOVLW  00
-004D4:  MOVWF  FF8
-004D6:  MOVLW  04
-004D8:  MOVWF  0F
-004DA:  RCALL  016E
+....................       fprintf(PORT1, "1. Flash Found. Test Addr: 0x001000\r\n");
+005BC:  MOVLW  80
+005BE:  MOVWF  FF6
+005C0:  MOVLW  00
+005C2:  MOVWF  FF7
+005C4:  MOVLW  00
+005C6:  MOVWF  FF8
+005C8:  RCALL  0160
 .................... 
-....................     if(write_val == read_val) {
-004DC:  MOVF   0E,W
-004DE:  SUBWF  0D,W
-004E0:  BNZ   04F2
-....................         fprintf(PORT1, "SUCCESS!\r\n");
-004E2:  MOVLW  AA
-004E4:  MOVWF  FF6
-004E6:  MOVLW  00
-004E8:  MOVWF  FF7
-004EA:  MOVLW  00
-004EC:  MOVWF  FF8
-004EE:  RCALL  00E6
-....................     } else {
-004F0:  BRA    0500
-....................         fprintf(PORT1, "FAIL\r\n");
-004F2:  MOVLW  B6
-004F4:  MOVWF  FF6
-004F6:  MOVLW  00
-004F8:  MOVWF  FF7
-004FA:  MOVLW  00
-004FC:  MOVWF  FF8
-004FE:  RCALL  00E6
-....................     }
+....................       // 2. セクタ消去 (4KB Erase)
+....................       // 書き込みの前には必ず消去が必要です。
+....................       fprintf(PORT1, "2. Erasing Sector... ");
+005CA:  MOVLW  A6
+005CC:  MOVWF  FF6
+005CE:  MOVLW  00
+005D0:  MOVWF  FF7
+005D2:  MOVLW  00
+005D4:  MOVWF  FF8
+005D6:  RCALL  0160
+....................       flash_write_enable();
+005D8:  RCALL  0254
+....................       flash_sector_erase(0x001000);
+005DA:  CLRF   22
+005DC:  CLRF   21
+005DE:  MOVLW  10
+005E0:  MOVWF  20
+005E2:  CLRF   1F
+005E4:  BRA    026C
+....................       flash_wait_busy(); // 消去完了待ち
+005E6:  RCALL  02C8
+....................       fprintf(PORT1, "Done.\r\n");
+005E8:  MOVLW  BC
+005EA:  MOVWF  FF6
+005EC:  MOVLW  00
+005EE:  MOVWF  FF7
+005F0:  MOVLW  00
+005F2:  MOVWF  FF8
+005F4:  RCALL  0160
 .................... 
-....................     while(TRUE) {
-....................         delay_ms(1000);
-00500:  MOVLW  04
-00502:  MOVWF  0F
-00504:  MOVLW  FA
-00506:  MOVWF  10
-00508:  RCALL  00BE
-0050A:  DECFSZ 0F,F
-0050C:  BRA    0504
-0050E:  BRA    0500
-....................     }
+....................       // 3. 書き込み (Page Program)
+....................       fprintf(PORT1, "3. Writing Data {0xAA, 0xBB...}... ");
+005F6:  MOVLW  C4
+005F8:  MOVWF  FF6
+005FA:  MOVLW  00
+005FC:  MOVWF  FF7
+005FE:  MOVLW  00
+00600:  MOVWF  FF8
+00602:  RCALL  0160
+....................       flash_write_enable();
+00604:  RCALL  0254
+....................       flash_page_program(0x001000, write_buf, 10);
+00606:  CLRF   22
+00608:  CLRF   21
+0060A:  MOVLW  10
+0060C:  MOVWF  20
+0060E:  CLRF   1F
+00610:  CLRF   24
+00612:  MOVLW  09
+00614:  MOVWF  23
+00616:  CLRF   26
+00618:  MOVLW  0A
+0061A:  MOVWF  25
+0061C:  BRA    02F4
+....................       flash_wait_busy(); // 書き込み完了待ち
+0061E:  RCALL  02C8
+....................       fprintf(PORT1, "Done.\r\n");
+00620:  MOVLW  E8
+00622:  MOVWF  FF6
+00624:  MOVLW  00
+00626:  MOVWF  FF7
+00628:  MOVLW  00
+0062A:  MOVWF  FF8
+0062C:  RCALL  0160
+.................... 
+....................       // 4. 読み出し検証
+....................       fprintf(PORT1, "4. Reading Data... ");
+0062E:  MOVLW  F0
+00630:  MOVWF  FF6
+00632:  MOVLW  00
+00634:  MOVWF  FF7
+00636:  MOVLW  00
+00638:  MOVWF  FF8
+0063A:  RCALL  0160
+....................       // バッファクリア
+....................       for(i=0; i<10; i++) read_buf[i] = 0;
+0063C:  CLRF   1D
+0063E:  MOVF   1D,W
+00640:  SUBLW  09
+00642:  BNC   0658
+00644:  CLRF   03
+00646:  MOVF   1D,W
+00648:  ADDLW  13
+0064A:  MOVWF  FE9
+0064C:  MOVLW  00
+0064E:  ADDWFC 03,W
+00650:  MOVWF  FEA
+00652:  CLRF   FEF
+00654:  INCF   1D,F
+00656:  BRA    063E
+.................... 
+....................       flash_read_data(0x001000, read_buf, 10);
+00658:  CLRF   22
+0065A:  CLRF   21
+0065C:  MOVLW  10
+0065E:  MOVWF  20
+00660:  CLRF   1F
+00662:  CLRF   24
+00664:  MOVLW  13
+00666:  MOVWF  23
+00668:  CLRF   26
+0066A:  MOVLW  0A
+0066C:  MOVWF  25
+0066E:  BRA    0384
+.................... 
+....................       // 比較
+....................       int match = 1;
+00670:  MOVLW  01
+00672:  MOVWF  1E
+....................       for(i=0; i<10; i++) {
+00674:  CLRF   1D
+00676:  MOVF   1D,W
+00678:  SUBLW  09
+0067A:  BNC   06A8
+....................          if(read_buf[i] != write_buf[i]) match = 0;
+0067C:  CLRF   03
+0067E:  MOVF   1D,W
+00680:  ADDLW  13
+00682:  MOVWF  FE9
+00684:  MOVLW  00
+00686:  ADDWFC 03,W
+00688:  MOVWF  FEA
+0068A:  MOVFF  FEF,1F
+0068E:  CLRF   03
+00690:  MOVF   1D,W
+00692:  ADDLW  09
+00694:  MOVWF  FE9
+00696:  MOVLW  00
+00698:  ADDWFC 03,W
+0069A:  MOVWF  FEA
+0069C:  MOVF   FEF,W
+0069E:  SUBWF  1F,W
+006A0:  BZ    06A4
+006A2:  CLRF   1E
+006A4:  INCF   1D,F
+006A6:  BRA    0676
+....................       }
+.................... 
+....................       if(match) {
+006A8:  MOVF   1E,F
+006AA:  BZ    06F8
+....................          fprintf(PORT1, "[SUCCESS] Data Matches!\r\n");
+006AC:  MOVLW  04
+006AE:  MOVWF  FF6
+006B0:  MOVLW  01
+006B2:  MOVWF  FF7
+006B4:  MOVLW  00
+006B6:  MOVWF  FF8
+006B8:  RCALL  0160
+....................          for(i=0; i<10; i++) fprintf(PORT1, "%02X ", read_buf[i]);
+006BA:  CLRF   1D
+006BC:  MOVF   1D,W
+006BE:  SUBLW  09
+006C0:  BNC   06E6
+006C2:  CLRF   03
+006C4:  MOVF   1D,W
+006C6:  ADDLW  13
+006C8:  MOVWF  FE9
+006CA:  MOVLW  00
+006CC:  ADDWFC 03,W
+006CE:  MOVWF  FEA
+006D0:  MOVFF  FEF,20
+006D4:  MOVLW  37
+006D6:  MOVWF  21
+006D8:  RCALL  0212
+006DA:  MOVLW  20
+006DC:  BTFSS  F9E.4
+006DE:  BRA    06DC
+006E0:  MOVWF  FAD
+006E2:  INCF   1D,F
+006E4:  BRA    06BC
+....................          fprintf(PORT1, "\r\n");
+006E6:  MOVLW  0D
+006E8:  BTFSS  F9E.4
+006EA:  BRA    06E8
+006EC:  MOVWF  FAD
+006EE:  MOVLW  0A
+006F0:  BTFSS  F9E.4
+006F2:  BRA    06F0
+006F4:  MOVWF  FAD
+....................       } else {
+006F6:  BRA    0750
+....................          fprintf(PORT1, "[FAIL] Data Mismatch.\r\n");
+006F8:  MOVLW  1E
+006FA:  MOVWF  FF6
+006FC:  MOVLW  01
+006FE:  MOVWF  FF7
+00700:  MOVLW  00
+00702:  MOVWF  FF8
+00704:  RCALL  0160
+....................          fprintf(PORT1, "Read: ");
+00706:  MOVLW  36
+00708:  MOVWF  FF6
+0070A:  MOVLW  01
+0070C:  MOVWF  FF7
+0070E:  MOVLW  00
+00710:  MOVWF  FF8
+00712:  RCALL  0160
+....................          for(i=0; i<10; i++) fprintf(PORT1, "%02X ", read_buf[i]);
+00714:  CLRF   1D
+00716:  MOVF   1D,W
+00718:  SUBLW  09
+0071A:  BNC   0740
+0071C:  CLRF   03
+0071E:  MOVF   1D,W
+00720:  ADDLW  13
+00722:  MOVWF  FE9
+00724:  MOVLW  00
+00726:  ADDWFC 03,W
+00728:  MOVWF  FEA
+0072A:  MOVFF  FEF,20
+0072E:  MOVLW  37
+00730:  MOVWF  21
+00732:  RCALL  0212
+00734:  MOVLW  20
+00736:  BTFSS  F9E.4
+00738:  BRA    0736
+0073A:  MOVWF  FAD
+0073C:  INCF   1D,F
+0073E:  BRA    0716
+....................          fprintf(PORT1, "\r\n");
+00740:  MOVLW  0D
+00742:  BTFSS  F9E.4
+00744:  BRA    0742
+00746:  MOVWF  FAD
+00748:  MOVLW  0A
+0074A:  BTFSS  F9E.4
+0074C:  BRA    074A
+0074E:  MOVWF  FAD
+....................       }
+.................... 
+....................       fprintf(PORT1, "--- Test Finished (Wait 5s) ---\r\n");
+00750:  MOVLW  3E
+00752:  MOVWF  FF6
+00754:  MOVLW  01
+00756:  MOVWF  FF7
+00758:  MOVLW  00
+0075A:  MOVWF  FF8
+0075C:  RCALL  0160
+....................       delay_ms(5000);
+0075E:  MOVLW  14
+00760:  MOVWF  1F
+00762:  MOVLW  FA
+00764:  MOVWF  20
+00766:  RCALL  018A
+00768:  DECFSZ 1F,F
+0076A:  BRA    0762
+0076C:  BRA    053A
+....................    }
+.................... 
+.................... #elif OPERATION_MODE == 1
+....................    // --- モード1: GPIOテスト ---
+....................    // ... (以前と同じコード) ...
+....................    fprintf(PORT1, "Mode 1: GPIO Toggle Test.\r\n");
+....................    while(TRUE) {
+....................       output_low(SPI2_CS); delay_ms(2000);
+....................       output_high(SPI2_CS); delay_ms(2000);
+....................       output_low(PIN_A3); delay_ms(2000);
+....................       output_high(PIN_A3); delay_ms(2000);
+....................       output_low(PIN_A1); delay_ms(2000);
+....................       output_high(PIN_A1); delay_ms(2000);
+....................    }
+.................... 
+.................... #elif OPERATION_MODE == 2
+....................    // --- モード2: SPI連続送信 ---
+....................    // ... (以前と同じコード) ...
+....................    output_low(SPI2_CS);
+....................    while(TRUE) {
+....................       spi_xfer(SPI2, 0x55);
+....................    }
+.................... 
+.................... #else
+....................    // --- モード0: ID読み取りのみ ---
+....................    fprintf(PORT1, "Mode 0: Read ID Only.\r\n");
+....................    while(TRUE) {
+....................       output_low(SPI2_CS);
+....................       spi_xfer(SPI2, CMD_READ_ID);
+....................       manufacturer_id = spi_xfer(SPI2, 0x00);
+....................       memory_type = spi_xfer(SPI2, 0x00);
+....................       memory_capacity = spi_xfer(SPI2, 0x00);
+....................       output_high(SPI2_CS);
+....................       fprintf(PORT1, "ID: %02X %02X %02X\r\n", manufacturer_id, memory_type, memory_capacity);
+....................       delay_ms(1000);
+....................    }
+.................... #endif
 .................... }
-00510:  SLEEP 
+.................... 
+0076E:  SLEEP 
+.................... // --- Flash操作関数群 ---
+.................... 
+.................... // 書き込み許可 (Write Enable)
+.................... void flash_write_enable() {
+....................    output_low(SPI2_CS);
+*
+00254:  BCF    F93.3
+00256:  BCF    F8A.3
+....................    spi_xfer(SPI2, CMD_WRITE_ENABLE); // 0x06
+00258:  MOVLW  06
+0025A:  MOVWF  2E
+0025C:  MOVLW  08
+0025E:  MOVWF  2F
+00260:  MOVLW  01
+00262:  MOVWF  30
+00264:  RCALL  01B2
+....................    output_high(SPI2_CS);
+00266:  BCF    F93.3
+00268:  BSF    F8A.3
+0026A:  RETURN 0
+.................... }
+.................... 
+.................... // ビジー待機 (Status RegisterのWIPビット監視)
+.................... void flash_wait_busy() {
+....................    int8 status;
+....................    do {
+....................       output_low(SPI2_CS);
+*
+002C8:  BCF    F93.3
+002CA:  BCF    F8A.3
+....................       spi_xfer(SPI2, CMD_READ_STATUS); // 0x05
+002CC:  MOVLW  05
+002CE:  MOVWF  2E
+002D0:  MOVLW  08
+002D2:  MOVWF  2F
+002D4:  MOVLW  01
+002D6:  MOVWF  30
+002D8:  RCALL  01B2
+....................       status = spi_xfer(SPI2, 0x00);
+002DA:  CLRF   2E
+002DC:  MOVLW  08
+002DE:  MOVWF  2F
+002E0:  MOVLW  01
+002E2:  MOVWF  30
+002E4:  RCALL  01B2
+002E6:  MOVFF  01,1F
+....................       output_high(SPI2_CS);
+002EA:  BCF    F93.3
+002EC:  BSF    F8A.3
+....................       // Bit 0 が WIP (Write In Progress)
+....................    } while (status & 0x01);
+002EE:  BTFSC  1F.0
+002F0:  BRA    02C8
+002F2:  RETURN 0
+.................... }
+.................... 
+.................... // セクタ消去 (4KB Subsector Erase)
+.................... void flash_sector_erase(int32 addr) {
+....................    output_low(SPI2_CS);
+*
+0026C:  BCF    F93.3
+0026E:  BCF    F8A.3
+....................    spi_xfer(SPI2, CMD_SECTOR_ERASE); // 0x20
+00270:  MOVLW  20
+00272:  MOVWF  2E
+00274:  MOVLW  08
+00276:  MOVWF  2F
+00278:  MOVLW  01
+0027A:  MOVWF  30
+0027C:  RCALL  01B2
+.................... 
+....................    // 3バイトアドレス送信 (MSB First)
+....................    spi_xfer(SPI2, (addr >> 16) & 0xFF);
+0027E:  CLRF   26
+00280:  CLRF   27
+00282:  CLRF   25
+00284:  CLRF   26
+00286:  CLRF   27
+00288:  MOVFF  21,2E
+0028C:  MOVLW  08
+0028E:  MOVWF  2F
+00290:  MOVLW  01
+00292:  MOVWF  30
+00294:  RCALL  01B2
+....................    spi_xfer(SPI2, (addr >> 8) & 0xFF);
+00296:  CLRF   27
+00298:  CLRF   25
+0029A:  CLRF   26
+0029C:  CLRF   27
+0029E:  MOVFF  20,2E
+002A2:  MOVLW  08
+002A4:  MOVWF  2F
+002A6:  MOVLW  01
+002A8:  MOVWF  30
+002AA:  RCALL  01B2
+....................    spi_xfer(SPI2, addr & 0xFF);
+002AC:  CLRF   24
+002AE:  CLRF   25
+002B0:  CLRF   26
+002B2:  MOVFF  1F,2E
+002B6:  MOVLW  08
+002B8:  MOVWF  2F
+002BA:  MOVLW  01
+002BC:  MOVWF  30
+002BE:  RCALL  01B2
+.................... 
+....................    output_high(SPI2_CS);
+002C0:  BCF    F93.3
+002C2:  BSF    F8A.3
+002C4:  GOTO   05E6 (RETURN)
+.................... }
+.................... 
+.................... // ページプログラム (データ書き込み)
+.................... void flash_page_program(int32 addr, int8 *data, int16 len) {
+....................    int16 i;
+.................... 
+....................    output_low(SPI2_CS);
+*
+002F4:  BCF    F93.3
+002F6:  BCF    F8A.3
+....................    spi_xfer(SPI2, CMD_PAGE_PROGRAM); // 0x02
+002F8:  MOVLW  02
+002FA:  MOVWF  2E
+002FC:  MOVLW  08
+002FE:  MOVWF  2F
+00300:  MOVLW  01
+00302:  MOVWF  30
+00304:  RCALL  01B2
+.................... 
+....................    // 3バイトアドレス送信
+....................    spi_xfer(SPI2, (addr >> 16) & 0xFF);
+00306:  CLRF   2C
+00308:  CLRF   2D
+0030A:  CLRF   2B
+0030C:  CLRF   2C
+0030E:  CLRF   2D
+00310:  MOVFF  21,2E
+00314:  MOVLW  08
+00316:  MOVWF  2F
+00318:  MOVLW  01
+0031A:  MOVWF  30
+0031C:  RCALL  01B2
+....................    spi_xfer(SPI2, (addr >> 8) & 0xFF);
+0031E:  CLRF   2D
+00320:  CLRF   2B
+00322:  CLRF   2C
+00324:  CLRF   2D
+00326:  MOVFF  20,2E
+0032A:  MOVLW  08
+0032C:  MOVWF  2F
+0032E:  MOVLW  01
+00330:  MOVWF  30
+00332:  RCALL  01B2
+....................    spi_xfer(SPI2, addr & 0xFF);
+00334:  CLRF   2A
+00336:  CLRF   2B
+00338:  CLRF   2C
+0033A:  MOVFF  1F,2E
+0033E:  MOVLW  08
+00340:  MOVWF  2F
+00342:  MOVLW  01
+00344:  MOVWF  30
+00346:  RCALL  01B2
+.................... 
+....................    // データ送信
+....................    for(i=0; i<len; i++) {
+00348:  CLRF   28
+0034A:  CLRF   27
+0034C:  MOVF   28,W
+0034E:  SUBWF  26,W
+00350:  BNC   037C
+00352:  BNZ   035A
+00354:  MOVF   25,W
+00356:  SUBWF  27,W
+00358:  BC    037C
+....................       spi_xfer(SPI2, data[i]);
+0035A:  MOVF   23,W
+0035C:  ADDWF  27,W
+0035E:  MOVWF  FE9
+00360:  MOVF   24,W
+00362:  ADDWFC 28,W
+00364:  MOVWF  FEA
+00366:  MOVFF  FEF,2E
+0036A:  MOVLW  08
+0036C:  MOVWF  2F
+0036E:  MOVLW  01
+00370:  MOVWF  30
+00372:  RCALL  01B2
+00374:  INCF   27,F
+00376:  BTFSC  FD8.2
+00378:  INCF   28,F
+0037A:  BRA    034C
+....................    }
+.................... 
+....................    output_high(SPI2_CS);
+0037C:  BCF    F93.3
+0037E:  BSF    F8A.3
+00380:  GOTO   061E (RETURN)
+.................... }
+.................... 
+.................... // データ読み出し
+.................... void flash_read_data(int32 addr, int8 *buffer, int16 len) {
+....................    int16 i;
+.................... 
+....................    output_low(SPI2_CS);
+00384:  BCF    F93.3
+00386:  BCF    F8A.3
+....................    spi_xfer(SPI2, CMD_READ_DATA); // 0x03
+00388:  MOVLW  03
+0038A:  MOVWF  2E
+0038C:  MOVLW  08
+0038E:  MOVWF  2F
+00390:  MOVLW  01
+00392:  MOVWF  30
+00394:  RCALL  01B2
+.................... 
+....................    // 3バイトアドレス送信
+....................    spi_xfer(SPI2, (addr >> 16) & 0xFF);
+00396:  CLRF   2C
+00398:  CLRF   2D
+0039A:  CLRF   2B
+0039C:  CLRF   2C
+0039E:  CLRF   2D
+003A0:  MOVFF  21,2E
+003A4:  MOVLW  08
+003A6:  MOVWF  2F
+003A8:  MOVLW  01
+003AA:  MOVWF  30
+003AC:  RCALL  01B2
+....................    spi_xfer(SPI2, (addr >> 8) & 0xFF);
+003AE:  CLRF   2D
+003B0:  CLRF   2B
+003B2:  CLRF   2C
+003B4:  CLRF   2D
+003B6:  MOVFF  20,2E
+003BA:  MOVLW  08
+003BC:  MOVWF  2F
+003BE:  MOVLW  01
+003C0:  MOVWF  30
+003C2:  RCALL  01B2
+....................    spi_xfer(SPI2, addr & 0xFF);
+003C4:  CLRF   2A
+003C6:  CLRF   2B
+003C8:  CLRF   2C
+003CA:  MOVFF  1F,2E
+003CE:  MOVLW  08
+003D0:  MOVWF  2F
+003D2:  MOVLW  01
+003D4:  MOVWF  30
+003D6:  RCALL  01B2
+.................... 
+....................    // データ受信
+....................    for(i=0; i<len; i++) {
+003D8:  CLRF   28
+003DA:  CLRF   27
+003DC:  MOVF   28,W
+003DE:  SUBWF  26,W
+003E0:  BNC   040E
+003E2:  BNZ   03EA
+003E4:  MOVF   25,W
+003E6:  SUBWF  27,W
+003E8:  BC    040E
+....................       buffer[i] = spi_xfer(SPI2, 0x00);
+003EA:  MOVF   23,W
+003EC:  ADDWF  27,W
+003EE:  MOVWF  FE9
+003F0:  MOVF   24,W
+003F2:  ADDWFC 28,W
+003F4:  MOVWF  FEA
+003F6:  CLRF   2E
+003F8:  MOVLW  08
+003FA:  MOVWF  2F
+003FC:  MOVLW  01
+003FE:  MOVWF  30
+00400:  RCALL  01B2
+00402:  MOVFF  01,FEF
+00406:  INCF   27,F
+00408:  BTFSC  FD8.2
+0040A:  INCF   28,F
+0040C:  BRA    03DC
+....................    }
+.................... 
+....................    output_high(SPI2_CS);
+0040E:  BCF    F93.3
+00410:  BSF    F8A.3
+00412:  GOTO   0670 (RETURN)
+.................... }
 
 Configuration Fuses:
    Word  1: F7A0   STVREN NOXINST NODEBUG BROWNOUT_SW BORV18 NOPROTECT

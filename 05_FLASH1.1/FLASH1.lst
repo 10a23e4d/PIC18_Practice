@@ -1,0 +1,1763 @@
+CCS PCH C Compiler, Version 5.104, 57077               18-2-26 14:43
+
+               Filename:   C:\Users\rice_\Chiba Institute of Technology\6���@ - �h�L�������g\TMP_MIS\02_Software\PIC18_Practice\05_FLASH1.1\FLASH1.lst
+
+               ROM used:   1406 bytes (1%)
+                           Largest free fragment is 65520
+               RAM used:   6 (0%) at main() level
+                           35 (1%) worst case
+               Stack used: 2 locations
+               Stack size: 31
+
+*
+00000:  NOP   
+00002:  GOTO   047E
+.................... #include "FLASH1.h"
+.................... #include <18F67J94.h>
+.................... //////////// Standard Header file for the PIC18F67J94 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC18F67J94
+00006:  DATA 31,47
+00008:  DATA 62,69
+0000A:  DATA 74,20
+0000C:  DATA 66,6C
+0000E:  DATA 61,73
+00010:  DATA 68,20
+00012:  DATA 62,75
+00014:  DATA 73,79
+00016:  DATA 0A,0D
+00018:  DATA 00,00
+0001A:  DATA 52,65
+0001C:  DATA 61,64
+0001E:  DATA 20,49
+00020:  DATA 44,3A
+00022:  DATA 00,00
+00024:  DATA 66,6C
+00026:  DATA 61,73
+00028:  DATA 68,20
+0002A:  DATA 63,6F
+0002C:  DATA 6E,6E
+0002E:  DATA 65,63
+00030:  DATA 74,20
+00032:  DATA 4F,4B
+00034:  DATA 0D,0A
+00036:  DATA 00,00
+00038:  DATA 66,6C
+0003A:  DATA 61,73
+0003C:  DATA 68,20
+0003E:  DATA 6E,6F
+00040:  DATA 74,20
+00042:  DATA 63,6F
+00044:  DATA 6E,6E
+00046:  DATA 65,63
+00048:  DATA 74,0D
+0004A:  DATA 0A,00
+0004C:  DATA 66,6C
+0004E:  DATA 61,73
+00050:  DATA 68,20
+00052:  DATA 74,69
+00054:  DATA 6D,65
+00056:  DATA 6F,75
+00058:  DATA 74,00
+0005A:  DATA 66,6C
+0005C:  DATA 61,73
+0005E:  DATA 68,20
+00060:  DATA 74,69
+00062:  DATA 6D,65
+00064:  DATA 6F,75
+00066:  DATA 74,00
+00068:  DATA 66,6C
+0006A:  DATA 61,73
+0006C:  DATA 68,20
+0006E:  DATA 74,69
+00070:  DATA 6D,65
+00072:  DATA 6F,75
+00074:  DATA 74,00
+00076:  DATA 66,6C
+00078:  DATA 61,73
+0007A:  DATA 68,20
+0007C:  DATA 74,69
+0007E:  DATA 6D,65
+00080:  DATA 6F,75
+00082:  DATA 74,00
+00084:  DATA 66,6C
+00086:  DATA 61,73
+00088:  DATA 68,20
+0008A:  DATA 74,69
+0008C:  DATA 6D,65
+0008E:  DATA 6F,75
+00090:  DATA 74,00
+00092:  DATA 3D,3D
+00094:  DATA 50,72
+00096:  DATA 6F,67
+00098:  DATA 72,61
+0009A:  DATA 6D,20
+0009C:  DATA 53,74
+0009E:  DATA 61,72
+000A0:  DATA 74,3D
+000A2:  DATA 3D,0D
+000A4:  DATA 0A,00
+000A6:  TBLRD*+
+000A8:  MOVF   FF5,F
+000AA:  BZ    00CE
+000AC:  MOVFF  FF6,1C
+000B0:  MOVFF  FF7,1D
+000B4:  MOVFF  FF8,1E
+000B8:  MOVF   FF5,W
+000BA:  BTFSS  F9E.4
+000BC:  BRA    00BA
+000BE:  MOVWF  FAD
+000C0:  MOVFF  1C,FF6
+000C4:  MOVFF  1D,FF7
+000C8:  MOVFF  1E,FF8
+000CC:  BRA    00A6
+000CE:  RETURN 0
+*
+00154:  BTFSC  1E.7
+00156:  BRA    0178
+00158:  MOVLW  0F
+0015A:  MOVWF  00
+0015C:  SWAPF  1D,W
+0015E:  ANDWF  00,F
+00160:  MOVLW  0A
+00162:  SUBWF  00,W
+00164:  BC    016C
+00166:  MOVLW  30
+00168:  ADDWF  00,F
+0016A:  BRA    0170
+0016C:  MOVF   1E,W
+0016E:  ADDWF  00,F
+00170:  MOVF   00,W
+00172:  BTFSS  F9E.4
+00174:  BRA    0172
+00176:  MOVWF  FAD
+00178:  MOVLW  0F
+0017A:  ANDWF  1D,F
+0017C:  MOVLW  0A
+0017E:  SUBWF  1D,W
+00180:  BC    0186
+00182:  MOVLW  30
+00184:  BRA    018A
+00186:  BCF    1E.7
+00188:  MOVF   1E,W
+0018A:  ADDWF  1D,F
+0018C:  MOVF   1D,W
+0018E:  BTFSS  F9E.4
+00190:  BRA    018E
+00192:  MOVWF  FAD
+00194:  GOTO   0210 (RETURN)
+.................... 
+.................... #list
+.................... 
+.................... 
+.................... 
+.................... 
+.................... 
+.................... #FUSES NOWDT                    //No Watch Dog Timer
+.................... #device ADC = 12
+.................... #use delay(crystal=16000000)
+*
+00262:  CLRF   FEA
+00264:  MOVLW  10
+00266:  MOVWF  FE9
+00268:  MOVF   FEF,W
+0026A:  BZ    0288
+0026C:  MOVLW  05
+0026E:  MOVWF  01
+00270:  CLRF   00
+00272:  DECFSZ 00,F
+00274:  BRA    0272
+00276:  DECFSZ 01,F
+00278:  BRA    0270
+0027A:  MOVLW  2E
+0027C:  MOVWF  00
+0027E:  DECFSZ 00,F
+00280:  BRA    027E
+00282:  BRA    0284
+00284:  DECFSZ FEF,F
+00286:  BRA    026C
+00288:  RETURN 0
+.................... 
+.................... #pin_select U1TX = PIN_F7
+.................... #pin_select U1RX = PIN_F5
+.................... #use rs232(baud=9600, UART1, parity=N,bits=8,stream=PORT1)
+.................... 
+.................... #pin_select U2TX = PIN_D3
+.................... #pin_select U2RX =    PIN_D2
+.................... #use rs232(baud=9600, UART2, parity=N,bits=8,stream=PORT2)
+.................... 
+.................... #pin_select U3TX = PIN_E5
+.................... #pin_select U3RX = PIN_E4
+.................... #use rs232(baud=9600, UART3, parity=N,bits=8,stream=PORT3)
+.................... 
+.................... #pin_select U4TX = PIN_E3
+.................... #pin_select U4RX = PIN_F2
+.................... #use rs232(baud=9600, UART4, parity=N,bits=8,stream=PORT4)
+.................... 
+.................... //#define SPI1_CS PIN_A2
+.................... //#use spi (MASTER, CLK = PIN_A3, DI = PIN_A0, DO = PIN_A1,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI1)
+.................... 
+.................... #define SPI2_CS PIN_B3
+.................... #use spi (MASTER, CLK = PIN_B2, DI = PIN_B5, DO = PIN_B4,BAUD=1000000, MODE=0, BITS=8, STREAM=SPI2)
+*
+000D8:  MOVF   1F,W
+000DA:  SUBLW  08
+000DC:  BZ    00E6
+000DE:  MOVWF  21
+000E0:  RLCF   1E,F
+000E2:  DECFSZ 21,F
+000E4:  BRA    00E0
+000E6:  BSF    F93.5
+000E8:  BCF    F93.4
+000EA:  BCF    F93.2
+000EC:  BCF    F8A.2
+000EE:  MOVFF  1F,21
+000F2:  BTFSS  1E.7
+000F4:  BCF    F8A.4
+000F6:  BTFSC  1E.7
+000F8:  BSF    F8A.4
+000FA:  RLCF   1E,F
+000FC:  BSF    F8A.2
+000FE:  RLCF   01,F
+00100:  BTFSS  F81.5
+00102:  BCF    01.0
+00104:  BTFSC  F81.5
+00106:  BSF    01.0
+00108:  BCF    F8A.2
+0010A:  DECFSZ 21,F
+0010C:  BRA    00F2
+0010E:  RETURN 0
+.................... 
+.................... #define DIO_3 PIN_G0
+.................... #define DIO_4 PIN_G1
+.................... #define DIO_5 PIN_G2
+.................... #define DIO_6 PIN_G3
+.................... #define DIO_8 PIN_G4
+.................... #define DIO_12 PIN_F6
+.................... #define DIO_27 PIN_A5
+.................... #define DIO_28 PIN_A4
+.................... #define DIO_29 PIN_C1
+.................... #define DIO_30 PIN_C0
+.................... #define DIO_31 PIN_C6
+.................... #define DIO_32 PIN_C7
+.................... #define DIO_33 PIN_C2
+.................... #define DIO_34 PIN_C3
+.................... #define DIO_35 PIN_C4
+.................... #define DIO_36 PIN_C5
+.................... #define DIO_47 PIN_B1
+.................... #define DIO_48 PIN_B0
+.................... #define DIO_49 PIN_D7
+.................... #define DIO_50 PIN_D6
+.................... #define DIO_51 PIN_D5
+.................... #define DIO_52 PIN_D4
+.................... #define DIO_55 PIN_D1
+.................... #define DIO_58 PIN_D0
+.................... #define DIO_59 PIN_E7
+.................... 
+.................... #include <GDNS_tbd_FlashOperation.c>
+.................... #include <GDNS_tbd_FlashOperation.h>
+.................... #define DEBUG
+.................... #define USE_FLASH1G     //MT25QL01GBBB:SMF,CF
+.................... //#define USE_FLASH128M   //MT25QL128ABA:PICF,GF
+.................... 
+.................... //////////////////////////////port select//////////////////////////////////////
+.................... #ifdef DEBUG
+....................    #define DEBUG_PORT PORT1
+.................... #endif
+.................... 
+.................... #ifdef USE_FLASH1G
+....................    #define FLASH1G SPI2//port for 1 Gbit Flash
+....................    #define FLASH1G_CS PIN_B3
+.................... #endif
+.................... 
+.................... #ifdef USE_FLASH128M
+....................    #define FLASH128M SPI2//port for 128 Mbit Flash
+....................    #define FLASH128M_CS PIN_B3
+.................... #endif
+.................... 
+.................... ////////////////////////////////CMD List///////////////////////////////////////
+.................... #define READ_ID                     0x9F
+.................... #define READ_STATUS_REGISTER        0x05
+.................... #define READ                        0x03
+.................... #define READ_4BYTE                  0x13
+.................... #define WRITE_ENABLE                0x06
+.................... #define PAGE_PROGRAM                0x02
+.................... #define PAGE_PROGRAM_4BYTE          0x12
+.................... #define SUBSECTOR_4KB_ERASE         0x20
+.................... #define SUBSECTOR_4KB_ERASE_4BYTE   0x21
+.................... #define SUBSECTOR_32KB_ERASE        0x52
+.................... #define SUBSECTOR_32KB_ERASE_4BYTE  0x5C
+.................... #define SECTOR_ERASE                0xD8
+.................... #define SECTOR_ERASE_4BYTE          0xDC
+.................... 
+.................... ///////////////////////////function List///////////////////////////////////////
+.................... #ifdef USE_FLASH1G
+....................    int8 status_register_flash1g();                                                                       //bit[7:2]status register control bit,bit[1]write enable bit T:ennable F:disable,bit[0]write in progress bit T:busy F:ready
+....................    int8 read_id_flash1g();                                                                               //T:Flash id read successfully(connect OK),F:Flash id read failed
+....................    void sector_erase_flash1g(unsigned int32 sector_address);                                             //64kByte erase
+....................    void subsector_32kByte_erase_flash1g(unsigned int32 subsector_address);                               //32kByte erase
+....................    void subsector_4kByte_erase_flash1g(unsigned int32 subsector_address);                                //4kByte erase
+....................    int8 read_data_byte_flash1g(unsigned int32 read_address);                                             //read 1 Byte data
+....................    void read_data_bytes_flash1g(unsigned int32 read_address,unsigned int32 amount,int8 *read_data);      //read multi Bytes data(max 128 MByte) and store to "read data"
+....................    void write_data_byte_flash1g(unsigned int32 write_address,int8 write_data);                           //write 1 Byte data to flash
+....................    void write_data_bytes_flash1g(unsigned int32 write_address,int8 amount,int8 *write_data);             //write multi Bytes data(max128 Byte) to flash
+.................... #endif
+....................    
+.................... #ifdef USE_FLASH128M
+....................    int8 status_register_flash128m();                                                                     //bit[7:2]status register control bit,bit[1]write enable bit T:ennable F:disable,bit[0]write in progress bit T:busy F:ready
+....................    int8 read_id_flash128m();                                                                             //T:Flash id read successfully(connect OK),F:Flash id read failed
+....................    void sector_erase_flash128m(unsigned int32 sector_address);                                           //64kByte erase
+....................    void subsector_32kByte_erase_flash128m(unsigned int32 subsector_address);                             //32kByte erase
+....................    void subsector_4kByte_erase_flash128m(unsigned int32 subsector_address);                              //4kByte erase
+....................    int8 read_data_byte_flash128m(unsigned int32 read_address);                                           //read 1 Byte data
+....................    void read_data_bytes_flash128m(unsigned int32 read_address,unsigned int32 amount,int8 *read_data);    //read multi Bytes data(max 128 MByte) and store to "read data"
+....................    void write_data_byte_flash128m(unsigned int32 write_address,int8 write_data);                         //write 1 Byte data to flash
+....................    void write_data_bytes_flash128m(unsigned int32 write_address,int8 amount,int8 *write_data);           //write multi Bytes data(max128 Byte) to flash
+.................... #endif
+....................    
+.................... 
+.................... 
+.................... void flash_setting()
+.................... {
+....................    #ifdef USE_FLASH1G
+....................       output_high(FLASH1G_CS);
+*
+000D0:  BCF    F93.3
+000D2:  BSF    F8A.3
+....................    #endif
+....................    #ifdef USE_FLASH128M
+000D4:  GOTO   0556 (RETURN)
+....................       output_high(FLASH128M_CS);
+....................    #endif
+.................... }
+.................... 
+.................... #ifdef USE_FLASH1G
+....................    int8 status_register_flash1g()
+....................    {
+....................       int8 status_reg;
+....................       output_low(FLASH1G_CS);                                              //lower the CS PIN
+*
+00110:  BCF    F93.3
+00112:  BCF    F8A.3
+....................       spi_xfer(FLASH1G,READ_STATUS_REGISTER);                              //READ STATUS REGISTER COMAND  (0x05)
+00114:  MOVLW  05
+00116:  MOVWF  1E
+00118:  MOVLW  08
+0011A:  MOVWF  1F
+0011C:  MOVLW  01
+0011E:  MOVWF  20
+00120:  RCALL  00D8
+....................       status_reg = spi_xfer(FLASH1G);
+00122:  MOVLW  01
+00124:  MOVWF  1E
+00126:  MOVLW  08
+00128:  MOVWF  1F
+0012A:  MOVLW  01
+0012C:  MOVWF  20
+0012E:  RCALL  00D8
+00130:  MOVFF  01,10
+....................       output_high(FLASH1G_CS);                                             //take CS PIN higher back
+00134:  BCF    F93.3
+00136:  BSF    F8A.3
+....................       #ifdef DEBUG
+....................          if((status_reg & 0x01) == true)                                          //masking status bit   
+00138:  MOVF   10,W
+0013A:  ANDLW  01
+0013C:  SUBLW  01
+0013E:  BNZ   014E
+....................             fprintf(DEBUG_PORT,"1Gbit flash busy\n\r");
+00140:  MOVLW  06
+00142:  MOVWF  FF6
+00144:  MOVLW  00
+00146:  MOVWF  FF7
+00148:  MOVLW  00
+0014A:  MOVWF  FF8
+0014C:  RCALL  00A6
+....................       #endif
+....................       return status_reg;
+0014E:  MOVFF  10,01
+00152:  RETURN 0
+....................    }
+....................    
+....................    int8 read_id_flash1g()//->success:True,fail:false
+....................    {
+....................       int8 chip_id[21];
+....................       output_low(FLASH1G_CS);
+*
+00198:  BCF    F93.3
+0019A:  BCF    F8A.3
+....................       for (int8 i = 0;i < 21;i++)
+0019C:  CLRF   1B
+0019E:  MOVF   1B,W
+001A0:  SUBLW  14
+001A2:  BNC   021C
+....................       {
+....................          if (i == 0)
+001A4:  MOVF   1B,F
+001A6:  BNZ   01D8
+....................          {
+....................             chip_id[i] = spi_xfer(FLASH1G,READ_ID);
+001A8:  CLRF   03
+001AA:  MOVF   1B,W
+001AC:  ADDLW  06
+001AE:  MOVWF  FE9
+001B0:  MOVLW  00
+001B2:  ADDWFC 03,W
+001B4:  MOVWF  FEA
+001B6:  MOVLW  9F
+001B8:  MOVWF  1E
+001BA:  MOVLW  08
+001BC:  MOVWF  1F
+001BE:  MOVLW  01
+001C0:  MOVWF  20
+001C2:  RCALL  00D8
+001C4:  MOVFF  01,FEF
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"Read ID:");
+001C8:  MOVLW  1A
+001CA:  MOVWF  FF6
+001CC:  MOVLW  00
+001CE:  MOVWF  FF7
+001D0:  MOVLW  00
+001D2:  MOVWF  FF8
+001D4:  RCALL  00A6
+....................             #endif
+....................          }
+001D6:  BRA    0218
+....................          else
+....................          {
+....................             chip_id[i] = spi_xfer(FLASH1G);
+001D8:  CLRF   03
+001DA:  MOVF   1B,W
+001DC:  ADDLW  06
+001DE:  MOVWF  FE9
+001E0:  MOVLW  00
+001E2:  ADDWFC 03,W
+001E4:  MOVWF  FEA
+001E6:  MOVLW  01
+001E8:  MOVWF  1E
+001EA:  MOVLW  08
+001EC:  MOVWF  1F
+001EE:  MOVLW  01
+001F0:  MOVWF  20
+001F2:  RCALL  00D8
+001F4:  MOVFF  01,FEF
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"%x ",chip_id[i]);
+001F8:  CLRF   03
+001FA:  MOVF   1B,W
+001FC:  ADDLW  06
+001FE:  MOVWF  FE9
+00200:  MOVLW  00
+00202:  ADDWFC 03,W
+00204:  MOVWF  FEA
+00206:  MOVFF  FEF,1D
+0020A:  MOVLW  57
+0020C:  MOVWF  1E
+0020E:  BRA    0154
+00210:  MOVLW  20
+00212:  BTFSS  F9E.4
+00214:  BRA    0212
+00216:  MOVWF  FAD
+....................             #endif   
+....................          }
+00218:  INCF   1B,F
+0021A:  BRA    019E
+....................       }
+....................       output_high(FLASH1G_CS);
+0021C:  BCF    F93.3
+0021E:  BSF    F8A.3
+....................       #ifdef DEBUG
+....................          fprintf(DEBUG_PORT,"\r\n");
+00220:  MOVLW  0D
+00222:  BTFSS  F9E.4
+00224:  BRA    0222
+00226:  MOVWF  FAD
+00228:  MOVLW  0A
+0022A:  BTFSS  F9E.4
+0022C:  BRA    022A
+0022E:  MOVWF  FAD
+....................       #endif
+....................       //chip id check
+....................       if(chip_id[1] == 0x20)
+00230:  MOVF   07,W
+00232:  SUBLW  20
+00234:  BNZ   024C
+....................       {  
+....................          #ifdef DEBUG
+....................             fprintf(DEBUG_PORT,"flash connect OK\r\n");
+00236:  MOVLW  24
+00238:  MOVWF  FF6
+0023A:  MOVLW  00
+0023C:  MOVWF  FF7
+0023E:  MOVLW  00
+00240:  MOVWF  FF8
+00242:  RCALL  00A6
+....................          #endif
+....................          return true;
+00244:  MOVLW  01
+00246:  MOVWF  01
+00248:  BRA    025E
+....................       }
+0024A:  BRA    025E
+....................       else
+....................       {
+....................          #ifdef DEBUG
+....................             fprintf(DEBUG_PORT,"flash not connect\r\n");
+0024C:  MOVLW  38
+0024E:  MOVWF  FF6
+00250:  MOVLW  00
+00252:  MOVWF  FF7
+00254:  MOVLW  00
+00256:  MOVWF  FF8
+00258:  RCALL  00A6
+....................          #endif
+....................          return false;
+0025A:  MOVLW  00
+0025C:  MOVWF  01
+....................       }
+0025E:  GOTO   055A (RETURN)
+....................    }
+....................    
+....................    void sector_erase_flash1g(unsigned int32 sector_address)
+*
+0028A:  CLRF   0E
+....................    {
+....................       unsigned int8 address[4];
+....................       unsigned int8 timeout_counter = 0;
+....................       
+....................       address[0]  = (unsigned int8)((sector_address>>24) & 0xff);   // 0x _ _ 00 00 00
+0028C:  MOVFF  09,0A
+....................       address[1]  = (unsigned int8)((sector_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+00290:  MOVFF  08,0B
+....................       address[2]  = (unsigned int8)((sector_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+00294:  MOVFF  07,0C
+....................       address[3]  = (unsigned int8)((sector_address) & 0xff);       // 0x 00 00 00 _ _
+00298:  MOVFF  06,0D
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH1G_CS);
+0029C:  BCF    F93.3
+0029E:  BCF    F8A.3
+....................       spi_xfer(FLASH1G,WRITE_ENABLE);
+002A0:  MOVLW  06
+002A2:  MOVWF  1E
+002A4:  MOVLW  08
+002A6:  MOVWF  1F
+002A8:  MOVLW  01
+002AA:  MOVWF  20
+002AC:  RCALL  00D8
+....................       output_high(FLASH1G_CS);
+002AE:  BCF    F93.3
+002B0:  BSF    F8A.3
+....................       //Write enabled
+....................       
+....................       output_low(FLASH1G_CS);
+002B2:  BCF    F93.3
+002B4:  BCF    F8A.3
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH1G,SECTOR_ERASE_4BYTE); //SECTOR ERASE COMAND   (0xDC)
+002B6:  MOVLW  DC
+002B8:  MOVWF  1E
+002BA:  MOVLW  08
+002BC:  MOVWF  1F
+002BE:  MOVLW  01
+002C0:  MOVWF  20
+002C2:  RCALL  00D8
+....................       
+....................       spi_xfer(FLASH1G,address[0]);   
+002C4:  MOVFF  0A,1E
+002C8:  MOVLW  08
+002CA:  MOVWF  1F
+002CC:  MOVLW  01
+002CE:  MOVWF  20
+002D0:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[1]);    
+002D2:  MOVFF  0B,1E
+002D6:  MOVLW  08
+002D8:  MOVWF  1F
+002DA:  MOVLW  01
+002DC:  MOVWF  20
+002DE:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[2]);    
+002E0:  MOVFF  0C,1E
+002E4:  MOVLW  08
+002E6:  MOVWF  1F
+002E8:  MOVLW  01
+002EA:  MOVWF  20
+002EC:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[3]);
+002EE:  MOVFF  0D,1E
+002F2:  MOVLW  08
+002F4:  MOVWF  1F
+002F6:  MOVLW  01
+002F8:  MOVWF  20
+002FA:  RCALL  00D8
+....................       //////////////////////////////////////////////////////////////////
+.................... 
+....................       output_high(FLASH1G_CS);            //take CS PIN higher back
+002FC:  BCF    F93.3
+002FE:  BSF    F8A.3
+....................       
+....................       while((status_register_flash1g() & 0x01) == 1)                                          //masking status bit
+00300:  RCALL  0110
+00302:  MOVF   01,W
+00304:  ANDLW  01
+00306:  SUBLW  01
+00308:  BNZ   0338
+....................       {
+....................          if(timeout_counter > 10)
+0030A:  MOVF   0E,W
+0030C:  SUBLW  0A
+0030E:  BC    0318
+....................             delay_ms(200);
+00310:  MOVLW  C8
+00312:  MOVWF  10
+00314:  RCALL  0262
+00316:  BRA    031E
+....................          else
+....................             delay_ms(10);   
+00318:  MOVLW  0A
+0031A:  MOVWF  10
+0031C:  RCALL  0262
+....................          
+....................          if(timeout_counter > 100)
+0031E:  MOVF   0E,W
+00320:  SUBLW  64
+00322:  BC    0334
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+00324:  MOVLW  4C
+00326:  MOVWF  FF6
+00328:  MOVLW  00
+0032A:  MOVWF  FF7
+0032C:  MOVLW  00
+0032E:  MOVWF  FF8
+00330:  RCALL  00A6
+....................             #endif
+....................             break;
+00332:  BRA    0338
+....................          }  
+....................          timeout_counter++;
+00334:  INCF   0E,F
+00336:  BRA    0300
+....................       }
+....................       return;
+00338:  GOTO   0564 (RETURN)
+....................    }
+....................    
+....................    void subsector_32kByte_erase_flash1g(unsigned int32 subsector_address)
+....................    {
+....................       unsigned int8 address[4];
+....................       unsigned int8 timeout_counter = 0;
+....................       
+....................       address[0]  = (unsigned int8)((subsector_address>>24) & 0xff);   // 0x _ _ 00 00 00
+....................       address[1]  = (unsigned int8)((subsector_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+....................       address[2]  = (unsigned int8)((subsector_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+....................       address[3]  = (unsigned int8)((subsector_address) & 0xff);       // 0x 00 00 00 _ _
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH1G_CS);
+....................       spi_xfer(FLASH1G,WRITE_ENABLE);
+....................       output_high(FLASH1G_CS);
+....................       //Write enabled
+....................       
+....................       output_low(FLASH1G_CS);
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH1G,SUBSECTOR_32KB_ERASE_4BYTE);
+....................       
+....................       spi_xfer(FLASH1G,address[0]);   
+....................       spi_xfer(FLASH1G,address[1]);    
+....................       spi_xfer(FLASH1G,address[2]);    
+....................       spi_xfer(FLASH1G,address[3]);
+....................       //////////////////////////////////////////////////////////////////
+....................       output_high(FLASH1G_CS);            //take CS PIN higher back
+....................       
+....................       while((status_register_flash1g() & 0x01) == 1)                                          //masking status bit
+....................       {
+....................          if(timeout_counter > 10)
+....................             delay_ms(200);
+....................          else
+....................             delay_ms(10);   
+....................          
+....................          if(timeout_counter > 100)
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+....................             #endif
+....................             break;
+....................          }  
+....................          timeout_counter++;
+....................       }
+....................    }
+....................    
+....................    void subsector_4kByte_erase_flash1g(unsigned int32 subsector_address)//4kByte erase
+....................    {
+....................       unsigned int8 address[4];
+....................       unsigned int8 timeout_counter = 0;
+....................       
+....................       address[0]  = (unsigned int8)((subsector_address>>24) & 0xff);   // 0x _ _ 00 00 00
+....................       address[1]  = (unsigned int8)((subsector_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+....................       address[2]  = (unsigned int8)((subsector_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+....................       address[3]  = (unsigned int8)((subsector_address) & 0xff);       // 0x 00 00 00 _ _
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH1G_CS);
+....................       spi_xfer(FLASH1G,WRITE_ENABLE);
+....................       output_high(FLASH1G_CS);
+....................       //Write enabled
+....................       
+....................       output_low(FLASH1G_CS);
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH1G,SUBSECTOR_4KB_ERASE_4BYTE);
+....................       
+....................       spi_xfer(FLASH1G,address[0]);   
+....................       spi_xfer(FLASH1G,address[1]);    
+....................       spi_xfer(FLASH1G,address[2]);    
+....................       spi_xfer(FLASH1G,address[3]);
+....................       //////////////////////////////////////////////////////////////////
+....................       
+....................       delay_us(2);
+....................       output_high(FLASH1G_CS);            //take CS PIN higher back
+....................       
+....................       while((status_register_flash1g() & 0x01) == 1)                                          //masking status bit
+....................       {
+....................          if(timeout_counter > 10)
+....................             delay_ms(200);
+....................          else
+....................             delay_ms(10);   
+....................          
+....................          if(timeout_counter > 100)
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+....................             #endif
+....................             break;
+....................          }  
+....................          timeout_counter++;
+....................       }
+....................    }
+....................       
+....................    int8 read_data_byte_flash1g(unsigned int32 read_address)
+....................    {
+....................       int8 read_data;
+....................       unsigned int8 address[4];
+....................       
+....................       address[0]  = (unsigned int8)((read_address>>24) & 0xff);   // 0x _ _ 00 00 00
+*
+003FC:  MOVFF  09,0B
+....................       address[1]  = (unsigned int8)((read_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+00400:  MOVFF  08,0C
+....................       address[2]  = (unsigned int8)((read_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+00404:  MOVFF  07,0D
+....................       address[3]  = (unsigned int8)((read_address) & 0xff);       // 0x 00 00 00 _ _
+00408:  MOVFF  06,0E
+....................    
+....................       output_low(FLASH1G_CS);
+0040C:  BCF    F93.3
+0040E:  BCF    F8A.3
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH1G,READ_4BYTE);
+00410:  MOVLW  13
+00412:  MOVWF  1E
+00414:  MOVLW  08
+00416:  MOVWF  1F
+00418:  MOVLW  01
+0041A:  MOVWF  20
+0041C:  RCALL  00D8
+....................       
+....................       spi_xfer(FLASH1G,address[0]);   
+0041E:  MOVFF  0B,1E
+00422:  MOVLW  08
+00424:  MOVWF  1F
+00426:  MOVLW  01
+00428:  MOVWF  20
+0042A:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[1]);    
+0042C:  MOVFF  0C,1E
+00430:  MOVLW  08
+00432:  MOVWF  1F
+00434:  MOVLW  01
+00436:  MOVWF  20
+00438:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[2]);    
+0043A:  MOVFF  0D,1E
+0043E:  MOVLW  08
+00440:  MOVWF  1F
+00442:  MOVLW  01
+00444:  MOVWF  20
+00446:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[3]);
+00448:  MOVFF  0E,1E
+0044C:  MOVLW  08
+0044E:  MOVWF  1F
+00450:  MOVLW  01
+00452:  MOVWF  20
+00454:  RCALL  00D8
+....................       read_data = spi_xfer(FLASH1G);
+00456:  MOVLW  01
+00458:  MOVWF  1E
+0045A:  MOVLW  08
+0045C:  MOVWF  1F
+0045E:  MOVLW  01
+00460:  MOVWF  20
+00462:  RCALL  00D8
+00464:  MOVFF  01,0A
+....................       //////////////////////////////////////////////////////////////////
+....................       
+....................       delay_us(2);
+00468:  MOVLW  02
+0046A:  MOVWF  00
+0046C:  DECFSZ 00,F
+0046E:  BRA    046C
+00470:  NOP   
+....................       output_high(FLASH1G_CS);            //take CS PIN higher back
+00472:  BCF    F93.3
+00474:  BSF    F8A.3
+....................       return read_data;
+00476:  MOVFF  0A,01
+0047A:  GOTO   057C (RETURN)
+....................    }
+....................       
+....................    void read_data_bytes_flash1g(unsigned int32 read_address,int8 amount,int8 *read_data)
+....................    {
+....................       unsigned int8 address[4];
+....................       
+....................       address[0]  = (unsigned int8)((read_address>>24) & 0xff);   // 0x _ _ 00 00 00
+....................       address[1]  = (unsigned int8)((read_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+....................       address[2]  = (unsigned int8)((read_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+....................       address[3]  = (unsigned int8)((read_address) & 0xff);       // 0x 00 00 00 _ _
+....................    
+....................       output_low(FLASH1G_CS);
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH1G,READ_4BYTE);
+....................       
+....................       spi_xfer(FLASH1G,address[0]);   
+....................       spi_xfer(FLASH1G,address[1]);    
+....................       spi_xfer(FLASH1G,address[2]);    
+....................       spi_xfer(FLASH1G,address[3]);
+....................       for(int8 i = 0;i < amount;i++)
+....................          read_data[i] = spi_xfer(FLASH1G);
+....................       //////////////////////////////////////////////////////////////////
+....................       
+....................       delay_us(2);
+....................       output_high(FLASH1G_CS);            //take CS PIN higher back
+....................    
+....................       return;
+....................    }
+....................    
+....................    void write_data_byte_flash1g(unsigned int32 write_address,int8 write_data)
+*
+0033C:  CLRF   0F
+....................    {
+....................       unsigned int8 address[4];
+....................       unsigned int8 timeout_counter = 0;
+....................       
+....................       //Byte extraction
+....................       address[0]  = (unsigned int8)((write_address>>24) & 0xff);                     // 0x _ _ 00 00 00
+0033E:  MOVFF  09,0B
+....................       address[1]  = (unsigned int8)((write_address>>16) & 0xff);                     // 0x 00 _ _ 00 00
+00342:  MOVFF  08,0C
+....................       address[2]  = (unsigned int8)((write_address>>8) & 0xff);                      // 0x 00 00 _ _ 00
+00346:  MOVFF  07,0D
+....................       address[3]  = (unsigned int8)((write_address) & 0xff);                         // 0x 00 00 00 _ _
+0034A:  MOVFF  06,0E
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH1G_CS);
+0034E:  BCF    F93.3
+00350:  BCF    F8A.3
+....................       spi_xfer(FLASH1G,WRITE_ENABLE);
+00352:  MOVLW  06
+00354:  MOVWF  1E
+00356:  MOVLW  08
+00358:  MOVWF  1F
+0035A:  MOVLW  01
+0035C:  MOVWF  20
+0035E:  RCALL  00D8
+....................       output_high(FLASH1G_CS);
+00360:  BCF    F93.3
+00362:  BSF    F8A.3
+....................       //Write enabled
+....................       
+....................       output_low(FLASH1G_CS);
+00364:  BCF    F93.3
+00366:  BCF    F8A.3
+....................       ////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH1G,PAGE_PROGRAM_4BYTE);                                               //PAGE WRITE COMAND  (0x12)
+00368:  MOVLW  12
+0036A:  MOVWF  1E
+0036C:  MOVLW  08
+0036E:  MOVWF  1F
+00370:  MOVLW  01
+00372:  MOVWF  20
+00374:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[0]);
+00376:  MOVFF  0B,1E
+0037A:  MOVLW  08
+0037C:  MOVWF  1F
+0037E:  MOVLW  01
+00380:  MOVWF  20
+00382:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[1]);
+00384:  MOVFF  0C,1E
+00388:  MOVLW  08
+0038A:  MOVWF  1F
+0038C:  MOVLW  01
+0038E:  MOVWF  20
+00390:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[2]);
+00392:  MOVFF  0D,1E
+00396:  MOVLW  08
+00398:  MOVWF  1F
+0039A:  MOVLW  01
+0039C:  MOVWF  20
+0039E:  RCALL  00D8
+....................       spi_xfer(FLASH1G,address[3]);
+003A0:  MOVFF  0E,1E
+003A4:  MOVLW  08
+003A6:  MOVWF  1F
+003A8:  MOVLW  01
+003AA:  MOVWF  20
+003AC:  RCALL  00D8
+....................       spi_xfer(FLASH1G,write_data);
+003AE:  MOVFF  0A,1E
+003B2:  MOVLW  08
+003B4:  MOVWF  1F
+003B6:  MOVLW  01
+003B8:  MOVWF  20
+003BA:  RCALL  00D8
+....................       ////////////////////////////////////////////////////////////////
+....................       
+....................       output_high(FLASH1G_CS);          //take CS PIN higher back
+003BC:  BCF    F93.3
+003BE:  BSF    F8A.3
+....................       
+....................       while((status_register_flash1g() & 0x01) == 1)                                          //masking status bit
+003C0:  RCALL  0110
+003C2:  MOVF   01,W
+003C4:  ANDLW  01
+003C6:  SUBLW  01
+003C8:  BNZ   03F8
+....................       {
+....................          if(timeout_counter > 10)
+003CA:  MOVF   0F,W
+003CC:  SUBLW  0A
+003CE:  BC    03D8
+....................             delay_ms(200);
+003D0:  MOVLW  C8
+003D2:  MOVWF  10
+003D4:  RCALL  0262
+003D6:  BRA    03DE
+....................          else
+....................             delay_ms(10);   
+003D8:  MOVLW  0A
+003DA:  MOVWF  10
+003DC:  RCALL  0262
+....................          
+....................          if(timeout_counter > 100)
+003DE:  MOVF   0F,W
+003E0:  SUBLW  64
+003E2:  BC    03F4
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+003E4:  MOVLW  76
+003E6:  MOVWF  FF6
+003E8:  MOVLW  00
+003EA:  MOVWF  FF7
+003EC:  MOVLW  00
+003EE:  MOVWF  FF8
+003F0:  RCALL  00A6
+....................             #endif
+....................             break;
+003F2:  BRA    03F8
+....................          }  
+....................          timeout_counter++;
+003F4:  INCF   0F,F
+003F6:  BRA    03C0
+....................       }
+....................       return;
+003F8:  GOTO   0572 (RETURN)
+....................    }
+....................    
+....................    void write_data_bytes_flash1g(unsigned int32 write_address,int8 amount,int8 *write_data)
+....................    {
+....................       unsigned int8 address[4];
+....................       unsigned int8 timeout_counter = 0;
+....................       
+....................       //Byte extraction
+....................       address[0]  = (unsigned int8)((write_address>>24) & 0xff);                     // 0x _ _ 00 00 00
+....................       address[1]  = (unsigned int8)((write_address>>16) & 0xff);                     // 0x 00 _ _ 00 00
+....................       address[2]  = (unsigned int8)((write_address>>8) & 0xff);                      // 0x 00 00 _ _ 00
+....................       address[3]  = (unsigned int8)((write_address) & 0xff);                         // 0x 00 00 00 _ _
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH1G_CS);
+....................       spi_xfer(FLASH1G,WRITE_ENABLE);
+....................       output_high(FLASH1G_CS);
+....................       //Write enabled
+....................       
+....................       output_low(FLASH1G_CS);
+....................       ////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH1G,PAGE_PROGRAM_4BYTE);                                               //PAGE WRITE COMAND  (0x12)
+....................       spi_xfer(FLASH1G,address[0]);
+....................       spi_xfer(FLASH1G,address[1]);
+....................       spi_xfer(FLASH1G,address[2]);
+....................       spi_xfer(FLASH1G,address[3]);
+....................       for(int8 i = 0;i < amount;i++) 
+....................          spi_xfer(FLASH1G,write_data[i]);
+....................       ////////////////////////////////////////////////////////////////
+....................       output_high(FLASH1G_CS);          //take CS PIN higher back
+....................       
+....................       while((status_register_flash1g() & 0x01) == 1)                                          //masking status bit
+....................       {
+....................          if(timeout_counter > 10)
+....................             delay_ms(200);
+....................          else
+....................             delay_ms(10);   
+....................          
+....................          if(timeout_counter > 100)
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+....................             #endif
+....................             break;
+....................          }  
+....................          timeout_counter++;
+....................       }
+....................       return;
+....................    }
+.................... #endif
+.................... 
+.................... #ifdef USE_FLASH128M
+....................    int8 status_register_flash128m()
+....................    {
+....................       unsigned int8 status_reg;
+....................       output_low(FLASH128M_CS);                                              //lower the CS PIN
+....................       spi_xfer(FLASH128M,READ_STATUS_REGISTER);                              //READ STATUS REGISTER COMAND (0x05)
+....................       status_reg = spi_xfer(FLASH128M);
+....................       output_high(FLASH128M_CS);                                             //take CS PIN higher back
+....................       #ifdef DEBUG
+....................          if((status_reg & 0x01) == true)                                          //masking status bit
+....................             fprintf(DEBUG_PORT,"128Mbit flash busy\n\r");
+....................       #endif
+....................       return status_reg;
+....................    }
+....................    
+....................    int8 read_id_flash128m()//->success:True,fail:false
+....................    {
+....................       int8 chip_id[21];
+....................       output_low(FLASH128M_CS);
+....................       for (int8 i = 0;i <= 20;i++)
+....................       {
+....................          if (i == 0)
+....................          {
+....................             chip_id[i] = spi_xfer(FLASH128M,READ_ID);
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"Read ID:");
+....................             #endif
+....................          }
+....................          else
+....................          {
+....................             chip_id[i] = spi_xfer(FLASH128M,0x00);
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"%x ",chip_id[i]);  
+....................             #endif
+....................          }
+....................       }
+....................       output_high(FLASH128M_CS);
+....................       #ifdef DEBUG
+....................          fprintf(DEBUG_PORT,"\r\n");
+....................       #endif
+....................       //chip id check
+....................       if(chip_id[1] == 0x20)
+....................       {
+....................          #ifdef DEBUG
+....................             fprintf(DEBUG_PORT,"flash connect OK\r\n");
+....................          #endif
+....................          return true;
+....................       }
+....................       else
+....................       {
+....................          #ifdef DEBUG
+....................             fprintf(DEBUG_PORT,"flash not connect\r\n");
+....................          #endif
+....................          return false;
+....................       }
+....................    }
+....................    
+....................    void sector_erase_flash128m(unsigned int32 sector_address)
+....................    {
+....................       unsigned int8 address[3];
+....................       unsigned int8 timeout_counter = 0;
+....................       
+....................       address[0]  = (unsigned int8)((sector_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+....................       address[1]  = (unsigned int8)((sector_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+....................       address[2]  = (unsigned int8)((sector_address) & 0xff);       // 0x 00 00 00 _ _
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH128M_CS);
+....................       spi_xfer(FLASH128M,WRITE_ENABLE);
+....................       output_high(FLASH128M_CS);
+....................       //Write enabled
+....................       
+....................       delay_us(2);
+....................       
+....................       output_low(FLASH128M_CS);
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH128M,SECTOR_ERASE); //SECTOR ERASE COMAND   (0xDC)
+....................       
+....................       spi_xfer(FLASH128M,address[0]);   
+....................       spi_xfer(FLASH128M,address[1]);    
+....................       spi_xfer(FLASH128M,address[2]);    
+....................       //////////////////////////////////////////////////////////////////
+....................       
+....................       output_high(FLASH128M_CS);            //take CS PIN higher back
+....................       
+....................       while((status_register_flash128m() & 0x01) == 1)                                          //masking status bit
+....................       {
+....................          if(timeout_counter > 10)
+....................             delay_ms(200);
+....................          else
+....................             delay_ms(10);   
+....................          
+....................          if(timeout_counter > 100)
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+....................             #endif
+....................             break;
+....................          }  
+....................          timeout_counter++;
+....................       }
+....................       return;
+....................    }
+....................    
+....................    void subsector_32kByte_erase_flash128m(unsigned int32 subsector_address)
+....................    {
+....................       unsigned int8 address[3];
+....................       unsigned int8 timeout_counter = 0;
+....................       
+....................       address[0]  = (unsigned int8)((subsector_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+....................       address[1]  = (unsigned int8)((subsector_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+....................       address[2]  = (unsigned int8)((subsector_address) & 0xff);       // 0x 00 00 00 _ _
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH128M_CS);
+....................       spi_xfer(FLASH128M,WRITE_ENABLE);
+....................       output_high(FLASH128M_CS);
+....................       //Write enabled
+....................       
+....................       output_low(FLASH128M_CS);
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH128M,SUBSECTOR_32KB_ERASE_4BYTE);
+....................       
+....................       spi_xfer(FLASH128M,address[0]);   
+....................       spi_xfer(FLASH128M,address[1]);    
+....................       spi_xfer(FLASH128M,address[2]);    
+....................       //////////////////////////////////////////////////////////////////
+....................       
+....................       output_high(FLASH128M_CS);            //take CS PIN higher back
+....................       
+....................       while((status_register_flash128m() & 0x01) == 1)                                          //masking status bit
+....................       {
+....................          if(timeout_counter > 10)
+....................             delay_ms(200);
+....................          else
+....................             delay_ms(10);   
+....................          
+....................          if(timeout_counter > 100)
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+....................             #endif
+....................             break;
+....................          }  
+....................          timeout_counter++;
+....................       }
+....................       
+....................    }
+....................       
+....................    void subsector_4kByte_erase_flash128m(unsigned int32 subsector_address)
+....................    {
+....................       unsigned int8 address[3];
+....................       unsigned int8 timeout_counter = 0;
+....................       
+....................       address[0]  = (unsigned int8)((subsector_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+....................       address[1]  = (unsigned int8)((subsector_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+....................       address[2]  = (unsigned int8)((subsector_address) & 0xff);       // 0x 00 00 00 _ _
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH128M_CS);
+....................       //delay_ms(2);
+....................       spi_xfer(FLASH128M,WRITE_ENABLE);
+....................       output_high(FLASH128M_CS);
+....................       //Write enabled
+....................       
+....................       delay_us(2);
+....................       
+....................       output_low(FLASH128M_CS);
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH128M,SUBSECTOR_4KB_ERASE_4BYTE);
+....................       
+....................       spi_xfer(FLASH128M,address[0]);   
+....................       spi_xfer(FLASH128M,address[1]);    
+....................       spi_xfer(FLASH128M,address[2]);    
+....................       //////////////////////////////////////////////////////////////////
+....................       
+....................       output_high(FLASH128M_CS);            //take CS PIN higher back
+....................       
+....................       while((status_register_flash128m() & 0x01) == 1)                                          //masking status bit
+....................       {
+....................          if(timeout_counter > 10)
+....................             delay_ms(200);
+....................          else
+....................             delay_ms(10);   
+....................          
+....................          if(timeout_counter > 100)
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+....................             #endif
+....................             break;
+....................          }  
+....................          timeout_counter++;
+....................       }
+....................    }
+....................       
+....................    int8 read_data_byte_flash128m(unsigned int32 read_address)
+....................    {
+....................       int8 read_data;
+....................       unsigned int8 address[3];
+....................       
+....................       address[0]  = (unsigned int8)((read_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+....................       address[1]  = (unsigned int8)((read_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+....................       address[2]  = (unsigned int8)((read_address) & 0xff);       // 0x 00 00 00 _ _
+....................    
+....................       output_low(FLASH128M_CS);
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH128M,READ);
+....................       
+....................       spi_xfer(FLASH128M,address[0]);   
+....................       spi_xfer(FLASH128M,address[1]);    
+....................       spi_xfer(FLASH128M,address[2]);    
+....................       read_data = spi_xfer(FLASH128M);
+....................       //////////////////////////////////////////////////////////////////
+....................       
+....................       delay_us(2);
+....................       output_high(FLASH128M_CS);            //take CS PIN higher back
+....................    
+....................       return read_data;
+....................    }
+....................       
+....................    void read_data_bytes_flash128m(unsigned int32 read_address,int8 amount,int8 *read_data)
+....................    {
+....................       unsigned int8 address[3];
+....................       
+....................       address[0]  = (unsigned int8)((read_address>>16) & 0xff);   // 0x 00 _ _ 00 00
+....................       address[1]  = (unsigned int8)((read_address>>8) & 0xff);    // 0x 00 00 _ _ 00
+....................       address[2]  = (unsigned int8)((read_address) & 0xff);       // 0x 00 00 00 _ _
+....................    
+....................       output_low(FLASH128M_CS);
+....................       ///////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH128M,READ);
+....................       
+....................       spi_xfer(FLASH128M,address[0]);   
+....................       spi_xfer(FLASH128M,address[1]);    
+....................       spi_xfer(FLASH128M,address[2]);    
+....................       for(int8 i = 0;i < amount;i++)
+....................          read_data[i] = spi_xfer(FLASH128M);
+....................       //////////////////////////////////////////////////////////////////
+....................       
+....................       delay_us(2);
+....................       output_high(FLASH128M_CS);            //take CS PIN higher back
+....................    
+....................       return;
+....................    }
+....................    
+....................    void write_data_byte(unsigned int32 write_address,int8 write_data)
+....................    {
+....................       unsigned int8 address[3];
+....................       unsigned int8 timeout_counter = 0;
+....................       //Byte extraction
+....................       address[0]  = (unsigned int8)((write_address>>16) & 0xff);                     // 0x 00 _ _ 00 00
+....................       address[1]  = (unsigned int8)((write_address>>8) & 0xff);                      // 0x 00 00 _ _ 00
+....................       address[2]  = (unsigned int8)((write_address) & 0xff);                         // 0x 00 00 00 _ _
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH128M_CS);
+....................       spi_xfer(FLASH128M,WRITE_ENABLE);
+....................       output_high(FLASH128M_CS);
+....................       //Write enabled
+....................       
+....................       output_low(FLASH128M_CS);
+....................       ////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH128M,PAGE_PROGRAM_4BYTE);                                               //PAGE WRITE COMAND  (0x12)
+....................       spi_xfer(FLASH128M,address[0]);
+....................       spi_xfer(FLASH128M,address[1]);
+....................       spi_xfer(FLASH128M,address[2]);
+....................       spi_xfer(FLASH128M,address[3]);
+....................       ////////////////////////////////////////////////////////////////
+....................       
+....................       output_high(FLASH128M_CS);          //take CS PIN higher back
+....................       
+....................       while((status_register_flash128m() & 0x01) == 1)                                          //masking status bit
+....................       {
+....................          if(timeout_counter > 10)
+....................             delay_ms(200);
+....................          else
+....................             delay_ms(10);   
+....................          
+....................          if(timeout_counter > 100)
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+....................             #endif
+....................             break;
+....................          }  
+....................          timeout_counter++;
+....................       }
+....................       //delay_us(10);  
+....................       
+....................       return;
+....................    }
+....................    
+....................    void write_data_bytes(unsigned int32 write_address,int8 write_data)
+....................    {
+....................       unsigned int8 address[3];
+....................       unsigned int8 timeout_counter = 0;
+....................       //Byte extraction
+....................       address[0]  = (unsigned int8)((write_address>>16) & 0xff);                     // 0x 00 _ _ 00 00
+....................       address[1]  = (unsigned int8)((write_address>>8) & 0xff);                      // 0x 00 00 _ _ 00
+....................       address[2]  = (unsigned int8)((write_address) & 0xff);                         // 0x 00 00 00 _ _
+....................       
+....................       //Write enable sequence
+....................       output_low(FLASH128M_CS);
+....................       spi_xfer(FLASH128M,WRITE_ENABLE);
+....................       output_high(FLASH128M_CS);
+....................       //Write enabled
+....................       
+....................       output_low(FLASH128M_CS);
+....................       ////////////////////////////////////////////////////////////////
+....................       spi_xfer(FLASH128M,PAGE_PROGRAM_4BYTE);                                               //PAGE WRITE COMAND  (0x12)
+....................       spi_xfer(FLASH128M,address[0]);
+....................       spi_xfer(FLASH128M,address[1]);
+....................       spi_xfer(FLASH128M,address[2]);
+....................       spi_xfer(FLASH128M,write_data);
+....................       ////////////////////////////////////////////////////////////////
+....................       output_high(FLASH128M_CS);          //take CS PIN higher back
+....................       
+....................       while((status_register_flash128M() & 0x01) == 1)                                          //masking status bit
+....................       {
+....................          if(timeout_counter > 10)
+....................             delay_ms(200);
+....................          else
+....................             delay_ms(10);   
+....................          
+....................          if(timeout_counter > 100)
+....................          {
+....................             #ifdef DEBUG
+....................                fprintf(DEBUG_PORT,"flash timeout");
+....................             #endif
+....................             break;
+....................          }  
+....................          timeout_counter++;
+....................       }
+....................       return;
+....................    }
+.................... 
+.................... #endif
+.................... 
+.................... 
+.................... 
+.................... 
+.................... //#include <GDNS_tbd_FlashOperation.h>
+.................... 
+.................... 
+.................... /*
+.................... // --- MT25QL01GBBB コマンド定義 ---
+.................... #define CMD_READ_ID       0x9F
+.................... #define CMD_WRITE_ENABLE  0x06
+.................... #define CMD_READ_STATUS   0x05
+.................... #define CMD_READ_DATA     0x03
+.................... #define CMD_PAGE_PROGRAM  0x02 // 3-byte address page program
+.................... #define CMD_SECTOR_ERASE  0x20 // 4KB Subsector Erase (3-byte address)
+.................... #define CMD_BULK_ERASE    0xC7
+.................... 
+.................... 
+.................... // ★★★ 動作モード切り替え ★★★
+.................... // 0: ID読み取り (通常)
+.................... // 1: GPIOテスト (テスター用)
+.................... // 2: SPI連続送信 (オシロ用)
+.................... // 3: Flash書き込み/読み出しテスト (NEW!)
+.................... #define OPERATION_MODE 3
+.................... 
+.................... // --- 関数プロトタイプ宣言 ---
+.................... 
+.................... void flash_write_enable();
+.................... void flash_wait_busy();
+.................... void flash_sector_erase(int32 addr);
+.................... void flash_page_program(int32 addr, int8 *data, int16 len);
+.................... void flash_read_data(int32 addr, int8 *buffer, int16 len);
+.................... */
+.................... 
+.................... void main()
+*
+0047E:  CLRF   FF8
+00480:  BCF    FD0.7
+00482:  MOVLB  E
+00484:  MOVLW  55
+00486:  MOVWF  F7E
+00488:  MOVLW  AA
+0048A:  MOVWF  F7E
+0048C:  BCF    F66.6
+0048E:  MOVLW  F8
+00490:  MOVWF  x2A
+00492:  MOVLW  F5
+00494:  MOVWF  x2B
+00496:  MOVLW  F8
+00498:  MOVWF  x2C
+0049A:  MOVLW  F9
+0049C:  MOVWF  x2D
+0049E:  MOVLW  20
+004A0:  MOVWF  x1D
+004A2:  MOVLW  30
+004A4:  MOVWF  x22
+004A6:  MOVLW  20
+004A8:  MOVWF  x24
+004AA:  MOVLW  01
+004AC:  MOVWF  x25
+004AE:  MOVLW  55
+004B0:  MOVWF  F7E
+004B2:  MOVLW  AA
+004B4:  MOVWF  F7E
+004B6:  BSF    F66.6
+004B8:  CLRF   F9B
+004BA:  CLRF   F64
+004BC:  CLRF   F65
+004BE:  CLRF   F66
+004C0:  MOVLW  02
+004C2:  MOVWF  FD3
+004C4:  BSF    F67.3
+004C6:  MOVLW  A0
+004C8:  MOVWF  FAF
+004CA:  MOVLW  01
+004CC:  MOVLB  F
+004CE:  MOVWF  x30
+004D0:  MOVLW  A6
+004D2:  MOVWF  FAC
+004D4:  MOVLW  90
+004D6:  MOVWF  FAB
+004D8:  BSF    x31.3
+004DA:  MOVLW  A0
+004DC:  MOVWF  x1F
+004DE:  MOVLW  01
+004E0:  MOVWF  x20
+004E2:  MOVLW  A6
+004E4:  MOVWF  x32
+004E6:  MOVLW  90
+004E8:  MOVWF  x33
+004EA:  BSF    x2D.3
+004EC:  MOVLW  A0
+004EE:  MOVWF  x2B
+004F0:  MOVLW  01
+004F2:  MOVWF  x2C
+004F4:  MOVLW  A6
+004F6:  MOVWF  x2E
+004F8:  MOVLW  90
+004FA:  MOVWF  x2F
+004FC:  MOVLB  E
+004FE:  BSF    xFD.3
+00500:  MOVLW  A0
+00502:  MOVWF  xFB
+00504:  MOVLW  01
+00506:  MOVWF  xFC
+00508:  MOVLW  A6
+0050A:  MOVWF  xFE
+0050C:  MOVLW  90
+0050E:  MOVWF  xFF
+00510:  BSF    F93.5
+00512:  BCF    F93.4
+00514:  BCF    F93.2
+00516:  BCF    F8A.2
+00518:  CLRF   05
+0051A:  CLRF   04
+0051C:  CLRF   xD9
+0051E:  CLRF   xDA
+00520:  CLRF   xCE
+00522:  CLRF   xCF
+00524:  CLRF   xD0
+00526:  CLRF   xD1
+00528:  CLRF   xD2
+0052A:  CLRF   xD3
+0052C:  CLRF   xD4
+0052E:  CLRF   xD5
+00530:  CLRF   x45
+00532:  CLRF   x46
+00534:  CLRF   x47
+00536:  BCF    x8D.7
+00538:  BCF    x8D.6
+0053A:  BCF    x8D.5
+0053C:  MOVLB  F
+0053E:  CLRF   x53
+00540:  CLRF   x38
+00542:  CLRF   x37
+.................... {
+.................... fprintf(PORT1, "==Program Start==\r\n");
+00544:  MOVLW  92
+00546:  MOVWF  FF6
+00548:  MOVLW  00
+0054A:  MOVWF  FF7
+0054C:  MOVLW  00
+0054E:  MOVWF  FF8
+00550:  MOVLB  0
+00552:  RCALL  00A6
+.................... 
+.................... flash_setting();
+00554:  BRA    00D0
+.................... status_register_flash1g();
+00556:  RCALL  0110
+.................... read_id_flash1g();
+00558:  BRA    0198
+.................... sector_erase_flash1g(0000);
+0055A:  CLRF   09
+0055C:  CLRF   08
+0055E:  CLRF   07
+00560:  CLRF   06
+00562:  BRA    028A
+.................... write_data_byte_flash1g(0x00, 0xAB);
+00564:  CLRF   09
+00566:  CLRF   08
+00568:  CLRF   07
+0056A:  CLRF   06
+0056C:  MOVLW  AB
+0056E:  MOVWF  0A
+00570:  BRA    033C
+.................... read_data_byte_flash1g(0000);
+00572:  CLRF   09
+00574:  CLRF   08
+00576:  CLRF   07
+00578:  CLRF   06
+0057A:  BRA    03FC
+.................... 
+.................... }
+.................... 
+0057C:  SLEEP 
+.................... 
+.................... 
+.................... 
+.................... 
+.................... /*// --- メイン関数 ---
+.................... void main() {
+....................    int8 manufacturer_id, memory_type, memory_capacity;
+....................    int8 write_buf[10] = {0xAA, 0xBB, 0xCC, 0xDD, 0xEE, 1, 2, 3, 4, 5};
+....................    int8 read_buf[10];
+....................    int i;
+.................... 
+....................       setup_adc_ports(NO_ANALOGS);
+.................... 
+....................    // CS初期化
+....................    output_high(SPI2_CS);
+.................... 
+....................    fprintf(PORT1, "\r\n=== System Started ===\r\n");
+....................    delay_ms(100);
+.................... 
+.................... #if OPERATION_MODE == 3
+....................    // --- モード3: Flash R/W テスト ---
+....................    fprintf(PORT1, "Mode 3: Flash Read/Write Test Start.\r\n");
+.................... 
+....................    while(TRUE) {
+....................       // 1. まずID確認
+....................       output_high(SPI2_CS);
+....................       spi_xfer(SPI2, CMD_READ_ID);
+....................       manufacturer_id = spi_xfer(SPI2, 0x00);
+....................       spi_xfer(SPI2, 0x00); spi_xfer(SPI2, 0x00); // 残りは読み飛ばし
+....................       output_high(SPI2_CS);
+.................... 
+.................... 
+....................       if(manufacturer_id != 0x20) {
+....................          fprintf(PORT1, "Error: Flash ID mismatch (0x%X). Check connection.\r\n", manufacturer_id);
+....................          delay_ms(1000);
+....................          continue;
+....................       }
+.................... 
+....................       fprintf(PORT1, "1. Flash Found. Test Addr: 0x001000\r\n");
+.................... 
+....................       // 2. セクタ消去 (4KB Erase)
+....................       // 書き込みの前には必ず消去が必要です。
+....................       fprintf(PORT1, "2.1 Erasing Sector... ");
+....................       flash_write_enable();
+....................       flash_sector_erase(0x001000);
+....................       fprintf(PORT1, "2.2 Erase Command Sent. Waiting... ");
+....................       flash_wait_busy(); // 消去完了待ち
+....................       fprintf(PORT1, "Done.\r\n");
+.................... 
+....................       // 3. 書き込み (Page Program)
+....................       fprintf(PORT1, "3. Writing Data {0xAA, 0xBB...}... ");
+....................       flash_write_enable();
+....................       flash_page_program(0x001000, write_buf, 10);
+....................       flash_wait_busy(); // 書き込み完了待ち
+....................       fprintf(PORT1, "Done.\r\n");
+.................... 
+....................       // 4. 読み出し検証
+....................       fprintf(PORT1, "4. Reading Data... ");
+....................       // バッファクリア
+....................       for(i=0; i<10; i++) read_buf[i] = 0;
+.................... 
+....................       flash_read_data(0x001000, read_buf, 10);
+.................... 
+....................       // 比較
+....................       int match = 1;
+....................       for(i=0; i<10; i++) {
+....................          if(read_buf[i] != write_buf[i]) match = 0;
+....................       }
+.................... 
+....................       if(match) {
+....................          fprintf(PORT1, "[SUCCESS] Data Matches!\r\n");
+....................          for(i=0; i<10; i++) fprintf(PORT1, "%02X ", read_buf[i]);
+....................          fprintf(PORT1, "\r\n");
+....................       } else {
+....................          fprintf(PORT1, "[FAIL] Data Mismatch.\r\n");
+....................          fprintf(PORT1, "Read: ");
+....................          for(i=0; i<10; i++) fprintf(PORT1, "%02X ", read_buf[i]);
+....................          fprintf(PORT1, "\r\n");
+....................       }
+.................... 
+....................       fprintf(PORT1, "--- Test Finished (Wait 5s) ---\r\n");
+....................       delay_ms(5000);
+....................    }
+.................... 
+.................... #elif OPERATION_MODE == 1
+....................    // --- モード1: GPIOテスト ---
+....................    // ... (以前と同じコード) ...
+....................    fprintf(PORT1, "Mode 1: GPIO Toggle Test.\r\n");
+....................    while(TRUE) {
+....................       output_low(SPI2_CS); delay_ms(2000);
+....................       output_high(SPI2_CS); delay_ms(2000);
+....................       output_low(PIN_A3); delay_ms(2000);
+....................       output_high(PIN_A3); delay_ms(2000);
+....................       output_low(PIN_A1); delay_ms(2000);
+....................       output_high(PIN_A1); delay_ms(2000);
+....................    }
+.................... 
+.................... #elif OPERATION_MODE == 2
+....................    // --- モード2: SPI連続送信 ---
+....................    // ... (以前と同じコード) ...
+....................    output_low(SPI2_CS);
+....................    while(TRUE) {
+....................       spi_xfer(SPI2, 0x55);
+....................    }
+.................... 
+.................... #else
+....................    // --- モード0: ID読み取りのみ ---
+....................    fprintf(PORT1, "Mode 0: Read ID Only.\r\n");
+....................    while(TRUE) {
+....................       output_low(SPI2_CS);
+....................       spi_xfer(SPI2, CMD_READ_ID);
+....................       manufacturer_id = spi_xfer(SPI2, 0x00);
+....................       memory_type = spi_xfer(SPI2, 0x00);
+....................       memory_capacity = spi_xfer(SPI2, 0x00);
+....................       output_high(SPI2_CS);
+....................       fprintf(PORT1, "ID: %02X %02X %02X\r\n", manufacturer_id, memory_type, memory_capacity);
+....................       delay_ms(1000);
+....................    }
+.................... #endif
+.................... }
+.................... 
+.................... // --- Flash操作関数群 ---
+.................... 
+.................... // 書き込み許可 (Write Enable)
+.................... void flash_write_enable() {
+....................    output_low(SPI2_CS);
+....................    spi_xfer(SPI2, CMD_WRITE_ENABLE); // 0x06
+....................    output_high(SPI2_CS);
+.................... }
+.................... 
+.................... // ビジー待機 (Status RegisterのWIPビット監視)
+.................... void flash_wait_busy() {
+....................    int8 status;
+....................    //do {
+....................       output_low(SPI2_CS);
+....................       fprintf(PORT1, "Output Low\n\r");
+....................       spi_xfer(SPI2, WRITE_ENABLE); // 0x05
+....................       fprintf(PORT1, "WRITE ENABLE\n\r");
+....................       status = spi_xfer(SPI2, 0x00);
+....................       fprintf(PORT1, "spi_xfer done\n\r");
+....................       output_high(SPI2_CS);
+....................       fprintf(PORT1, "Output high\n\r");
+....................       // Bit 0 が WIP (Write In Progress)
+....................    //} while (status & 0x01);
+.................... }
+.................... 
+.................... // セクタ消去 (4KB Subsector Erase)
+.................... void flash_sector_erase(int32 addr) {
+....................    output_low(SPI2_CS);
+....................    spi_xfer(SPI2, CMD_SECTOR_ERASE); // 0x20
+.................... 
+....................    // 3バイトアドレス送信 (MSB First)
+....................    spi_xfer(SPI2, (addr >> 16) & 0xFF);
+....................    spi_xfer(SPI2, (addr >> 8) & 0xFF);
+....................    spi_xfer(SPI2, addr & 0xFF);
+.................... 
+....................    output_high(SPI2_CS);
+.................... }
+.................... 
+.................... // ページプログラム (データ書き込み)
+.................... void flash_page_program(int32 addr, int8 *data, int16 len) {
+....................    int16 i;
+.................... 
+....................    output_low(SPI2_CS);
+....................    spi_xfer(SPI2, CMD_PAGE_PROGRAM); // 0x02
+.................... 
+....................    // 3バイトアドレス送信
+....................    spi_xfer(SPI2, (addr >> 16) & 0xFF);
+....................    spi_xfer(SPI2, (addr >> 8) & 0xFF);
+....................    spi_xfer(SPI2, addr & 0xFF);
+.................... 
+....................    // データ送信
+....................    for(i=0; i<len; i++) {
+....................       spi_xfer(SPI2, data[i]);
+....................    }
+.................... 
+....................    output_high(SPI2_CS);
+.................... }
+.................... 
+.................... // データ読み出し
+.................... void flash_read_data(int32 addr, int8 *buffer, int16 len) {
+....................    int16 i;
+.................... 
+....................    output_low(SPI2_CS);
+....................    spi_xfer(SPI2, CMD_READ_DATA); // 0x03
+.................... 
+....................    // 3バイトアドレス送信
+....................    spi_xfer(SPI2, (addr >> 16) & 0xFF);
+....................    spi_xfer(SPI2, (addr >> 8) & 0xFF);
+....................    spi_xfer(SPI2, addr & 0xFF);
+.................... 
+....................    // データ受信
+....................    for(i=0; i<len; i++) {
+....................       buffer[i] = spi_xfer(SPI2, 0x00);
+....................    }
+.................... 
+....................    output_high(SPI2_CS);
+.................... }*/
+
+Configuration Fuses:
+   Word  1: F7A0   STVREN NOXINST NODEBUG BROWNOUT_SW BORV18 NOPROTECT
+   Word  2: FF82   PR SOSC_DIG NOCLOCKOUT IESO NOPLL
+   Word  3: F032   HS
+   Word  4: F7FF   WPFP WPDIS WPEND NOWPCFG
+   Word  5: FF03   T5G_IS_T5G CINA_DEFAULT IOL1WAY LS48MHZ MSSP2MSK7 MSSPMSK7
+   Word  6: FCFF   WDTWIN_25% WDTCLK_FRC WDT32768 NOWDT WINDIS WPRES128
+   Word  7: F01D   NOVREGSLEEP VBATBOR DSBOR DS_SW
+   Word  8: F3F8   DSWDT_25DAYS NODSWDT DSWDTOSC_INT
