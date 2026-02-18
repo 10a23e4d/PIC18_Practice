@@ -34,12 +34,29 @@ void main()
 {
 fprintf(PORT1, "==Program Start==\r\n");
 
+fprintf(PORT1, "Flash Setting Starting...\r\n");
 flash_setting();
+fprintf(PORT1, "Flash Setting done.\r\n");
+
+fprintf(PORT1, "Status Register Flash1G Starting...\r\n");
 status_register_flash1g();
+fprintf(PORT1, "Status Register Flash1G done.\r\n");
+
+fprintf(PORT1, "Read ID Flash1G Starting...\r\n");
 read_id_flash1g();
+fprintf(PORT1, "Read ID Flash1G done.\r\n");
+
+fprintf(PORT1, "Sector Erase Flash1G Starting...\r\n");
 sector_erase_flash1g(0000);
+fprintf(PORT1, "Sector Erase Flash1G done.\r\n");
+
+fprintf(PORT1, "Write Data Flash1G Starting...\r\n");
 write_data_byte_flash1g(0x00, 0xAB);
+fprintf(PORT1, "Write Data Flash1G done.\r\n");
+
+fprintf(PORT1, "Read Data Flash1G Starting...\r\n");
 read_data_byte_flash1g(0000);
+fprintf(PORT1, "Read Data Flash1G done.\r\n");
 
 }
 
