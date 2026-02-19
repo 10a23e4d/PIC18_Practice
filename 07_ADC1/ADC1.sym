@@ -1,0 +1,297 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B-01C @sprintf_string
+01D-01E strtok.save
+01F-022 _Randseed
+023-026 total_milliseconds
+027.0   time_updated
+028-029 MAIN.adc_value
+02A-02D MAIN.current_addr
+02E-031 MAIN.recorded_count
+032     MAIN.state
+033     MAIN.cmd
+034-03B MAIN.flash_buf
+03C-03F MAIN.read_ptr
+040-043 MAIN.i
+044-047 MAIN.voltage
+048-04B MAIN.r_time
+04C-04D MAIN.r_val
+04E-04F @ITOF.P1
+04E     @PSTRINGCN_9600_31791_31789.P2
+04E-051 sector_erase_flash1g.sector_address
+04E-04F @PRINTF_LU_9600_31791_31789.P1
+04E-051 @PRINTF_L32D_9600_31791_31789FPFPF.P2
+04E-051 write_data_bytes_flash1g.write_address
+04E-062 read_id_flash1g.chip_id
+04E-051 @PRINTF_L32U_9600_31791_31789.P1
+04E     MAIN.@SCRATCH1
+04F     MAIN.@SCRATCH2
+04F     @PSTRINGCN_9600_31791_31789.@SCRATCH1
+050     MAIN.@SCRATCH3
+050     @PSTRINGCN_9600_31791_31789.@SCRATCH2
+050     @PRINTF_LU_9600_31791_31789.@SCRATCH1
+051     MAIN.@SCRATCH4
+051     @PSTRINGCN_9600_31791_31789.@SCRATCH3
+051     @PRINTF_LU_9600_31791_31789.@SCRATCH2
+052-055 sector_erase_flash1g.address
+052-055 read_data_bytes_flash1g.read_address
+052     write_data_bytes_flash1g.amount
+052-055 @DIVFF.P1
+052     @PRINTF_L32D_9600_31791_31789FPFPF.P2
+052     @PRINTF_L32U_9600_31791_31789.@SCRATCH1
+052     @PRINTF_LU_9600_31791_31789.@SCRATCH3
+053-054 write_data_bytes_flash1g.write_data
+053     @PRINTF_L32U_9600_31791_31789.@SCRATCH2
+053     @PRINTF_LU_9600_31791_31789.@SCRATCH4
+053     @PRINTF_L32D_9600_31791_31789FPFPF.@SCRATCH1
+054     @PRINTF_L32U_9600_31791_31789.@SCRATCH3
+054     @PRINTF_LU_9600_31791_31789.@SCRATCH5
+054     @PRINTF_L32D_9600_31791_31789FPFPF.@SCRATCH2
+055-058 write_data_bytes_flash1g.address
+055     @PRINTF_L32U_9600_31791_31789.@SCRATCH4
+055     @PRINTF_LU_9600_31791_31789.@SCRATCH6
+055     @PRINTF_L32D_9600_31791_31789FPFPF.@SCRATCH3
+056     sector_erase_flash1g.timeout_counter
+056     read_data_bytes_flash1g.amount
+056-059 @DIVFF.P1
+056     @PRINTF_L32U_9600_31791_31789.@SCRATCH5
+056     @PRINTF_LU_9600_31791_31789.@SCRATCH7
+056     @PRINTF_L32D_9600_31791_31789FPFPF.@SCRATCH4
+057-058 read_data_bytes_flash1g.read_data
+057     sector_erase_flash1g.@SCRATCH1
+057     @PRINTF_L32U_9600_31791_31789.@SCRATCH6
+057     @PRINTF_L32D_9600_31791_31789FPFPF.@SCRATCH5
+058     sector_erase_flash1g.@SCRATCH2
+058     @PRINTF_L32U_9600_31791_31789.@SCRATCH7
+058     @PRINTF_L32D_9600_31791_31789FPFPF.@SCRATCH6
+059-05C read_data_bytes_flash1g.address
+059     write_data_bytes_flash1g.timeout_counter
+059     sector_erase_flash1g.@SCRATCH3
+059     @PRINTF_L32U_9600_31791_31789.@SCRATCH8
+059     @PRINTF_L32D_9600_31791_31789FPFPF.@SCRATCH7
+05A     write_data_bytes_flash1g.i
+05A     sector_erase_flash1g.@SCRATCH4
+05A     @DIVFF.@SCRATCH1
+05A     @PRINTF_L32D_9600_31791_31789FPFPF.@SCRATCH8
+05B-05E @MULFF.P1
+05B-05E @FTOSD.P2
+05B     status_register_flash1g.status_reg
+05B-05E @DIV3232.P1
+05B     @delay_ms1.P2
+05B     sector_erase_flash1g.@SCRATCH5
+05B     write_data_bytes_flash1g.@SCRATCH1
+05B     @DIVFF.@SCRATCH2
+05C     status_register_flash1g.@SCRATCH1
+05C     write_data_bytes_flash1g.@SCRATCH2
+05C     @DIVFF.@SCRATCH3
+05D     read_data_bytes_flash1g.i
+05D     write_data_bytes_flash1g.@SCRATCH3
+05D     @DIVFF.@SCRATCH4
+05E     read_data_bytes_flash1g.@SCRATCH1
+05E     write_data_bytes_flash1g.@SCRATCH4
+05E     @DIVFF.@SCRATCH5
+05F-062 @MULFF.P1
+05F-062 @DIV3232.P2
+05F     read_data_bytes_flash1g.@SCRATCH2
+05F     write_data_bytes_flash1g.@SCRATCH5
+05F     @DIVFF.@SCRATCH6
+05F     @FTOSD.@SCRATCH1
+060     read_data_bytes_flash1g.@SCRATCH3
+061     read_data_bytes_flash1g.@SCRATCH4
+062     read_data_bytes_flash1g.@SCRATCH5
+063     read_id_flash1g.i
+063     @MULFF.@SCRATCH1
+063     @DIV3232.@SCRATCH1
+064     @PSTRINGC_9600_31791_31789.@SCRATCH1
+064     read_id_flash1g.@SCRATCH1
+064     @MULFF.@SCRATCH2
+064     @DIV3232.@SCRATCH2
+065     @PRINTF_X_9600_31791_31789.P1
+065     @PSTRINGC_9600_31791_31789.@SCRATCH2
+065     read_id_flash1g.@SCRATCH2
+065     @MULFF.@SCRATCH3
+065     @DIV3232.@SCRATCH3
+066     @SPI_XFER_1.P1
+066     @PRINTF_X_9600_31791_31789.P2
+066     @PSTRINGC_9600_31791_31789.@SCRATCH3
+066     @DIV3232.@SCRATCH4
+067     @SPI_XFER_1.P1
+067     @DIV3232.@SCRATCH5
+068     @SPI_XFER_1.P1
+069     @SPI_XFER_1.@SCRATCH1
+06A     @SPI_XFER_1.@SCRATCH2
+EEF.0   MDBIT
+EEF.3   MDOUT
+F08     CCP_7
+F08     CCP_7_LOW
+F09     CCP_7_HIGH
+F0B     CCP_6
+F0B     CCP_6_LOW
+F0C     CCP_6_HIGH
+F0E     CCP_5_LOW
+F0E     CCP_5
+F0F     CCP_5_HIGH
+F11     CCP_4_LOW
+F11     CCP_4
+F12     CCP_4_HIGH
+F21     DSGPR3
+F22     DSGPR2
+F23     DSGPR1
+F24     DSGPR0
+F41     CCP_10_LOW
+F41     CCP_10
+F42     CCP_10_HIGH
+F44     CCP_9_LOW
+F44     CCP_9
+F45     CCP_9_HIGH
+F47     CCP_8
+F47     CCP_8_LOW
+F48     CCP_8_HIGH
+F4A     CCP_3
+F4A     CCP_3_LOW
+F4B     CCP_3_HIGH
+F4F     CCP_2_LOW
+F4F     CCP_2
+F50     CCP_2_HIGH
+F83     PSP_DATA
+FBA     CCP_1
+FBA     CCP_1_LOW
+FBB     CCP_1_HIGH
+FC4.0   C1OUT
+FC4.1   C2OUT
+FC4.2   C3OUT
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000BE  @const985.call
+0000D2  @const992.call
+0000DC  @const998.call
+0000F0  @const999.call
+000104  @const1002.call
+000112  @const1005.call
+000120  @const1008.call
+00012E  @const1019.call
+00013C  @const1023.call
+00014A  timer0_isr
+00016C  @const1310.call
+000188  @const1311.call
+0001A6  @const1312.call
+0001BE  @const1313.call
+0001D6  @const1314.call
+000200  @const1315.call
+00021C  @const1316.call
+000242  @const1317.call
+000256  @const1318.call
+00027A  @const1319.call
+000296  @const1320.call
+0002B2  @const1321.call
+0002D6  @const1322.call
+0002EC  @const1323.call
+000308  @const1324.call
+00031E  @const1332.call
+000338  @const1333.call
+00035A  @const1334.call
+000378  @const1335.call
+000398  @const1336.call
+0003C8  @const1350.call
+0003D8  @const1351.call
+000402  @const1352.call
+000430  @PSTRINGC_9600_31791_31789
+00045A  flash_setting
+000462  @SPI_XFER_1
+00049A  @PRINTF_X_9600_31791_31789
+0004DC  read_id_flash1g
+0005A6  status_register_flash1g
+0005EA  @delay_ms1
+000612  sector_erase_flash1g
+0006C4  @PSTRINGCN_9600_31791_31789
+0006EC  @DIV3232
+00077A  @PRINTF_L32U_9600_31791_31789
+000820  read_data_bytes_flash1g
+0008B6  @ITOF
+0008EE  @MULFF
+0009E0  @DIVFF
+000B3C  @PRINTF_LU_9600_31791_31789
+000BE8  @FTOSD
+000C28  @PRINTF_L32D_9600_31791_31789FPFPF
+000DAA  write_data_bytes_flash1g
+000E98  @cinit1
+000E98  MAIN
+000F6A  @cinit2
+0135  StrtoulGO
+0135  StrtolGO
+
+Project Directory:
+    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\07_ADC1\
+
+Project Files:
+    ADC1.c                                                  [19-2-26 16:02  CRC=C7DFCAF2]
+    ADC1.h                                                  [19-2-26 13:46  CRC=61B8A364]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h [13-5-21 13:54  CRC=CB5C8DE4]
+    GDNS_tbd_FlashOperation.c                               [18-3-25 15:06  CRC=6C874E47]
+    GDNS_tbd_FlashOperation.h                               [18-2-26 12:54  CRC=84B2634C]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [30-6-20 14:21  CRC=452E14BB]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [30-1-19 12:26  CRC=897CEC6C]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [06-4-20 08:43  CRC=B1605627]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-1-08 15:55  CRC=2D1F019F]
+
+Source signature=C0780859
+Program memory checksum=0000
+Hex file CRC=8190
+
+Units:
+    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\07_ADC1\ADC1 (main)
+
+Compiler Settings:
+    Processor:      PIC18F67J94
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   ADC1.xsym
+    Errors:      ADC1.err
+    Ext Symbols: ADC1.esym
+    INHX32:      ADC1.hex
+    Symbols:     ADC1.sym
+    List:        ADC1.lst
+    Debug/COFF:  ADC1.cof
+    Project:     ADC1.ccspjt
+    Call Tree:   ADC1.tre
+    Statistics:  ADC1.STA

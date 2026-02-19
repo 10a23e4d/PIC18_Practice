@@ -1,0 +1,106 @@
+
+ROM used:   5340/131056 (4%)
+            5340/131056 (4%) including unused fragments
+
+            1.2 Average locations per line
+            7.0 Average locations per statement
+
+RAM used:   82/3578 (2%) at main() level
+            108/3578 (3%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  214    92  12  ADC1.c
+   65     0   0  ADC1.h
+ 1487     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
+  697   183  24  GDNS_tbd_FlashOperation.c
+   60     0   0  GDNS_tbd_FlashOperation.h
+ 1354   359  47  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
+  435   129  17  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+----- -----
+ 4372   763 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     40   0    1             @delay_ms1
+0     56   1    6             @SPI_XFER_1
+0      8   0    0     19  0.5  flash_setting
+0     68   1    2    210  3.7  status_register_flash1g
+0     20   0    0             @const985
+0     42   0    3             @PSTRINGC_9600_31791_31789
+0    202   2   24    635  5.6  read_id_flash1g
+0     10   0    0             @const992
+0     66   1    2             @PRINTF_X_9600_31791_31789
+0     20   0    0             @const998
+0     20   0    0             @const999
+0    178   2   14   1161  8.7  sector_erase_flash1g
+0     14   0    0             @const1002
+0     14   0    0             @const1005
+0     14   0    0             @const1008
+0    150   1   17    931  7.5  read_data_bytes_flash1g
+0     14   0    0             @const1019
+0    238   2   18   1450 10.8  write_data_bytes_flash1g
+0     14   0    0             @const1023
+0    242   2   11             @MULFF
+0     56   1    2             @ITOF
+0    348   3   14             @DIVFF
+0     34   0    0     56  1.4  timer0_isr
+0   1606  15   42   4218  9.1  MAIN
+0     28   0    0             @const1310
+0     30   0    0             @const1311
+0     24   0    0             @const1312
+0     24   0    0             @const1313
+0     42   0    0             @const1314
+0     28   0    0             @const1315
+0     38   0    0             @const1316
+0     20   0    0             @const1317
+0     36   0    0             @const1318
+0     28   0    0             @const1319
+0     28   0    0             @const1320
+0     36   0    0             @const1321
+0     22   0    0             @const1322
+0     28   0    0             @const1323
+0     22   0    0             @const1324
+0     40   0    4             @PSTRINGCN_9600_31791_31789
+0    142   1   13             @DIV3232
+0    166   2   12             @PRINTF_L32U_9600_31791_31789
+0     26   0    0             @const1332
+0     34   0    0             @const1333
+0     30   0    0             @const1334
+0     32   0    0             @const1335
+0     48   0    0             @const1336
+0    172   2    9             @PRINTF_LU_9600_31791_31789
+0     64   1    5             @FTOSD
+0    386   4   13             @PRINTF_L32D_9600_31791_31789FPFPF
+0     16   0    0             @const1350
+0     42   0    0             @const1351
+0     46   0    0             @const1352
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               8
+    Statements              763
+    Comments                1206
+    Volume (V)              11672
+    Difficulty (D)          45.4
+    Effort to implement (E) 530117
+    Time to implement (T)   8 hours, 11 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   21
+    Maintainability (MI)    67
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00004     6  0  
+00006-00006     0  2  
+00008-000BC   182  0  
+000BE-0FFFE  5152  60194  
+10000-1FFEE     0  65520  
+
+
+

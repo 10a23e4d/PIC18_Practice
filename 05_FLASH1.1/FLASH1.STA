@@ -13,7 +13,7 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  345    35   5  FLASH1.c
+  344    35   5  FLASH1.c
    60     0   0  FLASH1.h
  1487     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
   697   183  26  GDNS_tbd_FlashOperation.c
@@ -23,7 +23,7 @@ Lines Stmts  %   Files
   435   129  18  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
    28     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
 ----- -----
- 4498   706 Total
+ 4497   706 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------

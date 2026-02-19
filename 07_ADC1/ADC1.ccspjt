@@ -1,0 +1,22 @@
+[PROJECT]
+Target=ADC1.hex
+Processor_Text=PIC18F67J94
+CCSVersion=5.104
+Compiler=PCH
+[Target Data]
+FileList=ADC1.c
+[ADC1.c]
+Type=4
+[mru-list]
+1=ADC1.c
+
+[defines]
+buildcount=7
+
+[Opened Files]
+1=ADC1.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=ADC1 (main)

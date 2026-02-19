@@ -11,7 +11,7 @@ Type=4
 1=FLASH1.c
 
 [defines]
-buildcount=18
+buildcount=19
 
 [Opened Files]
 1=FLASH1.c
@@ -22,12 +22,14 @@ t2=1
 t3=1
 4=GDNS_tbd_FlashOperation.h
 t4=1
-Count=5
+Count=6
 5=..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h
 t5=472
+6=..\07_ADC1\ADC1.c
+t6=472
 
 [ProjectLog]
-Days=1
+Days=2
 D1=18-02-2026
 D1_L=24
 D1_L1=[46849]Stopped Editing.
@@ -58,6 +60,10 @@ D1_L21=[57830]Project Closed.
 D1_L22=[57944]Project Closed.
 D1_L23=[59555]Project Opened.
 D1_L24=[63861]Project Closed.
+D2=19-02-2026
+D2_L=2
+D2_L1=[49711]Project Opened.
+D2_L2=[49741]Project Closed.
 
 [fileformats]
 forcecoff=0
