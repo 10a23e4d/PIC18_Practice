@@ -1,0 +1,17 @@
+[PROJECT]
+Target=FLASH2.hex
+Processor_Text=PIC18F67J94
+CCSVersion=5.104
+Compiler=PCH
+[Target Data]
+FileList=FLASH2.c
+[FLASH2.c]
+Type=4
+[mru-list]
+1=FLASH2.c
+[Units]
+Count=1
+1=FLASH2 (main)
+
+[defines]
+buildcount=1

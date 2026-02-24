@@ -1,0 +1,205 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-005 @sprintf_string
+006-01A MAIN.write_str
+01B-02F MAIN.read_buf
+030     MAIN.data_len
+031     MAIN.i
+032     MAIN.c
+033-047 read_id_flash128m.chip_id
+033     @PRINTF_U_9600_31791_31789.P1
+033     @PSTRINGCN_9600_31791_31789.P2
+033-036 sector_erase_flash128m.sector_address
+033-036 write_data_bytes_flash128m.write_address
+033     MAIN.@SCRATCH1
+033     @PSTRINGR_9600_31791_31789.@SCRATCH1
+034-037 read_data_bytes_flash128m.read_address
+034     @PRINTF_U_9600_31791_31789.P1
+034     MAIN.@SCRATCH2
+034     @PSTRINGCN_9600_31791_31789.@SCRATCH1
+034     @PSTRINGR_9600_31791_31789.@SCRATCH2
+035     @DIV88.P1
+035     @PSTRINGCN_9600_31791_31789.@SCRATCH2
+036     @DIV88.P1
+036     @PSTRINGCN_9600_31791_31789.@SCRATCH3
+037-039 sector_erase_flash128m.address
+037     write_data_bytes_flash128m.amount
+037     @DIV88.@SCRATCH1
+038-039 write_data_bytes_flash128m.write_data
+038     read_data_bytes_flash128m.amount
+039-03A read_data_bytes_flash128m.read_data
+03A-03C write_data_bytes_flash128m.address
+03A     sector_erase_flash128m.timeout_counter
+03B-03D read_data_bytes_flash128m.address
+03B     sector_erase_flash128m.@SCRATCH1
+03C     sector_erase_flash128m.@SCRATCH2
+03D     write_data_bytes_flash128m.timeout_counter
+03D     sector_erase_flash128m.@SCRATCH3
+03E     read_data_bytes_flash128m.i
+03E     write_data_bytes_flash128m.i
+03E     sector_erase_flash128m.@SCRATCH4
+03F     @delay_ms1.P1
+03F     status_register_flash128m.status_reg
+03F     sector_erase_flash128m.@SCRATCH5
+03F     read_data_bytes_flash128m.@SCRATCH1
+03F     write_data_bytes_flash128m.@SCRATCH1
+040     status_register_flash128m.@SCRATCH1
+040     read_data_bytes_flash128m.@SCRATCH2
+040     write_data_bytes_flash128m.@SCRATCH2
+041     read_data_bytes_flash128m.@SCRATCH3
+041     write_data_bytes_flash128m.@SCRATCH3
+042     read_data_bytes_flash128m.@SCRATCH4
+042     write_data_bytes_flash128m.@SCRATCH4
+043     read_data_bytes_flash128m.@SCRATCH5
+043     write_data_bytes_flash128m.@SCRATCH5
+048     read_id_flash128m.i
+049     @PSTRINGC_9600_31791_31789.@SCRATCH1
+049     read_id_flash128m.@SCRATCH1
+04A     @PRINTF_X_9600_31791_31789.P1
+04A     @PSTRINGC_9600_31791_31789.@SCRATCH2
+04A     read_id_flash128m.@SCRATCH2
+04B     @PRINTF_X_9600_31791_31789.P1
+04B     @SPI_XFER_1.P2
+04B     @PSTRINGC_9600_31791_31789.@SCRATCH3
+04C     @SPI_XFER_1.P1
+04D     @SPI_XFER_1.P1
+04E     @SPI_XFER_1.@SCRATCH1
+04F     @SPI_XFER_1.@SCRATCH2
+EEF.0   MDBIT
+EEF.3   MDOUT
+F08     CCP_7
+F08     CCP_7_LOW
+F09     CCP_7_HIGH
+F0B     CCP_6_LOW
+F0B     CCP_6
+F0C     CCP_6_HIGH
+F0E     CCP_5
+F0E     CCP_5_LOW
+F0F     CCP_5_HIGH
+F11     CCP_4
+F11     CCP_4_LOW
+F12     CCP_4_HIGH
+F21     DSGPR3
+F22     DSGPR2
+F23     DSGPR1
+F24     DSGPR0
+F41     CCP_10_LOW
+F41     CCP_10
+F42     CCP_10_HIGH
+F44     CCP_9_LOW
+F44     CCP_9
+F45     CCP_9_HIGH
+F47     CCP_8_LOW
+F47     CCP_8
+F48     CCP_8_HIGH
+F4A     CCP_3
+F4A     CCP_3_LOW
+F4B     CCP_3_HIGH
+F4F     CCP_2_LOW
+F4F     CCP_2
+F50     CCP_2_HIGH
+F83     PSP_DATA
+FBA     CCP_1_LOW
+FBA     CCP_1
+FBB     CCP_1_HIGH
+FC4.0   C1OUT
+FC4.1   C2OUT
+FC4.2   C3OUT
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000006  @const985.call
+00001C  @const992.call
+000026  @const998.call
+00003A  @const999.call
+00004E  @const1002.call
+00005C  @const1005.call
+00006A  @const1008.call
+000078  @const1019.call
+000086  @const1023.call
+000094  @const1032.call
+0000A8  @const1033.call
+0000C4  @const1034.call
+0000DA  @const1035.call
+000102  @const1036.call
+000124  @const1037.call
+000144  @const1038.call
+00015A  @const1039.call
+000188  @const1040.call
+0001A2  @const1041.call
+0001C8  @const1042.call
+0001FE  @const1044.call
+00021C  @const1045.call
+00023E  @const1055.call
+00026A  @const1056.call
+000280  @const1057.call
+000292  @const1058.call
+0002A0  @const1059.call
+0002B2  @const1060.call
+0002CC  @const1061.call
+0002E0  @PSTRINGC_9600_31791_31789
+00030A  flash_setting
+000312  @SPI_XFER_1
+00034A  status_register_flash128m
+00038E  @PRINTF_X_9600_31791_31789
+0003D0  read_id_flash128m
+000498  @PUTCHARI_BIU_1
+0004A0  @PSTRINGCN_9600_31791_31789
+0004C8  @PSTRINGR_9600_31791_31789
+0004EE  @DIV88
+000516  @PRINTF_U_9600_31791_31789
+000584  @delay_ms1
+0005AC  sector_erase_flash128m
+000656  write_data_bytes_flash128m
+00071C  read_data_bytes_flash128m
+0007A0  MAIN
+0007A0  @cinit1
+000866  @cinit2
+
+Project Directory:
+    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\08_FLASH2.128\
+
+Project Files:
+    FLASH2.c                                                [24-2-26 11:10  CRC=E50C2247]
+    FLASH2.h                                                [24-2-26 11:10  CRC=76F857D0]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F67J94.h [13-5-21 13:54  CRC=CB5C8DE4]
+    GDNS_tbd_FlashOperation.c                               [24-2-26 11:11  CRC=A25405A7]
+    GDNS_tbd_FlashOperation.h                               [24-2-26 11:10  CRC=ED466056]
+
+Source signature=A441CE4E
+Program memory checksum=0000
+Hex file CRC=2D98
+
+Units:
+    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\08_FLASH2.128\FLASH2 (main)
+
+Compiler Settings:
+    Processor:      PIC18F67J94
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   FLASH2.xsym
+    Errors:      FLASH2.err
+    Ext Symbols: FLASH2.esym
+    INHX32:      FLASH2.hex
+    Symbols:     FLASH2.sym
+    List:        FLASH2.lst
+    Debug/COFF:  FLASH2.cof
+    Project:     FLASH2.ccspjt
+    Call Tree:   FLASH2.tre
+    Statistics:  FLASH2.STA

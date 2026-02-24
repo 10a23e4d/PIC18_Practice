@@ -221,7 +221,7 @@ void main()
 }
 */
 
-
+/*
 // ADC模擬コード ()
 // --- ADC値取得用関数（プロトタイプ） ---
 unsigned int16 get_adc_sample(void);
@@ -341,3 +341,5 @@ unsigned int16 get_adc_sample(void)
 
    return (unsigned int16)(rand() & 0x0FFF);
 }
+*/
+
