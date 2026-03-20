@@ -11,15 +11,17 @@ Type=4
 1=UART2.c
 
 [defines]
-buildcount=8
+buildcount=9
 
 [Opened Files]
-1=UART2.c
-t1=41
+1=..\..\..\..\..\..\OneDrive\デスクトップ\庭SW\18練習\LED2.c
+t1=1
 Count=1
+2=..\..\..\..\..\..\OneDrive\デスクトップ\庭SW\18練習\LED2.c
+t2=68
 
 [ProjectLog]
-Days=1
+Days=3
 D1=17-02-2026
 D1_L=5
 D1_L1=[50792]Project Closed.
@@ -31,6 +33,15 @@ TotalDebug=0
 D1_E=1
 D1_D=0
 D1_L5=[58949]Project Closed.
+D2=09-03-2026
+D2_L=2
+D2_L1=[52800]Project Opened.
+D2_L2=[53591]Project Closed.
+D3=10-03-2026
+D3_L=3
+D3_L1=[74940]Project Opened.
+D3_L2=[75904]Started Editing.
+D3_L3=[76647]Project Closed.
 
 [fileformats]
 forcecoff=0

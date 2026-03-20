@@ -105,7 +105,7 @@ ROM Allocation:
 00028C  @cinit2
 
 Project Directory:
-    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\
+    C:\Users\kikuk\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\
 
 Project Files:
     UART2.c                                                 [17-2-26 16:15  CRC=E63EF948]
@@ -117,7 +117,7 @@ Program memory checksum=0000
 Hex file CRC=44C5
 
 Units:
-    C:\Users\rice_\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\UART2 (main)
+    C:\Users\kikuk\Chiba Institute of Technology\6号機 - ドキュメント\TMP_MIS\02_Software\PIC18_Practice\04_UART2\UART2 (main)
 
 Compiler Settings:
     Processor:      PIC18F67J94
