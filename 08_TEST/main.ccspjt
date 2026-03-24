@@ -1,0 +1,36 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC18F67J94
+CCSVersion=5.104
+Compiler=PCH
+[Target Data]
+FileList=main.c
+[main.c]
+Type=4
+[mru-list]
+1=main.c
+
+[defines]
+buildcount=9
+
+[ProjectLog]
+Days=1
+D1=24-03-2026
+D1_L=9
+D1_L1=[43298]Stopped Editing.
+D1_L2=[43984]Started Editing.
+D1_L3=[44285]Stopped Editing.
+D1_L4=[45055]Started Editing.
+D1_L5=[45362]Stopped Editing.
+D1_L6=[45482]Started Editing.
+D1_L7=[45789]Stopped Editing.
+D1_L8=[48147]Started Editing.
+D1_L9=[48450]Stopped Editing.
+
+[Opened Files]
+1=main.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=main (main)

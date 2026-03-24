@@ -1,0 +1,41 @@
+#include "main.h"
+
+// 外部発振子(16MHz)を使用するためのヒューズ設定を追加
+#fuses HS
+
+// UARTの設定: RXを58番ピン(PIN_D0)、TXを55番ピン(PIN_D1)に変更、ボーレート9600bps
+#use rs232(baud=9600, parity=N, rcv=PIN_D0, xmit=PIN_D1, bits=8, stream=PC, FORCE_SW, ERRORS)
+
+// ピンの割り当て定義 (ユーザー指示に合わせて修正)
+#define LED1   PIN_A5  // 27番ピン RA5
+#define LED2   PIN_A1  // 23番ピン RA1
+
+void main()
+{
+    // アナログ入力機能をすべて無効化し、すべてのピンをデジタルI/Oとして設定する
+    setup_adc_ports(NO_ANALOGS);
+
+    // メインループ
+    while(TRUE)
+    {
+        // LED1(PIN_A1)とLED2(PIN_A5)をON (HIGH)
+        output_high(LED1);
+        output_high(LED2);
+
+        // 状態をUARTで送信
+        fprintf(PC, "LED ON\r\n");
+
+        // 1秒待機
+        delay_ms(1000);
+
+        // LED1(PIN_A1)とLED2(PIN_A5)をOFF (LOW)
+        output_low(LED1);
+        output_low(LED2);
+
+        // 状態をUARTで送信
+        fprintf(PC, "LED OFF\r\n");
+
+        // 1秒待機
+        delay_ms(1000);
+    }
+}
